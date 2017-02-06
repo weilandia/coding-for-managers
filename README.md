@@ -12,18 +12,18 @@ Schedule:
 | Day | Date | Topic |
 |-----|-------|------|
 | Day 1 | 02/06/17 | [Intro](intro)
-| Day 2 | 02/08/17 | <a href="https://github.com/product-school/coding-for-product-managers/html-css">HTML + CSS</a> |
-| Day 3 | 02/13/17 | <a href="https://github.com/product-school/coding-for-product-managers/git">Git</a>|
-| Day 4 | 02/15/17 | <a href="https://github.com/product-school/coding-for-product-managers/ruby">Ruby</a>|
-| Day 5 | 02/22/17 | <a href="https://github.com/product-school/coding-for-product-managers/rails-1">Rails I</a>|
-| Day 6 | 02/27/17 | <a href="https://github.com/product-school/coding-for-product-managers/rails-2">Rails II</a>|
-| Day 7 | 02/30/17 | <a href="https://github.com/product-school/coding-for-product-managers/rails-3">Rails III</a>|
-| Day 8 | 03/01/17 | <a href="https://github.com/product-school/coding-for-product-managers/authentication">Authentication</a>|
-| Day 9 | 03/06/17 | <a href="https://github.com/product-school/coding-for-product-managers/authorization">Authorization<a>|
-| Day 10 | 03/08/17 | <a href="https://github.com/product-school/coding-for-product-managers/responsive-design">Responsive Design</a>|
-| Day 11 | 03/13/17 | <a href="https://github.com/product-school/coding-for-product-managers/javascript">Javascript</a>|
-| Day 12 | 03/15/17 | <a href="https://github.com/product-school/coding-for-product-managers/jquery">JQuery</a>|
-| Day 13 | 03/20/17 | <a href="https://github.com/product-school/coding-for-product-managers/public-apis">Public APIs</a>|
-| Day 14 | 03/22/17 | <a href="https://github.com/product-school/coding-for-product-managers/testing">Testing</a>|
-| Day 15 | 03/27/17 | <a href="https://github.com/product-school/coding-for-product-managers/deployment">Deployment</a>|
-| Day 16 | 03/29/17 | <a href="https://github.com/product-school/coding-for-product-managers/review">Review</a>|
+| Day 2 | 02/08/17 | [HTML + CSS](html-css)
+| Day 3 | 02/13/17 | [Git](git)
+| Day 4 | 02/15/17 | [Ruby](ruby)
+| Day 5 | 02/22/17 | [Rails I](rails-1)
+| Day 6 | 02/27/17 | [Rails II](rails-2)
+| Day 7 | 02/30/17 | [Rails III](rails-3)
+| Day 8 | 03/01/17 | [Authentication](authentication)
+| Day 9 | 03/06/17 | [Authorization](authorization)
+| Day 10 | 03/08/17 | [Responsive Design](responsive-design)
+| Day 11 | 03/13/17 | [Javascript](javascript)
+| Day 12 | 03/15/17 | [jQuery](jquery)
+| Day 13 | 03/20/17 | [Public APIs](public-apis)
+| Day 14 | 03/22/17 | [Testing](testing)
+| Day 15 | 03/27/17 | [Deployment](deployment)
+| Day 16 | 03/29/17 | [Review](review)

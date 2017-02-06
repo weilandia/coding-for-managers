@@ -4,7 +4,7 @@
 
 ### Introductions
 * Why are you here?
-* [What are we going to build?](p-school-blog.herokuapp.com)
+* [What are we going to build?](http://www.p-school-blog.herokuapp.com)
 
 ### Initial Setup
 * [Cloud9](https://c9.io)

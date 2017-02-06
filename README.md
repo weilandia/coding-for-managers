@@ -11,7 +11,7 @@ Schedule:
 
 | Day | Date | Topic |
 |-----|-------|------|
-| Day 1 | 02/06/17 | <a href="https://github.com/product-school/coding-for-product-managers/intro">Intro</a> |
+| Day 1 | 02/06/17 | [Intro](intro)
 | Day 2 | 02/08/17 | <a href="https://github.com/product-school/coding-for-product-managers/html-css">HTML + CSS</a> |
 | Day 3 | 02/13/17 | <a href="https://github.com/product-school/coding-for-product-managers/git">Git</a>|
 | Day 4 | 02/15/17 | <a href="https://github.com/product-school/coding-for-product-managers/ruby">Ruby</a>|

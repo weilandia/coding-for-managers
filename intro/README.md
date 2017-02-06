@@ -132,7 +132,7 @@ Let's create a contact us file: `$ touch pages/contact_us.html`
 *Exercise: add another dropdown menu item and another horizontal rule*
 
 - Common form text field types: text, email, password, search, URL
-- Built-in validators
+- [Built-in validators](http://www.the-art-of-web.com/html/html5-form-validation/)
 - Form field types without text field ‘input’: checkbox, file, radio, number range
 - Form buttons: button, reset, submit
 

@@ -7,8 +7,8 @@
 * [What are we going to build?](p-school-blog.herokuapp.com)
 
 ### Initial Setup
-* [Cloud9](c9.io)
-* [Github](github.com)
+* [Cloud9](https://c9.io)
+* [Github](https://github.com)
 
 ### IDE/CLI
 * Create our first workspace in Cloud9
@@ -47,7 +47,7 @@ Let's create an index HTML file: `$ touch index.html`
   </body>
 </html>
 ```
-HTML body tags (full list: https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+[HTML body tags full list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 Commonly Used Tags:
 
@@ -270,9 +270,6 @@ Add this to the head of your file to let your mobile browser know your site is o
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
-
-## Homework:
-Finishing Up The HTML + CSS For Your Sample Page:  https://github.com/product-school/site-recreation
 
 **Resources:**
 

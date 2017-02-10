@@ -58,7 +58,7 @@ Cascading Style Sheets tell the browser how to display HTML elements. CSS is com
 #### Style Sheet
 ```html
 <head>
-  <link rel=”stylesheet” href=”styles/main.css”>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 ```
 

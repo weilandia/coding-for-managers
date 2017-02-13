@@ -203,34 +203,6 @@ Before we add some media queries, try collapsing your browser so it's too narrow
 }
 ```
 
-### Cross-Browser Compatability
-Making sure a site displays properly across different platforms can be a major headache for developers. To mitigate this, we test on multiple devices/browsers and use CSS browser prefixes to add support for CSS features before they are natively supported by the browser.
-
-Prefixes:  
-Android: `-webkit-`  
-Chrome: `-webkit-`  
-Firefox: `-moz-`  
-Internet Explorer: `-ms-`  
-iOS: `-webkit-`
-
-[This css auto-prefixer tool can make your life easier.](http://pleeease.io/play/)
-
-*Exercise: run your css through the auto-prefixer, save the new CSS and then view in another browser*
-
-
-
-#### Head Meta-tags:
-
-Add this to the head of your file to let your mobile browser know your site is optimized for mobile:
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
-```
-
-*Exercise: with a partner, use what you've learned to recreate this site. Use only the HTML skeleton and create your own `main.css` file*:
-
-* [Site Recreation Exercise](https://github.com/product-school/site-recreation)
-
 **Resources:**
 
 - For more information on CSS selectors: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference

@@ -11,9 +11,9 @@ Schedule:
 
 | Day | Date | Topic |
 |-----|-------|------|
-| Day 1 | 02/06/17 | [Intro](intro)
-| Day 2 | 02/08/17 | [HTML + CSS](html-css)
-| Day 3 | 02/13/17 | [Git](git)
+| Day 1 | 02/06/17 | [Intro and HTML](intro)
+| Day 2 | 02/08/17 | [CSS I](css-1)
+| Day 3 | 02/13/17 | [CSS II and Git](css-2-and-git)
 | Day 4 | 02/15/17 | [Ruby](ruby)
 | Day 5 | 02/22/17 | [Rails I](rails-1)
 | Day 6 | 02/27/17 | [Rails II](rails-2)

@@ -3,9 +3,13 @@
 Open up our previous Cloud 9 Workspace and finish creating our flex box Blog. Which classes/ids needed to be applied to which elements?
 
 How do we position certain elements in specific places? Let's do some more practice and get you familiar with css positioning.
+
 **go to [CSS Exercises](css_exercises)**
+
 1) Box Positioning
+
 2) Computer Gallery
+
 3) Astronaut
 
 After the exercises, we're going to be remaking our landing page from the HTML section because it's super bare-bones.

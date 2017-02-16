@@ -22,11 +22,20 @@ The goal of this lecture is to give you a roadmap for the course, teach you HTML
 
 
 
-### Introductions
-* Why are you here?
+## Introductions
+### Our Project
+Our project throughout the whole program will be to build a  blog where you'll be able to write articles, log in and have an about page. Click on the link below to have an overview of what it will look like.
 * [What are we going to build?](http://p-school-blog.herokuapp.com)
 
-  Explain that we use Google / MDN all the time and what other good rule of thumbs about coding.
+### Best practices
+Some good rules of thumbs to remember during the class are:
+**Google when you don't know**
+No software engineers have everything in mind when they are coding. Google is a very powerful resource to find what you are looking for.
+**Read the lectures notes before class**
+Learning coding can be pretty hard at the beginning especially if you have never been exposed to it. Read the lectures notes before each classes will help you understand faster key concepts that will be taught in class.
+**Ask as many questions as you like**
+Don't be afraid to ask questions during class. If you don't understand something, you will most likely not be alone in that case. Don't hesitate to raise you hand and ask.
+
 
 ### Initial Setup
 * [Cloud9](https://c9.io)

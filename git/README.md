@@ -62,6 +62,7 @@ The basic functionality of Git allows developers to track specific versions of t
 
 - Make a new branch with `$ git branch -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
 
+
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**
 - See Whiteboard for further description
 - Look back at the history of the new branch

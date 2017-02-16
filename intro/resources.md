@@ -7,6 +7,12 @@
 
 [An example of a styleguide](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide)
 
+## HTML forms
+
+[Common Form text field](http://www.the-art-of-web.com/html/html5-form-validation/)
+
+[Form buttons](http://www.w3schools.com/tags/att_button_type.asp)
+
 
 ## More Practice
 

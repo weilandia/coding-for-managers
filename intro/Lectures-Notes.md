@@ -97,14 +97,15 @@ Commonly Used Tags:
   - inspect FB page with Chrome Dev Tools (cmd + alt + i)
 
 ##### Dev Tool
-Now that you have a first experience with Chrome dev tool let's explain a little bit what it is. Dev tool is something in your web browser where you will be able to inspect elements or write directly some code on a webpage. This is very useful and powerful as it can help you writing or testing your code. 
+Now that you have a first experience with Chrome dev tool let's explain a little bit what it is. Dev tool is something in your web browser where you will be able to inspect elements or write directly some code on a webpage. This is very useful and powerful as it can help you writing or testing your code.
 
 *> Exercise: Change the title. Then add a heading of whatever size you want within the body and put one of the words into a span*
 
 Let's create a page directory: `$ mkdir pages`
 
 #### Lists:
-Lists are often used in HTML. Y
+Lists are often used in HTML. For example, you can easily create navigation menu thanks to lists. There are two types of lists:
+
 - Unordered list: `<ul> [list items] </ul>`
 - List item: `<li> item </li>`
 
@@ -129,6 +130,7 @@ Let's create a menu file: `$ touch pages/products.html`
 
 
 #### Form:
+Forms are used everywhere in the internet. The most common ones are contact forms. Here is how to build them:
 
 - Label `<label>`
 - Input `<input>`
@@ -180,7 +182,7 @@ Let's create a contact us file: `$ touch pages/contact_us.html`
 - Form buttons: button, reset, submit [W3 Schools](http://www.w3schools.com/tags/att_button_type.asp)
 
 #### Image:
-
+If you want to have a nice webpage, you will probably need to add some images to it. One thing to know about image is that it is a self closing tag. Here is how to embed an image to your website:
 - Image: `<img src=”file-path-or-URL” alt=”alternative title”/>`
 
 Let's create an about file: `$ touch pages/about.html`
@@ -203,6 +205,7 @@ Let's create an about file: `$ touch pages/about.html`
 
 
 #### Navigation:
+In order for your user to have a smooth navigation into your website, you will need to add a navigation menu. Here is a simple way to make one:
 
 - Nav: `<nav> [nav items in here] </nav>`
 - Links: `<a href="URL">Link title</a>`
@@ -219,9 +222,17 @@ Let's create an about file: `$ touch pages/about.html`
 
 # CSS Part 1
 
-Cascading Style Sheets tell the browser how to display HTML elements. CSS is quite nuanced but extremely powerful.
+Cascading Style Sheets tell the browser how to display HTML elements. In other words, this language will make your webpage look pretty. CSS is quite nuanced but extremely powerful.
+
+There are three ways to apply styling to a webpage:
+1. In-line styling
+2. Embedded styling
+3. Linked style Sheet
+
+Depending on your needs and your webpage complexity, you will go for one of those three options.
 
 #### In-line Styling
+
 `<tag style=”attribute: value;”>content</tag>`
 
 *Exercise: add a `color` and `font-family` to the heading on your home page*

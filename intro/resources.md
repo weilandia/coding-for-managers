@@ -10,6 +10,4 @@
 
 ## More Practice
 
-[Code Academy](https://www.codecademy.com/
-
-  )
+[Code Academy](https://www.codecademy.com/)

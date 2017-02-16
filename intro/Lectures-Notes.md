@@ -8,6 +8,7 @@ The goal of this lecture is to give you a roadmap for the course, teach you HTML
 * What is a Graphical User Interface (GUI)
 * Use an IDE such as Cloud 9
 * Use basic commands of the Terminal
+* Use Development tool
 * Structure a webpage with HTML
   * Create a list
   * Embed an image into your webpage
@@ -38,6 +39,7 @@ Don't be afraid to ask questions during class. If you don't understand something
 
 
 ### Initial Setup
+You will need two tools to get set up for the class. Make sure to create an account to Cloud 9 and Github before class. You should receive an invite from your Program Manager to both these tools.
 * [Cloud9](https://c9.io)
 * [Github](https://github.com)
 
@@ -73,6 +75,7 @@ Hyper-text Markup Language represents the frame or skeleton of any web page that
 
 Let's create an index HTML file: `$ touch index.html`
 
+Tags are the foundation of HTML. They usually start with `<name of the tag>` and end with `</name of the tag>`. You will be able to put text within the opening and closing tag. This is how you will structure your webpage with HTML. Here is an example of tags:
 ```html
 <!DOCTYPE html>
 <html>
@@ -91,14 +94,17 @@ Commonly Used Tags:
 - Headings: `<h1> - <h6> <h1>Hello World</h1>`
 - Span: `<span>Copy text </span>`
 - **Div**: `<div> [content to be placed inside] </div>`
-  - inspect FB page with Chrome Dev Tools
+  - inspect FB page with Chrome Dev Tools (cmd + alt + i)
+
+##### Dev Tool
+Now that you have a first experience with Chrome dev tool let's explain a little bit what it is. Dev tool is something in your web browser where you will be able to inspect elements or write directly some code on a webpage. This is very useful and powerful as it can help you writing or testing your code. 
 
 *> Exercise: Change the title. Then add a heading of whatever size you want within the body and put one of the words into a span*
 
 Let's create a page directory: `$ mkdir pages`
 
 #### Lists:
-
+Lists are often used in HTML. Y
 - Unordered list: `<ul> [list items] </ul>`
 - List item: `<li> item </li>`
 

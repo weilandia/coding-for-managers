@@ -60,7 +60,7 @@ The basic functionality of Git allows developers to track specific versions of t
 
 ## Branching
 
-- Make a new branch with `$ git checkout -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
+- Make a new branch with `$ git checkout -b the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
 
 
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**

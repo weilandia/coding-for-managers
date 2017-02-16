@@ -25,7 +25,8 @@ The goal of this lecture is to give you a roadmap for the course, teach you HTML
 ### Introductions
 * Why are you here?
 * [What are we going to build?](http://p-school-blog.herokuapp.com)
-Explain that we use Google / MDN all the time and what other good rule of thumbs about coding.
+
+  Explain that we use Google / MDN all the time and what other good rule of thumbs about coding.
 
 ### Initial Setup
 * [Cloud9](https://c9.io)

@@ -2,6 +2,8 @@
 
 # Hello World!
 
+The goal of this lecture is to give you a roadmap for the course, teach you HTML and introduce you to basic concepts of coding such as Graphical User Interface, Integrated Development Environment and Command Line Interface. 
+
 ### Introductions
 * Why are you here?
 * [What are we going to build?](http://p-school-blog.herokuapp.com)

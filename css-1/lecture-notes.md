@@ -1,75 +1,74 @@
 # Intro to CSS
-The goal of this class is to remind concepts you saw in the first class and dig deeper into CSS concepts.
+CSS stands for Cascading Style Sheets. It tells the browser how to display HTML elements. In other words, this language allows you to style your webpage. CSS is quite nuanced but extremely powerful.
 
 ## What you will learn in this course
-* Remind you the three ways to style a webpage
-  * In-line Styling
-  * Embedded Styling
-  * Stylesheet linked to your webpage
+* Start styling your page with CSS
+  * Add inline styling
+  * Use different selectors
+  * Embed styling into your tag
+  * Link your html page to a style Sheet
 * Make responsive design
   * Media queries
 * Position elements in your webpage
   * Flexbox
 
-Cascading Style Sheets tell the browser how to display HTML elements. CSS is complex but extremely powerful.
+## Three ways to style a webpage
 
-#### In-line Styling
+There are three ways to apply styling to a webpage:
+* In-line styling
+* Embedded styling
+* Linked style Sheet
+
+Depending on your needs and your webpage complexity, you will go for one of those three options.
+
+## In-line Styling
+Within an element, you can write some styling. This method is called in-line styling. It is pretty useful if you have small style changes you want to make. Here is an example:
+
 `<tag style=”attribute: value;”>content</tag>`
 
-*Exercise: add a `color` and `font-family` to the heading on your index.html page. Use a different color in a span surrounding part of the heading*
+*Exercise: add a `color` and `font-family` to the heading on your home page*
 
-#### Embedded
+### Selectors
+First, you need to select an element to apply some style on it. You can either directly select an element or select a class or an id.
+
+#### Select an element
+* elements/tags `html` `body` `a`
+You can directly apply style to an element. this will apply to all same elements. For example, if you select the anchor element `a`, the styling will apply to ALL `a` elements.
+
+#### Select a Class
+* classes (for items with shared characteristics)
+You can give an element a class name. ONE class can be given to several elements. If select this class name then styling will apply to all elements that have that class name. Here is a example:
+  * declare: `<tag class="photo menu-item event">content</tag>`
+  * select: `.photo` `.menu-item` `.event`
+
+### Select an id
+An id works the same as a class. However ONE id can be given to ONLY ONE element.
+* ids (for unique items)
+  * declare: `<tag id="profile_picture">content</tag>`
+  * select: `#profile_picture`
+
+## Embedded
+You can embed styling within the `<head>` tags of your webpage. It's useful when your webpage doesn't need much styling but you need to apply several properties to one element.  
 ```html
 <head>
   <style type="text/css">
     selector(s) {
-      property: value; /* many values are measured in px (short for pixels) */
+      property: value;
+      property: value;
+      property: value;
     }
   </style>
 </head>
 ```
-
-## Selectors
-
-* **elements/tags** `html` `body` `a`  
-
-*Exercise: add a style tag in the head of your index.html then move your inline-styling into it. Next, use a selector to style all the nav items at once  - maybe changed the `font-size`. Then style the html to have a `background-color`*
-* **classes** (for items with shared characteristics)
-  * declare: `<tag class="photo menu-item event">content</tag>`
-  * select: `.photo` `.menu-item` `.event`
-
-*Exercise: in your products.html page, add a class to each of your list items, like class="product". Bonus if you use multiple cursors to achieve this. Next, [give each list item a `border` property](https://developer.mozilla.org/en-US/docs/Web/CSS/border). Also get rid of the default black bullets if possible!*
-
-* **ids** (for unique items)
-  * declare: `<tag id="profile_picture">content</tag>`
-  * select: `#profile_picture`
+*Exercise: add a style tag in the head of your index.html then move your inline-styling into it. Next, use a selector to style all the nav items at once.*
 
 
-* **pseudo selectors** (styling that is assigned to a state of a page element or specific subset of elements)
+## Style Sheet
+When your webpage needs a lot of styling, you might prefer to link a separate stylesheet to your html file. This will help you keep your workflow very organized. Here is how to link a stylesheet to your webpage:
 
-`a:hover { color: red;}` => Links will turn red when a mouse hovers over them
-
-*Exercise: add a hover pseudo-selector to all anchor (link) tags, make it whatever color you want*
-
-`p:first-child { background-color: gray;}` => The first paragraph element on a page will have a gray background color
-
-`div:nth-child(3) { text-align: center; }` => Text in the 3rd div on the page will be centered
-
-**Selectors based off of relationships**
-
-- `A.class` All A elements that have a certain class
-- `A E {}`: Any E element that is a descendant of an A element (that is: a child, or a child of a child, etc.)
-- `A > E {}`: Any E element that is a child of an A element
-- `E:first-child {}`: Any E element that is the first child of its parent
-- `B + E {}`: Any E element that is the next sibling of a B element (that is: the next child of the same parent)
-
-*Exercise: with a partner, complete up to level 16 at the CSS Diner: https://flukeout.github.io/*
-
-
-#### Style Sheet
 ```html
 <head>
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel=”stylesheet” href=”styles/main.css”>
 </head>
 ```
 
@@ -82,21 +81,53 @@ let's create a stylesheet:
 *Exercise: link your stylesheet to your HTML pages and transfer all your styling into it. Now add a univeral style to your html like a background-color. Why might the styles not have been applied to your sub-pages?*
 
 
+Pseudo Selectors: styling that is assigned to a state of a page element or specific subset of elements:
+
+`a:hover { color: red;}` => Links will turn red when a mouse hovers over them
+
+`p:first-child { background-color: gray;}` => The first paragraph element on a page will have a gray background color
+
+`div:nth-child(3) { text-align: center; }` => Text in the 3rd div on the page will be centered
+
+**Selectors based off of relationships**
+
+- A E {}: Any E element that is a descendant of an A element (that is: a child, or a child of a child, etc.)
+- A > E {}: Any E element that is a child of an A element
+- E:first-child {}: Any E element that is the first child of its parent
+- B + E {}: Any E element that is the next sibling of a B element (that is: the next child of the same parent)
+
 ## Responsive Styling:
 
 Responsive styling enables you to customize how a page is displayed at different browser sizes. With media queries, you can set custom CSS for any browser with you’d like to target.
 
+#### Typical Viewport Sizes
+
+• Smartphones: 680 x 960 pixels
+
+• Tablets: 768 x 1024 pixels
+
+• Laptops: 1440 x 900 pixels
+
+• Desktops: 1920 x 1080 pixels
 
 #### Responsive media queries
 
 ```css
-@media (max-width: 767px) and (min-width: 480px) {
-  h2 {
+@media (max-width: 767px) and (min-width: 480px) { h2 {
    font-size: 12px;
-  }
-  nav {
-    display: none; }
-  }
+
+ }
+nav {
+display: none; }
+}
+```
+
+#### Head Meta-tags:
+
+Add this to the head of your file to let your mobile browser know your site is optimized for mobile:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
 ## Flexbox

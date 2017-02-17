@@ -228,9 +228,9 @@ In order for your user to have a smooth navigation into your website, you will n
 Cascading Style Sheets tell the browser how to display HTML elements. In other words, this language will make your webpage look pretty. CSS is quite nuanced but extremely powerful.
 
 There are three ways to apply styling to a webpage:
-1. In-line styling
-2. Embedded styling
-3. Linked style Sheet
+* In-line styling
+* Embedded styling
+* Linked style Sheet
 
 Depending on your needs and your webpage complexity, you will go for one of those three options.
 

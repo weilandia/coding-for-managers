@@ -1,4 +1,15 @@
 # Intro to CSS
+The goal of this class is to remind concepts you saw in the first class and dig deeper into CSS concepts.
+
+## What you will learn in this course
+* Remind you the three ways to style a webpage
+  * In-line Styling
+  * Embedded Styling
+  * Stylesheet linked to your webpage
+* Make responsive design
+  * Media queries
+* Position elements in your webpage
+  * Flexbox
 
 Cascading Style Sheets tell the browser how to display HTML elements. CSS is complex but extremely powerful.
 

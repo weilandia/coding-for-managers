@@ -25,26 +25,29 @@ The goal of this lecture is to give you a roadmap for the course, teach you HTML
 
 ## Introductions
 ### Our Project
-Our project throughout the whole program will be to build a  blog where you'll be able to write articles, log in and have an about page. Click on the link below to have an overview of what it will look like.
+Our project throughout the whole program will be to build a  blog where you'll be able to write articles, have an about page, sign in and sign up. Click on the link below to have an overview of what it will look like.
 * [What are we going to build?](http://p-school-blog.herokuapp.com)
 
 ### Best practices
 Some good rules of thumbs to remember during the class are:
+
 **Google when you don't know**
 No software engineers have everything in mind when they are coding. Google is a very powerful resource to find what you are looking for.
+
 **Read the lectures notes before class**
 Learning coding can be pretty hard at the beginning especially if you have never been exposed to it. Read the lectures notes before each classes will help you understand faster key concepts that will be taught in class.
+
 **Ask as many questions as you like**
 Don't be afraid to ask questions during class. If you don't understand something, you will most likely not be alone in that case. Don't hesitate to raise you hand and ask.
 
 
 ### Initial Setup
-You will need two tools to get set up for the class. Make sure to create an account to Cloud 9 and Github before class. You should receive an invite from your Program Manager to both these tools.
+You will need two tools to get set up for the class. Make sure to create an account on Cloud 9 and Github before class. You should receive an invite from your Program Manager to both these tools.
 * [Cloud9](https://c9.io)
 * [Github](https://github.com)
 
 ### IDE/CLI
-An Integrated Development Environment is a software that combines several tools a software developer needs into one place. An IDE usually acts as a text editor, a debugger and a compiler. One IDE that we are going to use is Cloud 9. With this tool you will be able to write some code and directly compile it through Cloud 9.
+An Integrated Development Environment (IDE) is a software that combines several tools a software developer needs into one place. An IDE usually acts as a text editor, a debugger and a compiler. One IDE that we are going to use is Cloud 9. With this tool you will be able to write some code and directly compile it through Cloud 9.
 
 * Create our first workspace in Cloud9
     * HTML5
@@ -52,7 +55,7 @@ An Integrated Development Environment is a software that combines several tools 
     * IDE
     * CLI
 
-At the bottom of your workspace in Cloud 9, you will see something called the command line or console or Shell. If you have ever watched Matrix, the big black screen with green text in it is the command line. Typically, this application will let you access, create, delete files and folders without using the usual graphical interface of your computer. It is very useful once you start creating complex applications because you will need to have all your work in local files and still be able to share it with your team.
+At the bottom of your workspace in Cloud 9, you will see something called the command line (CLI) or console or Shell. If you have ever watched Matrix, the big black screen with green text in it is the command line. Typically, this application will let you access, create, delete files and folders without using the usual graphical interface of your computer. It is very useful once you start creating complex applications because you will need to have all your work in local files and still be able to share it with your team.
 [Here](http://www.galvanize.com/learn/learn-to-code/programming-101-how-to-use-the-terminal-command-line/) is a video that explains more in depth the use of the command line.
 
 * Shell Commands ([POSIX](http://pubs.opengroup.org/onlinepubs/9699919799/)/[UNIX](https://upload.wikimedia.org/wikipedia/commons/c/cd/Unix_timeline.en.svg))

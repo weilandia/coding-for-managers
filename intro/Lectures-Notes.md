@@ -232,26 +232,39 @@ There are three ways to apply styling to a webpage:
 Depending on your needs and your webpage complexity, you will go for one of those three options.
 
 #### In-line Styling
+Within an element, you can write some styling. This method is called in-line styling. It is pretty useful if you have small style changes you want to make. Here is an example:
 
 `<tag style=”attribute: value;”>content</tag>`
 
 *Exercise: add a `color` and `font-family` to the heading on your home page*
 
 ## Selectors
+First, you need to select an element to apply some style on it. You can either directly select an element or select a class or an id.
 
+### Select an element
 * elements/tags `html` `body` `a`
+You can directly apply style to an element. this will apply to all same elements. For example, if you select the anchor element `a`, the styling will apply to ALL `a` elements.
+
+### Select a Class
 * classes (for items with shared characteristics)
+You can give an element a class name. ONE class can be given to several elements. If select this class name then styling will apply to all elements that have that class name. Here is a example:
   * declare: `<tag class="photo menu-item event">content</tag>`
   * select: `.photo` `.menu-item` `.event`
+
+### Select an id
+An id works the same as a class. However ONE id can be given to ONLY ONE element.
 * ids (for unique items)
   * declare: `<tag id="profile_picture">content</tag>`
   * select: `#profile_picture`
 
 #### Embedded
+You can embed styling within the `<head>` tags of your webpage. It's useful when your webpage doesn't need much styling but you need to apply several properties to one element.  
 ```html
 <head>
   <style type="text/css">
     selector(s) {
+      property: value;
+      property: value;
       property: value;
     }
   </style>
@@ -261,6 +274,8 @@ Depending on your needs and your webpage complexity, you will go for one of thos
 
 
 #### Style Sheet
+When your webpage needs a lot of styling, you might prefer to link a separate stylesheet to your html file. This will help you keep your workflow very organized. Here is how to link a stylesheet to your webpage:
+
 ```html
 <head>
   <link rel=”stylesheet” href=”styles/main.css”>

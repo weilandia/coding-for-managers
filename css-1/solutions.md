@@ -95,3 +95,127 @@ p#special {
 justify-content:flex-end
 }
 ```
+
+### Level 2
+```css
+#pond {
+  display: flex;
+
+justify-content:center;
+}
+```
+### Level 3
+```css
+#pond {
+  display: flex;
+
+justify-content:space-around
+}
+```
+### Level 4
+```css
+#pond {
+  display: flex;
+
+justify-content:space-between;
+}
+```
+
+### Level 5
+```css
+#pond {
+  display: flex;
+
+align-items:flex-end;
+}
+```
+### Level 6
+```css
+#pond {
+  display: flex;
+justify-content:center;
+align-items:center;
+
+}
+```
+
+### Level 7
+```css
+#pond {
+  display: flex;
+justify-content:space-around;
+align-items:flex-end;
+
+}
+```
+### Level 8
+```css
+#pond {
+  display: flex;
+flex-direction:row-reverse;
+}
+```
+### Level 9
+```css
+#pond {
+  display: flex;
+flex-direction:column;
+
+}
+```
+### Level 10
+```css
+#pond {
+  display: flex;
+flex-direction:row-reverse;
+justify-content:flex-end;
+}
+```
+### Level 11
+```css
+#pond {
+  display: flex;
+flex-direction: column;
+justify-content:flex-end;
+}
+```
+### Level 12
+```css
+#pond {
+  display: flex;
+justify-content:space-between;
+flex-direction:column-reverse;
+
+}
+```
+### Level 13
+```css
+#pond {
+  display: flex;
+justify-content:center;
+flex-direction:row-reverse;
+align-items:flex-end;
+
+}
+```
+### Level 14
+```css
+#pond {
+  display: flex;
+}
+
+.yellow {
+order:1;
+}
+```
+### Level 15
+```css
+#pond {
+  display: flex;
+}
+
+.red {
+order:-1
+
+}
+```

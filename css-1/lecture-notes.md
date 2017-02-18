@@ -135,10 +135,9 @@ Introduced by CSS3, Flexible Box, or flexbox, is a layout mode providing for the
 
 [My favorite guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-*Exercise: complete up to level 16 in Flexbox Froggy (easier) or Level 12 in Flexbox Tower Defence (harder).*
+*Exercise: complete up to level 16 in Flexbox Froggy (easier).*
 
 * [Flexbox Froggy](http://flexboxfroggy.com/)  
-* [Flexbox Tower Defence](http://flexboxdefense.com/)
 
 #### Adding Flexbox to our website
 

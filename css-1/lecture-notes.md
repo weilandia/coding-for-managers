@@ -134,6 +134,7 @@ Add this to the head of your file to let your mobile browser know your site is o
 Introduced by CSS3, Flexible Box, or flexbox, is a layout mode providing for the arrangement of elements on a page such that the elements behave predictably when the page layout must accommodate different screen sizes and different display devices.
 
 [My favorite guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+This guide will give you a very good understanding of flexbox! 
 
 *Exercise: complete up to level 16 in Flexbox Froggy (easier).*
 

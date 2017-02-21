@@ -208,13 +208,13 @@ Let's create a blog file: `$ touch pages/blog.html`
   ```
 
 
-**go to [CSS Exercises](css_exercises)**
+## A little more practice
+
+Go on exercises.md, we are going to do:
 
 1) Box Positioning
 
 2) Computer Gallery
-
-3) Astronaut
 
 After the exercises, we're going to be remaking our landing page from the HTML section because it's super bare-bones.
 

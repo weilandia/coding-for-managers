@@ -81,6 +81,23 @@ This works as justify-content but it aligns your items **vertically**.
 }
 ```
 
+### Main properties for the Child element
+#### Order
+You can change the order of which each items appears.
+```css
+.item {
+  order: <integer>;
+}
+```
+
+#### Align-self
+If you want to align one item in a specific way, align self is the property you need.
+```css
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
+
 *Exercise: complete up to level 16 in Flexbox Froggy.*
 
 * [Flexbox Froggy](http://flexboxfroggy.com/)  

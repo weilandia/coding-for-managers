@@ -32,7 +32,8 @@ The basic functionality of Git allows developers to track specific versions of t
 
 ## Staging and committing
 
-When you check the status of your git repo, you will see in red all the changes that haven't been "staged for commit" and green what have been "staged for commit". 
+When you check the status of your git repo, you will see in red all the changes that haven't been "staged for commit" and green what have been "staged for commit". Staging allows you to choose which changes you actually want to commit and which changes you either don't want to commit or commit later.
+Committing means that you are actually making and saving your changes. Each commit has a name given by you (or your team members) so that you can track all the changes you made in a file.
 
 - Stage all of the files in your folder to be included in your first commit: `$ git add .`
 - Staging is useful because you control what will be locked into the commit

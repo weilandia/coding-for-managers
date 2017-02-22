@@ -28,9 +28,6 @@ The basic functionality of Git allows developers to track specific versions of t
 - Create a git repository: `$ git init`
 - Create a file `$ touch hello.rb`
 - Write your first line of Ruby in hello.rb `puts "hello world!"`
-- Write your first line of Ruby in hello.rb: `puts "hello world!"`
-
-**Exercise: use the command `ruby` to run `hello.rb`. Similar to other commands, the syntax is `<command> <filename>`**
 - Check out the status of your git repository: `$ git status`
 
 ### Staging and committing
@@ -42,7 +39,6 @@ Committing means that you are actually making and saving your changes. Each comm
 - Staging is useful because you control what will be locked into the commit
 - To add individual files: `$ git add file_name`
 - Make your first commit: `$ git commit -m “Some descriptive notes surrounded by quotation marks"`
-- See Whiteboard for further description
 
 **Exercise: change your hello.rb file on your own or by adding the lines below and run the code**
 
@@ -59,14 +55,16 @@ Committing means that you are actually making and saving your changes. Each comm
   puts "All I got for valentine's day was #{gift.sample}."
 ```
 
-**Exercise: check the status of the repo. Then stage it. Finally, commit it.**
-- See Whiteboard for further description
+- **Exercise: check the status of the repo. Then stage it. Finally, commit it.**
+
 - Use `$ git log` to look back at the history of this branch
 
 ### Branching
 
-- Make a new branch with `$ git checkout -b the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
+Branching is what you will use all the time. When you create a new branch, you make an **exact copy** of your repo. Each time you are making changes, it will affect this specific branch **without** affecting the master branch.
+This is very useful when you have a new feature that you want to implement to a website. You will create a new branch for this specific feature, work on the code and commit changes. However the initial code from the master branch will remain unchanged. Therefore, all potential crashes are avoided.
 
+- Make a new branch with `$ git branch -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
 
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**
 
@@ -99,7 +97,6 @@ This is one of the most powerful thing Git and Github have to offer. Each time y
 
 - Visit your Github page and create a new repo with a name like `my-website`
 - Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9
-
 **Exercise: Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9. Enter the your directory using `cd` and then add a new file to the empty repo and make your first commit.**
 - See your remote by typing `git remote -v`
 - Push your first commit to github: `$ git push origin master`
@@ -113,7 +110,7 @@ When you are working in a team and you want people to review your code before pu
 - Make some changes to your code
 - Stage your changes for your commit
 - Commit your changes
-- Push your branch and new commit to github: `$ git push origin [your-branch-name]`
+- Push your branch and new commit to github: `$ git push -u origin [your-branch-name]`
 - Visit your github repo. You should see that your Github registered your pushing a new branch. Go ahead and click ‘Compare & pull request’ to submit a request to merge your code changes into your master code base. Don’t forget to include a message so that others know why they should include your changes.
 - Once your pull request is open, go ahead and merge your code to the master code base.
 - Problem, when we visit gh-pages, we still see the old version of your code. To update gh-pages, in the terminal, lets return to our master branch (`$ git checkout master`), pull the latest master version from github to our local repository (`$ git pull`), checkout out gh-pages branch (`$ git checkout gh-pages`), merge the updated master code-base into our gh-pages branch (`$ git merge master`), and, finally, push that updated gh-pages branch commit to github (`$ git push`)

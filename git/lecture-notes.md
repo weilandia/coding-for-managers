@@ -93,6 +93,7 @@ Here is why Git is powerful. If your changes are not right and you need to go ba
 Github is a platform that enables developers to store their codebase online, review developers’ code branches, and share feedback and error shooting before it’s integrated in the full code base. Similar to Git, it stores a full-history of any changes made over the codebase life cycle, creating a safeguard as the number of developers working with the codebase increases over time and your codebase grows in complexity.
 
 ### Linking your local Git repository with your Github repository
+This is one of the most powerful thing Git and Github have to offer. Each time you make changes locally on your computer, you can send those changes to github through git and they will be automatically updated on your repo in the Github website.
 
 - Visit your Github page and create a new repo with a name like `my-website`
 - Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9
@@ -102,6 +103,8 @@ Github is a platform that enables developers to store their codebase online, rev
 - View your code on github
 
 ### Pull Requests: Screening your developments before releasing your code
+When you are working in a team and you want people to review your code before pushing it to the master branch, you can create a pull request on github. When you create a pull request, you can ask team members to review your code, see all the changes you made and comment them. 
+
 
 - Let’s create a new branch where we’ll make some new changes that we’ll review before integrating into our master code base: `$ git checkout -b [your-branch-name]`
 - Make some changes to your code

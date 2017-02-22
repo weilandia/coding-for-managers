@@ -28,24 +28,16 @@ The basic functionality of Git allows developers to track specific versions of t
 - Create a git repository: `$ git init`
 - Create a file `$ touch hello.rb`
 - Write your first line of Ruby in hello.rb `puts "hello world!"`
-- Write your first line of Ruby in hello.rb: `puts "hello world!"`
-
-**Exercise: use the command `ruby` to run `hello.rb`. Similar to other commands, the syntax is `<command> <filename>`**
 - Check out the status of your git repository: `$ git status`
 
-### Staging and committing
-
-When you check the status of your git repo, you will see in red all the changes that haven't been "staged for commit" and green what have been "staged for commit". Staging allows you to choose which changes you actually want to commit and which changes you either don't want to commit or commit later.
-Committing means that you are actually making and saving your changes. Each commit has a name given by you (or your team members) so that you can track all the changes you made in a file.
+## Staging and committing
 
 - Stage all of the files in your folder to be included in your first commit: `$ git add .`
 - Staging is useful because you control what will be locked into the commit
 - To add individual files: `$ git add file_name`
 - Make your first commit: `$ git commit -m “Some descriptive notes surrounded by quotation marks"`
 - See Whiteboard for further description
-
 **Exercise: change your hello.rb file on your own or by adding the lines below and run the code**
-
 ```ruby
   gift = [
           "half of a leftover burrito",
@@ -59,32 +51,25 @@ Committing means that you are actually making and saving your changes. Each comm
   puts "All I got for valentine's day was #{gift.sample}."
 ```
 
-**Exercise: check the status of the repo. Then stage it. Finally, commit it.**
+- **Exercise: check the status of the repo. Then stage it. Finally, commit it.
 - See Whiteboard for further description
 - Use `$ git log` to look back at the history of this branch
 
-### Branching
+## Branching
 
-- Make a new branch with `$ git checkout -b the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
-
-
+- Make a new branch with `$ git branch -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**
-
+- See Whiteboard for further description
 - Look back at the history of the new branch
 - Switch branches using `$ git checkout master`. Look back at the history. Is it the same?
 
-### Merging
-Once you are done with all the changes you made in your branch, you are then ready to merge it with master branch.
-
+## Merging
 - On your master branch, merge our other branch `$ git merge the-branch-you-named`
 - What does fast-forward mean?
+- See Whiteboard for further description
 
-Once you merged you branched you can safely delete it. You can also keep you branches if you want to keep track of the changes you made on each branches.
 
-- on you master branch, delete our other branch `git branch ---delete the-branch-you-named`
-
-### Resetting
-Here is why Git is powerful. If your changes are not right and you need to go back to an older version of your code, it's possible. Here are the commands:
+## Resetting
 
 - Stash any uncommitted changes: `$ git stash`
 - See a list of past commits: `$ git log`
@@ -94,26 +79,22 @@ Here is why Git is powerful. If your changes are not right and you need to go ba
 
 Github is a platform that enables developers to store their codebase online, review developers’ code branches, and share feedback and error shooting before it’s integrated in the full code base. Similar to Git, it stores a full-history of any changes made over the codebase life cycle, creating a safeguard as the number of developers working with the codebase increases over time and your codebase grows in complexity.
 
-### Linking your local Git repository with your Github repository
-This is one of the most powerful thing Git and Github have to offer. Each time you make changes locally on your computer, you can send those changes to github through git and they will be automatically updated on your repo in the Github website.
+#### Linking your local Git repository with your Github repository
 
 - Visit your Github page and create a new repo with a name like `my-website`
 - Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9
-
 **Exercise: Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9. Enter the your directory using `cd` and then add a new file to the empty repo and make your first commit.**
 - See your remote by typing `git remote -v`
 - Push your first commit to github: `$ git push origin master`
 - View your code on github
 
-### Pull Requests: Screening your developments before releasing your code
-When you are working in a team and you want people to review your code before pushing it to the master branch, you can create a pull request on github. When you create a pull request, you can ask team members to review your code, see all the changes you made and comment them. 
-
+#### Pull Requests: Screening your developments before releasing your code
 
 - Let’s create a new branch where we’ll make some new changes that we’ll review before integrating into our master code base: `$ git checkout -b [your-branch-name]`
 - Make some changes to your code
 - Stage your changes for your commit
 - Commit your changes
-- Push your branch and new commit to github: `$ git push origin [your-branch-name]`
+- Push your branch and new commit to github: `$ git push -u origin [your-branch-name]`
 - Visit your github repo. You should see that your Github registered your pushing a new branch. Go ahead and click ‘Compare & pull request’ to submit a request to merge your code changes into your master code base. Don’t forget to include a message so that others know why they should include your changes.
 - Once your pull request is open, go ahead and merge your code to the master code base.
 - Problem, when we visit gh-pages, we still see the old version of your code. To update gh-pages, in the terminal, lets return to our master branch (`$ git checkout master`), pull the latest master version from github to our local repository (`$ git pull`), checkout out gh-pages branch (`$ git checkout gh-pages`), merge the updated master code-base into our gh-pages branch (`$ git merge master`), and, finally, push that updated gh-pages branch commit to github (`$ git push`)

@@ -32,12 +32,15 @@ The basic functionality of Git allows developers to track specific versions of t
 
 ## Staging and committing
 
+When you check the status of your git repo, you will see in red all the changes that haven't been "staged for commit" and green what have been "staged for commit". 
+
 - Stage all of the files in your folder to be included in your first commit: `$ git add .`
 - Staging is useful because you control what will be locked into the commit
 - To add individual files: `$ git add file_name`
 - Make your first commit: `$ git commit -m “Some descriptive notes surrounded by quotation marks"`
-- See Whiteboard for further description
+
 **Exercise: change your hello.rb file on your own or by adding the lines below and run the code**
+
 ```ruby
   gift = [
           "half of a leftover burrito",
@@ -52,21 +55,21 @@ The basic functionality of Git allows developers to track specific versions of t
 ```
 
 - **Exercise: check the status of the repo. Then stage it. Finally, commit it.
-- See Whiteboard for further description
+
 - Use `$ git log` to look back at the history of this branch
 
 ## Branching
 
 - Make a new branch with `$ git branch -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**
-- See Whiteboard for further description
+
 - Look back at the history of the new branch
 - Switch branches using `$ git checkout master`. Look back at the history. Is it the same?
 
 ## Merging
 - On your master branch, merge our other branch `$ git merge the-branch-you-named`
 - What does fast-forward mean?
-- See Whiteboard for further description
+
 
 
 ## Resetting
@@ -79,7 +82,7 @@ The basic functionality of Git allows developers to track specific versions of t
 
 Github is a platform that enables developers to store their codebase online, review developers’ code branches, and share feedback and error shooting before it’s integrated in the full code base. Similar to Git, it stores a full-history of any changes made over the codebase life cycle, creating a safeguard as the number of developers working with the codebase increases over time and your codebase grows in complexity.
 
-#### Linking your local Git repository with your Github repository
+### Linking your local Git repository with your Github repository
 
 - Visit your Github page and create a new repo with a name like `my-website`
 - Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9
@@ -88,7 +91,7 @@ Github is a platform that enables developers to store their codebase online, rev
 - Push your first commit to github: `$ git push origin master`
 - View your code on github
 
-#### Pull Requests: Screening your developments before releasing your code
+### Pull Requests: Screening your developments before releasing your code
 
 - Let’s create a new branch where we’ll make some new changes that we’ll review before integrating into our master code base: `$ git checkout -b [your-branch-name]`
 - Make some changes to your code

@@ -5,136 +5,197 @@
 |Have an introduction to the Ruby language|
 |Recognize different data types in Ruby|
 |Perform exercises to increase Ruby awareness|
-|Look ahead to how Ruby will be used in our projects|
+|Look ahead to how Ruby will be used with Rails|
 
-Ruby is a backend scripting language. Many of the JavaScript constructs that you learned, such as functions, variables, objects, iterators, and conditionals, are very similar to those used in Ruby. The main difference between Ruby and JavaScript is that JavaScript is asynchronous (multiple tasks can be running at one time), while Ruby is synchronous (tasks must be run sequentially). One of the benefits of Ruby is that it includes a huge library of methods and built in functionality, which makes your life a lot easier. Another benefit of Ruby, is that Rails, a Model-View-Controller (MVC) framework with an abundance of open-source functionality plug-ins that you can integrate into your app, is built on top of it enabling you to combine the two to quickly build awesome websites.
+Ruby is a high-level server-side object-oriented language. It has a large following, good documentation, and is used in Ruby on Rails, one of the most popular web frameworks in the world.
 
-**Note: Open your terminal and type irb to open a Ruby console. As you learn each step below, please follow along by practicing what you’re learning in your terminal.**
+## Ruby in your Terminal
 
-### What is an Object?
-**Everything in ruby is an object. Whether that is a string, complicated data structure, or functions. A few common objects include:**
+To start an interactive Ruby session:
 
-- Integer: whole number (eg: 1)
-- Float: numbers that include decimal points (eg: 1.3)
-- Strings: a piece of text. (eg: “hello world”)
-- Booleans: true / false
-- Arrays: a series of values. (eg: [1, 2, 3, 4])
-- Hashes: a collection of key value pairs. (eg: `casey = {“age” => 31, “height” => 5.8, “occupation” => “web developer”}`)
-- Methods: Bundle functionality. Analogous to functions in JavaScript.
-- Classes: Serve as ‘factories’ or ‘molds’ for creating new objects with a particular specifications and functionalities.
+`$ irb`
 
-### Data Types:
-- Integers: Integers are whole numbers. Any arithmetic done on an integer will always produce another integer.
+**What is a REPL?**
 
-  **For example, `1 / 2 will ## returns 0`.**
-- In order to deal with fractions, you have to use floats. You can do this by using Ruby’s built in .to_f method.
+# Basic Data Types
 
-  **For example: `(1.to_float)/2   ## returns .5`.**
-- Floats: Stands for floating point. It allows you to work with numbers that have decimal places.
+We're going to first learn about 4 basic types of objects in Ruby:
+- `Integer`: whole number (eg: 1)
+- `Float`: a decimal number, higher precision (eg: 21.356)
+- `String`: a single character or group of them (eg: "hello world")
+- `Nil`: an uninitialized, undefined, or empty value
 
-**In-Class Exercise: Use floats and integers to divide two objects and return a fraction. Then, convert that fraction into an integer.**
+Try the following:
 
-- Strings & String Interpolation: Strings represent text. For example “Hello world” or “34 is my favorite number”.
-- String Interpolation: In ruby allows you to combine strings by adding them together. Eg: `“Hello“ + “ World” ##“Hello World”`.
-- Including variables in strings: In ruby, you can include a variable in a double quoted string (a string wrapped in “ “ instead of ‘ ’) by surrounding the variable with #{variable}. For example, if have a variable, myName = “Min”. Then “Hello #{myName}!”!“Hello Min!”
+`> 3 + 2`
 
-**In-Class Exercise: Create a string of text that includes three variables.**
+`> 3 * 2.25`
 
-- Booleans: True or false. In Ruby, you might have a method that returns true/false, or you might use a statement that evaluates to a Boolean for an if...else statement. For example, if (2 + 2 == 4)....else...end In this case, (2+2 == 4) evaluates to true or false. If true, then it will perform the subsequent operation, otherwise, it will perform the operation detailed in the else statement.
+`> 3 / 2`
 
-**In-Class Exercise: Write 5 statements. 2 that evaluate to true. 3 that evaluate to false. Make each one as unique as possible.**
+**What is interesting about the result of 3 / 2?**
 
-### Transforming Data Types: Ruby has a number of built in methods to transform one data type to another.
+`> 3 ** 2`
 
-- To Float `.to_f`: Transforms a string or integer into a float. `“1”.to_f => 1.0` ; `1.to_f => 1.0`
-- To Integer `.to_i`: Transforms a string (eg: “5”) or a float into an integer. `“5”.to_i => 5`; This can be really helpful when you have a string representation of a number that you want to perform numeric functions on.
-- To String `.to_s`: Transforms an integer or float into a string. `1.to_s => “1”`. Similarly with to_i, you’ll find this helpful at times when you want to use numbers for displays.
-- Arrays: An array is a combination of objects separated, each separated by a comma. Eg: `[1, “two”, three, {hello: world, weather_today: “sunny”}]`. Arrays are an incredibly important building block as we start building out full backend applications. For example, we’ll query and work with all of the blog posts, categories, and users via arrays of objects. Your ability to access the array data that you want and use common array methods will make produce dividends as a coder.
-- Accessing Array Data: Imagine we have an array with values between 1 and 6. `ourArray = [1,2,3,4,5,6]`
-- Accessing A Single Array Object: `ourArray[object_index]`. Arrays start with a 0 index, meaning that `ourArray[0] => 1`. `ourArray[5] => 6`. `ourArray[100] => nil`.
-- Accessing a single array object counting down from the end: To access the last array object, counting backwards, you use negative numbers, starting with -1. `ourArray[-1] =>6`.
-- Accessing a specific number of objects, from a index onwards: if you wanted to access 3 array objects, starting with the 2nd object in the array: `ourArray[1,3] => [2,3,4]`.
-- Accessing all objects between two objects: `ourArray[1..4] => [2,3,4]`.This is inclusive,in that it includes the first object, last object, and everything in between.
+`> Math.sqrt(9)`
 
-**In-Class Exercise: Create an array with 8 array items.**
-1. Print out the third item in the array.
-2. Print out the second to last array item.
-3. Print out the first 3 items in the array.
-4. Print out all array items between the 2nd and 5th array item.
+**What is an object and what is OOP?**
 
-### Commonly used Ruby array methods:
-ourArray = ["Min", "Gaurav", "Adam", "Anastassia", "Constantin", "Casey"]
-               " Length - .length: ourArray.length!6. The number of objects in an array.
+Enter the next two commands:
 
+`> a = 4 * 3`
 
-- Count - .count: ourArray.count!6. The number of objects in an array.
-- Each – .each: Allows you to loop through each object in an array to perform a specific operation.
-- First - .first: Returns the first element in an array.
-- Last - .last: Returns the last element in an array.
-- Pop - .pop: Removes the last element of an array. ourArray.pop!6 . ourArray is now [1,2,3,4,5]
-- Push - .push: Inserts new objects into the end of an array. ourArray.push(7)![1,2,3,4,5,6,7] ; ourArray.push(8,9) ! [1,2,3,4,5,6,8,9]
-- Reverse - .reverse: Returns a new array in the reverse order. This is only temporary. It doesn’t actually transform the array object. ourArray.reverse![6,5,4,3,2,1] ; ourArray is still [1,2,3,4,5,6]
-- Index – index: Returns the index of that item in the array. ourArray.index(3)!2.
-- Unique – uniq: Returns a new that only includes the unique values in array. Eg. [1,2,2].uniq![1,2]
+`> b = 6 + 2`
 
-### Hashes: Hashes are a combination of key: value pairs.
-**Much of the data that we’ll be working with in ruby is stored in the form of a hash. For example, if Andy were are user, we might store his information as such: andy = {height: 70, weight: 170, age: 29, profession: “programmer”}.**
+**What is a variable?**
 
-- Accessing hash data: You can access a particular key-value pair using the syntax: variable_name[:key]. Eg: carlos[:age]!29
-- Hash syntax options: There are three different ways of defining a hash. The two syntax types that include a => are known as ‘hash rockets’.
-```rb
-{key: value}
-{“key” => value}
-{:key => value}
+Try the following:
+
+`> temp_val = a + b`
+
+`> puts temp_val`
+
+`> temp_val = a * b - temp_val`
+
+`> puts temp_val`
+
+Let's give Ruby a command with a string:
+
+`> puts "hello world!"`
+
+**Why does it output `nil`?**
+
+Let's build our first program!
+
+```ruby
+def say_hello(name)
+  puts "Hey " + name.capitalize + "!"
+end
 ```
 
-### Operators:
+# Basic Logic
 
-- Plus:a+b
-- Minus:a-b
-- Times:a*b
-- Divided by: a / b
-- Modulo: Returns the division remainder of two numbers. Eg: 5 % 3 ! 2. 6 % 3 ! 0.
-- Exponent: a ** b
-#### Comparison Operators:
-- `==`  Checks whether the value of two operands is equal. If yes, evaluates to true, if no, evaluates to false
-- `!=` Checks whether the value of two operands ARE NOT equal. If yes, evaluates to true, if no, evaluates to false
-- `>` Checks if operand on left is greater than operand on right. If yes, evaluates to true, if no, evaluates to false
-- `<` Less than
-- `<=` Less than or equal to
-- `>=` Greater than or equal to
-- `<=>` Combined comparison. Returns 0 if both operands are equal. 1 if left operand is greater. -1 left is lesser.
+Next, let's get familiar with some basic logic:
+- Booleans: `true` / `false`
+- Control statements: `if`/`elsif`/`else`
 
+##### Comparison Operators:
+- `==`: Checks whether the value of two operands is equal. If yes, evaluates to true, if no, evaluates to false
+- `!=`: Checks whether the value of two operands ARE NOT equal. If yes, evaluates to true, if no, evaluates to false
+- `>`: Checks if operand on left is greater than operand on right. If yes, evaluates to true, if no, evaluates to false
+- `<`: Less than
 
-### Variables: Unlike JavaScript, in ruby there’s no need to include a ‘var’ or end a line with a ‘;’
-```rb
-myNumber = 5
-myString = “Hello Friends”
+##### Logical Operators:
+- `&&`: AND (statements on both sides must be true)
+- `||`: OR (one of the statements on both sides must be true)
+
+```ruby
+def milk_is_expired?(days_old)
+
+  result = ""
+
+  if days_old < 5
+    result = "No!"    
+  elsif days_old < 12
+    result = "Not yet."
+  elsif days_old < 16
+    result = "Maybe. Smell test first!"
+  else
+    result = "Yes."
+  end
+
+  return result
+end
 ```
+
+# Advanced Data Types
+
+##### Array
+Ordered lists of data are important. Let's get familiar with `arrays`:
+- Array: a zero-indexed ordered series of values. (eg: [1, 2, 3, 4])
+
+Try the following:
+
+`> my_array = ["Min", "Ashmeet", "Adam", "Anastasia", "Constantine", "Lauren"]`
+
+`> my_array[0]`
+
+`> my_array[200]`
+
+**How do we access "Lauren"?**
+
+Common array methods:
+- `.count`: `my_array.count`
+- `.first`: `my_array.first`
+- `.last`: `my_array.last`
+- `.push`: `my_array.push("Jarad")`
+
+*protip: you can see all the methods available on an object with the `.methods` method*
+
+**How can we look at all the items in an array without explicitly accessing each index?**
+- `.each`
+```ruby
+  my_array.each do |array_item|
+    puts array_item
+  end
+```
+**Exercise:** *Write a function `name_length` that takes an array of strings as an argument, and return how many of the names are longer than 4 characters. Hint: use a variable for counting, the `.each` method and an `if` conditional*
+
+for example:
+```ruby
+name_length(['nemo', 'mary', 'melissa', 'pedro'])
+# => 2
+name_length(['jerry', 'arti', 'kyle', 'hao'])
+# => 1
+```
+
+##### Hash
+
+Accessing data quickly is important. How can we access a piece of data without looking through an entire array?
+
+- Hashes: a collection of key value pairs.
+
+try the following:
+
+`casey = {age: 31, height: 5.8, occupation: "web developer"}`
+
+`casey[:age]`
+
+**How can we access Casey's occupation?**
+
+**How can we add another attribute to Casey?**
+
+`casey[:location] = "San Francisco"`
+
 
 ### Classes
-**A class enables you to group a number of methods and variables together. Classes act as re-usable factory like structure that you can use to create custom objects.**
+A class enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
 ```rb
-class BestFriend
-def initialize(name) # The initialize method is what’s called when you use the class factory to create a new object. Eg: carlos = BestFriend.new(“Carlos”)
-@name = name # variables that start with an ‘@’ are instance varibles, which are accessible anywhere within the class
+class RobotFriend
+  def initialize(robot_name, companion_name) # The initialize method is what’s called when you use the class factory to create a new object. Eg: carlos = RobotFriend.new("Carlos")
+    @name = robot_name # variables that start with an ‘@’ are instance varibles, which are accessible anywhere within the class
+    @companion_name = companion_name
+  end
+
+  def say_kind_things
+    puts "#{@companion_name}, you’re my favorite person on earth. Don’t forget that!"
+  end  
+
+  def make_introduction
+    puts "Hello kind stranger! My name is #{@name} and this is my friend #{@companion_name}. You should be friends!"
+  end
+
+  def invite_me_to_dinner
+    puts "Hey, #{@name}. Want to grab dinner tonight?"
+  end
 end
-```
-```rb
-def say_kind_things
-puts “#{@name}, you’re my favorite person on earth. Don’t forget that!”
-end
-```
-```rb
-def invite_me_to_dinner
-puts “Hey, #{@name}. Want to grab dinner tonight?”
-end
-```
-Classes operate as a factory that builds individual objects, but are not objects themselves. If you want to use a class to create an object, you’ll need to create a new instance of the class:
-```rb
-bestie = BestFriend.new(“Carlos”) # pattern: ClassName + .new + (initialize_method_paramenters) bestie.say_kind_things!Carlos, you’re my favorite person on earth. Don’t forget that! besite.invite_me_to_dinner!Hey, Carlos. Want to grab dinner tonight?
 ```
 
+```rb
+companion = RobotFriend.new("Harold", "Jenni") # pattern: ClassName + .new + (initialize_method_paramenters)
+companion.say_kind_things
+companion.invite_me_to_dinner
+```
 
 Extra Resources:
 

@@ -1,7 +1,7 @@
 # Exercises
 
 ## Box Positioning
-1. create a <div> element and give it a class "box"
+1. create a ``<div>`` element and give it a class "box"
 2. duplicate that three times
 3. add an external style sheet and make them all 100 by 100 squares
 4. give them distinct ids and content so we can tell them apart

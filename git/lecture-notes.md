@@ -30,7 +30,7 @@ The basic functionality of Git allows developers to track specific versions of t
 - Write your first line of Ruby in hello.rb `puts "hello world!"`
 - Check out the status of your git repository: `$ git status`
 
-## Staging and committing
+### Staging and committing
 
 When you check the status of your git repo, you will see in red all the changes that haven't been "staged for commit" and green what have been "staged for commit". Staging allows you to choose which changes you actually want to commit and which changes you either don't want to commit or commit later.
 Committing means that you are actually making and saving your changes. Each commit has a name given by you (or your team members) so that you can track all the changes you made in a file.
@@ -55,25 +55,34 @@ Committing means that you are actually making and saving your changes. Each comm
   puts "All I got for valentine's day was #{gift.sample}."
 ```
 
-- **Exercise: check the status of the repo. Then stage it. Finally, commit it.
+- **Exercise: check the status of the repo. Then stage it. Finally, commit it.**
 
 - Use `$ git log` to look back at the history of this branch
 
-## Branching
+### Branching
+
+Branching is what you will use all the time. When you create a new branch, you make an **exact copy** of your repo. Each time you are making changes, it will affect this specific branch **without** affecting the master branch.
+This is very useful when you have a new feature that you want to implement to a website. You will create a new branch for this specific feature, work on the code and commit changes. However the initial code from the master branch will remain unchanged. Therefore, all potential crashes are avoided.
 
 - Make a new branch with `$ git branch -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
+
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**
 
 - Look back at the history of the new branch
 - Switch branches using `$ git checkout master`. Look back at the history. Is it the same?
 
-## Merging
+### Merging
+Once you are done with all the changes you made in your branch, you are then ready to merge it with master branch.
+
 - On your master branch, merge our other branch `$ git merge the-branch-you-named`
 - What does fast-forward mean?
 
+Once you merged you branched you can safely delete it. You can also keep you branches if you want to keep track of the changes you made on each branches.
 
+- on you master branch, delete our other branch `git branch ---delete the-branch-you-named`
 
-## Resetting
+### Resetting
+Here is why Git is powerful. If your changes are not right and you need to go back to an older version of your code, it's possible. Here are the commands:
 
 - Stash any uncommitted changes: `$ git stash`
 - See a list of past commits: `$ git log`

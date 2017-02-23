@@ -27,6 +27,7 @@ The basic functionality of Git allows developers to track specific versions of t
 - Check to see if git is installed `$ git --version`
 - Create a git repository: `$ git init`
 - Create a file `$ touch hello.rb`
+- Write your first line of Ruby in hello.rb `puts "hello world!"`
 - Write your first line of Ruby in hello.rb: `puts "hello world!"`
 
 **Exercise: use the command `ruby` to run `hello.rb`. Similar to other commands, the syntax is `<command> <filename>`**
@@ -41,10 +42,6 @@ Committing means that you are actually making and saving your changes. Each comm
 - Staging is useful because you control what will be locked into the commit
 - To add individual files: `$ git add file_name`
 - Make your first commit: `$ git commit -m “Some descriptive notes surrounded by quotation marks"`
-<<<<<<< HEAD:git/lecture-notes.md
-=======
-- See Whiteboard for further description
->>>>>>> 337b183d3d338149e354a1244df0b5684d8d5296:git/README.md
 
 **Exercise: change your hello.rb file on your own or by adding the lines below and run the code**
 
@@ -61,26 +58,23 @@ Committing means that you are actually making and saving your changes. Each comm
   puts "All I got for valentine's day was #{gift.sample}."
 ```
 
-<<<<<<< HEAD:git/lecture-notes.md
+**Exercise: check the status of the repo. Then stage it. Finally, commit it.**
+
 - **Exercise: check the status of the repo. Then stage it. Finally, commit it.**
 
-=======
 **Exercise: check the status of the repo. Then stage it. Finally, commit it.**
-- See Whiteboard for further description
->>>>>>> 337b183d3d338149e354a1244df0b5684d8d5296:git/README.md
+
 - Use `$ git log` to look back at the history of this branch
 
 ### Branching
 
+- Make a new branch with `$ git checkout -b the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
+
 Branching is what you will use all the time. When you create a new branch, you make an **exact copy** of your repo. Each time you are making changes, it will affect this specific branch **without** affecting the master branch.
 This is very useful when you have a new feature that you want to implement to a website. You will create a new branch for this specific feature, work on the code and commit changes. However the initial code from the master branch will remain unchanged. Therefore, all potential crashes are avoided.
 
-<<<<<<< HEAD:git/lecture-notes.md
-- Make a new branch with `$ git branch -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
-=======
 - Make a new branch with `$ git checkout -b the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
 
->>>>>>> 337b183d3d338149e354a1244df0b5684d8d5296:git/README.md
 
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**
 
@@ -120,7 +114,7 @@ This is one of the most powerful thing Git and Github have to offer. Each time y
 - View your code on github
 
 ### Pull Requests: Screening your developments before releasing your code
-When you are working in a team and you want people to review your code before pushing it to the master branch, you can create a pull request on github. When you create a pull request, you can ask team members to review your code, see all the changes you made and comment them. 
+When you are working in a team and you want people to review your code before pushing it to the master branch, you can create a pull request on github. When you create a pull request, you can ask team members to review your code, see all the changes you made and comment them.
 
 
 - Let’s create a new branch where we’ll make some new changes that we’ll review before integrating into our master code base: `$ git checkout -b [your-branch-name]`

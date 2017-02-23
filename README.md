@@ -1,11 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/8397980/19818474/bd21af4c-9d04-11e6-8df6-1ed154718dce.png" height="60">
 
 # Coding for Product Managers
-Monday/Wednesday 6:30pm - 9:00pm
-
-Instructor: Charlie Depman
-
-Email: cdepman@gmail.com
 
 Schedule:
 

@@ -7,7 +7,7 @@
 |Perform exercises to increase Ruby awareness|
 |Look ahead to how Ruby will be used with Rails|
 
-Ruby is a high-level server-side object-oriented language. It has a large following, good documentation, and is used in Ruby on Rails, one of the most popular web frameworks in the world.
+Ruby is a dynamically-typed high-level server-side object-oriented language. It has a large following, good documentation, and is used in Ruby on Rails, one of the most popular web frameworks in the world.
 
 ## Ruby in your Terminal
 

@@ -27,7 +27,9 @@ The basic functionality of Git allows developers to track specific versions of t
 - Check to see if git is installed `$ git --version`
 - Create a git repository: `$ git init`
 - Create a file `$ touch hello.rb`
-- Write your first line of Ruby in hello.rb `puts "hello world!"`
+- Write your first line of Ruby in hello.rb: `puts "hello world!"`
+
+**Exercise: use the command `ruby` to run `hello.rb`. Similar to other commands, the syntax is `<command> <filename>`**
 - Check out the status of your git repository: `$ git status`
 
 ## Staging and committing
@@ -37,6 +39,7 @@ The basic functionality of Git allows developers to track specific versions of t
 - To add individual files: `$ git add file_name`
 - Make your first commit: `$ git commit -m “Some descriptive notes surrounded by quotation marks"`
 - See Whiteboard for further description
+
 **Exercise: change your hello.rb file on your own or by adding the lines below and run the code**
 ```ruby
   gift = [
@@ -51,13 +54,15 @@ The basic functionality of Git allows developers to track specific versions of t
   puts "All I got for valentine's day was #{gift.sample}."
 ```
 
-- **Exercise: check the status of the repo. Then stage it. Finally, commit it.
+**Exercise: check the status of the repo. Then stage it. Finally, commit it.**
 - See Whiteboard for further description
 - Use `$ git log` to look back at the history of this branch
 
 ## Branching
 
-- Make a new branch with `$ git branch -c the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
+- Make a new branch with `$ git checkout -b the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
+
+
 **Exercise: modify the new branch by adding your own gift to the list or by creating another file. Stage it. Commit it.**
 - See Whiteboard for further description
 - Look back at the history of the new branch
@@ -83,6 +88,7 @@ Github is a platform that enables developers to store their codebase online, rev
 
 - Visit your Github page and create a new repo with a name like `my-website`
 - Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9
+
 **Exercise: Copy the “HTTPS Clone URL”. Enter `$ git clone [git clone url]` in tour terminal on Cloud 9. Enter the your directory using `cd` and then add a new file to the empty repo and make your first commit.**
 - See your remote by typing `git remote -v`
 - Push your first commit to github: `$ git push origin master`
@@ -94,7 +100,7 @@ Github is a platform that enables developers to store their codebase online, rev
 - Make some changes to your code
 - Stage your changes for your commit
 - Commit your changes
-- Push your branch and new commit to github: `$ git push -u origin [your-branch-name]`
+- Push your branch and new commit to github: `$ git push origin [your-branch-name]`
 - Visit your github repo. You should see that your Github registered your pushing a new branch. Go ahead and click ‘Compare & pull request’ to submit a request to merge your code changes into your master code base. Don’t forget to include a message so that others know why they should include your changes.
 - Once your pull request is open, go ahead and merge your code to the master code base.
 - Problem, when we visit gh-pages, we still see the old version of your code. To update gh-pages, in the terminal, lets return to our master branch (`$ git checkout master`), pull the latest master version from github to our local repository (`$ git pull`), checkout out gh-pages branch (`$ git checkout gh-pages`), merge the updated master code-base into our gh-pages branch (`$ git merge master`), and, finally, push that updated gh-pages branch commit to github (`$ git push`)

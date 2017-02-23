@@ -58,11 +58,7 @@ Committing means that you are actually making and saving your changes. Each comm
   puts "All I got for valentine's day was #{gift.sample}."
 ```
 
-**Exercise: check the status of the repo. Then stage it. Finally, commit it.**
-
 - **Exercise: check the status of the repo. Then stage it. Finally, commit it.**
-
-**Exercise: check the status of the repo. Then stage it. Finally, commit it.**
 
 - Use `$ git log` to look back at the history of this branch
 

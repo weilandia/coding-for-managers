@@ -64,8 +64,6 @@ Committing means that you are actually making and saving your changes. Each comm
 
 ### Branching
 
-- Make a new branch with `$ git checkout -b the-branch-will-be-named-whatever-you-type-here-no-spaces-use-hypens-plz`
-
 Branching is what you will use all the time. When you create a new branch, you make an **exact copy** of your repo. Each time you are making changes, it will affect this specific branch **without** affecting the master branch.
 This is very useful when you have a new feature that you want to implement to a website. You will create a new branch for this specific feature, work on the code and commit changes. However the initial code from the master branch will remain unchanged. Therefore, all potential crashes are avoided.
 

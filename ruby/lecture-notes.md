@@ -1,21 +1,21 @@
 # Intro to Ruby
-
-|Objectives|
-|----------|
-|Have an introduction to the Ruby language|
-|Recognize different data types in Ruby|
-|Perform exercises to increase Ruby awareness|
-|Look ahead to how Ruby will be used with Rails|
-
 Ruby is a high-level server-side object-oriented language. It has a large following, good documentation, and is used in Ruby on Rails, one of the most popular web frameworks in the world.
+
+## What you will learn in this course
+* Have an introduction to the Ruby language
+* Recognize different data types in Ruby
+* Perform exercises to increase Ruby awareness
+* Look ahead to how Ruby will be used with Rails
+
 
 ## Ruby in your Terminal
 
-To start an interactive Ruby session:
+To start an interactive Ruby session, go on your console and type:
 
 `$ irb`
 
 **What is a REPL?**
+You will enter in what is called a REPL specific to Ruby. REPL stands for Read-Eval-Print Loop. It is an environment that takes a user input (read), interprete it (eval) and return the result to the user (print) and do it each time the user asks to do it (loop). 
 
 # Basic Data Types
 

@@ -15,7 +15,7 @@ To start an interactive Ruby session, go on your console and type:
 `$ irb`
 
 **What is a REPL?**
-You will enter in what is called a REPL specific to Ruby. REPL stands for Read-Eval-Print Loop. It is an environment that takes a user input (read), interprete it (eval) and return the result to the user (print) and do it each time the user asks to do it (loop). 
+You will enter in what is called a REPL specific to Ruby. REPL stands for Read-Eval-Print Loop. It is an environment that takes a user input (read), interprete it (eval) and return the result to the user (print) and do it each time the user asks to do it (loop).
 
 # Basic Data Types
 
@@ -65,7 +65,14 @@ Let's give Ruby a command with a string:
 
 **Why does it output `nil`?**
 
-Let's build our first program!
+Let's build our first program! We are going to build a function. A function or method looks like this:
+
+ `def name-of-your-function(parameter1, parameter2,....)
+    your code
+  end
+ `
+
+Here is an example:
 
 ```ruby
 def say_hello(name)
@@ -77,7 +84,51 @@ end
 
 Next, let's get familiar with some basic logic:
 - Booleans: `true` / `false`
+Booleans only return 2 values: True or False. For example:
+`3 > 4 ==> FALSE`
+`4 > 3 ==> TRUE`
+`3 > 3 ==> FALSE`
+
 - Control statements: `if`/`elsif`/`else`
+Control statements execute an action if this action is true. For example
+
+`IF(x > 4) THEN puts "hello world"`
+If we set up x to a number greater than 4, you'll see `hello world` in your console. If x is less or equal than 4, the code won't be executed. Here is how you should write it in ruby:
+
+```rb
+if x > 4
+  puts "hello world"
+end
+```
+Don't forget the `end` at the end of your if statement.
+
+Now you can have several conditions you want to set. For example:
+
+```rb
+if your_age < 40
+  puts "you are not older than 40 years old"
+
+elsif your_age < 50
+  puts "you are older than 40 but not older than 50"
+end
+```
+If you set your variable `your_age`to a number less than 40 your code will return `you are not older than 40 years old`. If your variable is set to a number greater than 40 but not greater than 50, your code will return `you are older than 40 but not older than 50`.
+
+But what if you set your variable to a number greater than 50? Right now your code will return nothing. That is why, you can use an `else`. This will be used when NO conditions are met. For example:
+
+```rb
+if your_age < 40
+  puts "you are not older than 40 years old"
+
+elsif your_age < 50
+  puts "you are older than 40 but not older than 50"
+
+else
+  puts "You are older than 50"
+end
+```
+
+Now every number you set in your variable can be handled by your code.
 
 ##### Comparison Operators:
 - `==`: Checks whether the value of two operands is equal. If yes, evaluates to true, if no, evaluates to false
@@ -170,6 +221,7 @@ try the following:
 
 ### Classes
 A class enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
+
 ```rb
 class RobotFriend
   def initialize(robot_name, companion_name) # The initialize method is what’s called when you use the class factory to create a new object. Eg: carlos = RobotFriend.new("Carlos")

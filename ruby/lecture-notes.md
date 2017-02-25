@@ -40,6 +40,8 @@ Try the following:
 `> Math.sqrt(9)`
 
 **What is an object and what is OOP?**
+Have you tried `Math.sqrt(9)`. Math is what is called an Object and .sqrt a Method. An object is any data structure you want to apply a method on. It can be a variable for example.
+A method is a function. Some methods are already built in ruby (like sqrt()) but you can also build some yourself!
 
 Enter the next two commands:
 
@@ -65,7 +67,7 @@ Let's give Ruby a command with a string:
 
 **Why does it output `nil`?**
 
-Let's build our first program! We are going to build a function. A function or method looks like this:
+Let's build our first program! We are going to build a function. A function looks like this:
 
  `def name-of-your-function(parameter1, parameter2,....)
     your code
@@ -131,6 +133,7 @@ end
 Now every number you set in your variable can be handled by your code.
 
 ##### Comparison Operators:
+
 - `==`: Checks whether the value of two operands is equal. If yes, evaluates to true, if no, evaluates to false
 - `!=`: Checks whether the value of two operands ARE NOT equal. If yes, evaluates to true, if no, evaluates to false
 - `>`: Checks if operand on left is greater than operand on right. If yes, evaluates to true, if no, evaluates to false
@@ -190,7 +193,7 @@ Common array methods:
     puts array_item
   end
 ```
-**Exercise:** *Write a function `name_length` that takes an array of strings as an argument, and return how many of the names are longer than 4 characters. Hint: use a variable for counting, the `.each` method and an `if` conditional*
+**Exercise: name_length** *Write a function `name_length` that takes an array of strings as an argument, and return how many of the names are longer than 4 characters. Hint: use a variable for counting, the `.each` method and an `if` conditional*
 
 for example:
 ```ruby
@@ -202,9 +205,9 @@ name_length(['jerry', 'arti', 'kyle', 'hao'])
 
 ##### Hash
 
-Accessing data quickly is important. How can we access a piece of data without looking through an entire array?
+Accessing data quickly is important. How can we access a piece of data without looking through an entire array? With Hashes.
 
-- Hashes: a collection of key value pairs.
+- Hashes are a collection of key value pairs.
 
 try the following:
 

@@ -1,21 +1,21 @@
 # Intro to Ruby
-
-|Objectives|
-|----------|
-|Have an introduction to the Ruby language|
-|Recognize different data types in Ruby|
-|Perform exercises to increase Ruby awareness|
-|Look ahead to how Ruby will be used with Rails|
-
 Ruby is a dynamically-typed high-level server-side object-oriented language. It has a large following, good documentation, and is used in Ruby on Rails, one of the most popular web frameworks in the world.
+
+## What you will learn in this course
+* Have an introduction to the Ruby language
+* Recognize different data types in Ruby
+* Perform exercises to increase Ruby awareness
+* Look ahead to how Ruby will be used with Rails
+
 
 ## Ruby in your Terminal
 
-To start an interactive Ruby session:
+To start an interactive Ruby session, go on your console and type:
 
 `$ irb`
 
 **What is a REPL?**
+You will enter in what is called a REPL specific to Ruby. REPL stands for Read-Eval-Print Loop. It is an environment that takes a user input (read), interprete it (eval) and return the result to the user (print) and do it each time the user asks to do it (loop).
 
 # Basic Data Types
 
@@ -40,6 +40,8 @@ Try the following:
 `> Math.sqrt(9)`
 
 **What is an object and what is OOP?**
+Have you tried `Math.sqrt(9)`. Math is what is called an Object and `.sqrt()` a Method. An object is a data structure that contains **properties** and **methods**.
+A method is a function. Some methods are already built in ruby (like sqrt()) but you can also build some yourself!
 
 Enter the next two commands:
 
@@ -65,7 +67,14 @@ Let's give Ruby a command with a string:
 
 **Why does it output `nil`?**
 
-Let's build our first program!
+Let's build our first program! We are going to build a function. A function looks like this:
+
+ `def name-of-your-function(parameter1, parameter2,....)
+    your code
+  end
+ `
+
+Here is an example:
 
 ```ruby
 def say_hello(name)
@@ -77,9 +86,54 @@ end
 
 Next, let's get familiar with some basic logic:
 - Booleans: `true` / `false`
+Booleans only return 2 values: True or False. For example:
+`3 > 4 ==> FALSE`
+`4 > 3 ==> TRUE`
+`3 > 3 ==> FALSE`
+
 - Control statements: `if`/`elsif`/`else`
+Control statements execute an action if this action is true. For example
+
+`IF(x > 4) THEN puts "hello world"`
+If we set up x to a number greater than 4, you'll see `hello world` in your console. If x is less or equal than 4, the code won't be executed. Here is how you should write it in ruby:
+
+```rb
+if x > 4
+  puts "hello world"
+end
+```
+Don't forget the `end` at the end of your if statement.
+
+Now you can have several conditions you want to set. For example:
+
+```rb
+if your_age < 40
+  puts "you are not older than 40 years old"
+
+elsif your_age < 50
+  puts "you are older than 40 but not older than 50"
+end
+```
+If you set your variable `your_age`to a number less than 40 your code will return `you are not older than 40 years old`. If your variable is set to a number greater than 40 but not greater than 50, your code will return `you are older than 40 but not older than 50`.
+
+But what if you set your variable to a number greater than 50? Right now your code will return nothing. That is why, you can use an `else`. This will be used when NO conditions are met. For example:
+
+```rb
+if your_age < 40
+  puts "you are not older than 40 years old"
+
+elsif your_age < 50
+  puts "you are older than 40 but not older than 50"
+
+else
+  puts "You are older than 50"
+end
+```
+
+Now every number you set in your variable can be handled by your code.
 
 ##### Comparison Operators:
+
 - `==`: Checks whether the value of two operands is equal. If yes, evaluates to true, if no, evaluates to false
 - `!=`: Checks whether the value of two operands ARE NOT equal. If yes, evaluates to true, if no, evaluates to false
 - `>`: Checks if operand on left is greater than operand on right. If yes, evaluates to true, if no, evaluates to false
@@ -139,7 +193,7 @@ Common array methods:
     puts array_item
   end
 ```
-**Exercise:** *Write a function `name_length` that takes an array of strings as an argument, and return how many of the names are longer than 4 characters. Hint: use a variable for counting, the `.each` method and an `if` conditional*
+**Exercise: name_length** *Write a function `name_length` that takes an array of strings as an argument, and return how many of the names are longer than 4 characters. Hint: use a variable for counting, the `.each` method and an `if` conditional*
 
 for example:
 ```ruby
@@ -151,9 +205,9 @@ name_length(['jerry', 'arti', 'kyle', 'hao'])
 
 ##### Hash
 
-Accessing data quickly is important. How can we access a piece of data without looking through an entire array?
+Accessing data quickly is important. How can we access a piece of data without looking through an entire array? With Hashes.
 
-- Hashes: a collection of key value pairs.
+- Hashes are a collection of key value pairs.
 
 try the following:
 
@@ -169,12 +223,15 @@ try the following:
 
 
 ### Classes
+A class enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
+
 A `class` enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
 There are several important components to a `class`:
 - initializer
 - instance variables
 - class variables
 - methods
+
 
 ```rb
 class RobotFriend

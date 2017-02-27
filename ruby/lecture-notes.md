@@ -40,8 +40,7 @@ Try the following:
 `> Math.sqrt(9)`
 
 **What is an object and what is OOP?**
-Have you tried `Math.sqrt(9)`. Math is what is called an Object and `.sqrt()` a Method. An object is a data structure that contains **properties** and **methods**. 
-
+Have you tried `Math.sqrt(9)`. Math is what is called an Object and `.sqrt()` a Method. An object is a data structure that contains **properties** and **methods**.
 A method is a function. Some methods are already built in ruby (like sqrt()) but you can also build some yourself!
 
 Enter the next two commands:

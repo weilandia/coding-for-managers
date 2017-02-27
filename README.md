@@ -4,21 +4,21 @@
 
 Schedule:
 
-| Day | Topic |
-|-----|-------|
-| Day 1 | [Intro and HTML](intro)
-| Day 2 | [CSS I](css-1)
-| Day 3 | [CSS II](css-2)
-| Day 4 | [Git](git)
-| Day 5 | [Ruby](ruby)
-| Day 6 | [Rails I](rails-1)
-| Day 7 | [Rails II](rails-2)
-| Day 8 | [Rails III](rails-3)
-| Day 9 | [Authentication](authentication)
-| Day 10 |[Authorization](authorization)
-| Day 11 |[Responsive Design](responsive-design)
-| Day 12 |[Javascript](javascript)
-| Day 13 |[jQuery](jquery)
-| Day 14 |[Public APIs](public-apis)
-| Day 15 |[Testing](testing)
-| Day 16 |[Deployment](deployment)
+| Day | Date | Topic |
+|-----|-------|------|
+| Day 1 | 02/06/17 | [Intro and HTML](intro)
+| Day 2 | 02/08/17 | [CSS I](css-1)
+| Day 3 | 02/13/17 | [CSS II](css-2)
+| Day 4 | 02/15/17 | [Git](git)
+| Day 5 | 02/22/17 | [Ruby](ruby)
+| Day 6 | 02/27/17 | [Rails I](rails-1)
+| Day 7 | 03/01/17 | [Rails II](rails-2)
+| Day 8 | 03/06/17 | [Rails III](rails-3)
+| Day 9 | 03/08/17 | [Authentication](authentication)
+| Day 10 | 03/13/17 | [Authorization](authorization)
+| Day 11 | 03/15/17 | [Responsive Design](responsive-design)
+| Day 12 | 03/20/17 | [Javascript](javascript)
+| Day 13 | 03/22/17 | [jQuery](jquery)
+| Day 14 | 03/27/17 | [Public APIs](public-apis)
+| Day 15 | 03/29/17 | [Deployment](deployment)
+| Day 16 | 04/03/17 | [Technical Interviews](technical-interviews)

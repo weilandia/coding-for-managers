@@ -1,5 +1,5 @@
 # Intro to Ruby
-Ruby is a high-level server-side object-oriented language. It has a large following, good documentation, and is used in Ruby on Rails, one of the most popular web frameworks in the world.
+Ruby is a dynamically-typed high-level server-side object-oriented language. It has a large following, good documentation, and is used in Ruby on Rails, one of the most popular web frameworks in the world.
 
 ## What you will learn in this course
 * Have an introduction to the Ruby language
@@ -225,23 +225,57 @@ try the following:
 ### Classes
 A class enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
 
+A `class` enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
+There are several important components to a `class`:
+- initializer
+- instance variables
+- class variables
+- methods
+
+
 ```rb
 class RobotFriend
-  def initialize(robot_name, companion_name) # The initialize method is what’s called when you use the class factory to create a new object. Eg: carlos = RobotFriend.new("Carlos")
+  def initialize(robot_name, companion_name, num_cpus = 2) # The initialize method is what’s called when you use the class factory to create a new object. Eg: jerry = RobotFriend.new("Jerry")
     @name = robot_name # variables that start with an ‘@’ are instance varibles, which are accessible anywhere within the class
     @companion_name = companion_name
+    @num_cpus = num_cpus
+  end
+
+  def self.disclaimer
+    puts "Hello. I am a RobotFriend factory. I create RobotFriends for you. Please remember that your RobotFriend is not a sentient being and that your RobotFriend requires periodical charging of its batteries."
   end
 
   def say_kind_things
+    process
     puts "#{@companion_name}, you’re my favorite person on earth. Don’t forget that!"
   end  
 
   def make_introduction
+    process
     puts "Hello kind stranger! My name is #{@name} and this is my friend #{@companion_name}. You should be friends!"
   end
 
-  def invite_me_to_dinner
-    puts "Hey, #{@name}. Want to grab dinner tonight?"
+  def invite_companion_to_dinner
+    process
+    puts "Hey, #{@companion_name}. Want to grab dinner tonight?"
+  end
+
+  def upgrade!
+    @num_cpus *= 2
+    puts "#{@name} successfully upgraded to #{@num_cpus} CPUs"
+  end
+
+  private
+  def process
+    display = "processing"
+    limiter = 10 / @num_cpus
+    (0..limiter).each do
+      system "clear"
+      (0..3).each do |num|
+        print display + "."*num + "\r"
+        sleep 0.2
+      end
+    end
   end
 end
 ```
@@ -249,8 +283,10 @@ end
 ```rb
 companion = RobotFriend.new("Harold", "Jenni") # pattern: ClassName + .new + (initialize_method_paramenters)
 companion.say_kind_things
-companion.invite_me_to_dinner
 ```
+**Exercise:** *Our robot friend is a little slow. Upgrade it to be faster and try invoking/calling/executing the `make_introduction` method. Maybe upgrade it again and call the `invite_companion_to_dinner`.*
+
+**Exercise:** *Add another method to our RobotFriend class called `change_companion` that takes one argument: a name. The method must first print a line saying goodbye to the old companion, then it must change the instance variable, then it must print a line introducing itself to the new companion.*
 
 Extra Resources:
 

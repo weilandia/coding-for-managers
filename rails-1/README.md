@@ -44,12 +44,12 @@ Rails 4 Data Types:
 :time
 :timestamp
 ```
+[float vs decimal](http://stackoverflow.com/questions/8514167/float-vs-decimal-in-activerecord)
 
-In the case of our blog post, we have a:
+In the case of our blog post, we want to have:
 
 ```rb
 - title:string
-- intro:text
 - body:text
 - user_id:integer
 - category_id:integer
@@ -58,14 +58,14 @@ In the case of our blog post, we have a:
 ### Adding new models and migrating them into your database
 
 • Creating a new model:
-`$ rails generate model Post title:string intro:text body:text user_id:integer category_id:integer`
-
-• Adding data attributes to an existing model:
-`$ rails generate migration AddSubHeaderToPosts subheader:string`
+`$ rails generate model Post title:string body:text`
 
 • Migrating your changes into the database: When you create a new model or make additions, you’ll see that a new ‘migration’ file is added to the bottom of your db/migrate folder. They represent a blueprint for the change you’d like to make, but haven’t yet been persisted into your database. In order to make those changes in your database, you’ll have to run the command: `$ rake db:migrate`
 
-**In-Class Exercise: Create the table for your blog posts in your database.**
+• Destroying a new model:
+`$ rails destroy model Post title:string body:text`
+
+**In-Class Exercise: Create the table for your blog posts in your database. It should have the following attributes: a `title`, a `body`, a `user_id` and a `category_id`**
 
 • More on database migrations: http://guides.rubyonrails.org/v3.2.21/migrations.html
 
@@ -75,7 +75,7 @@ In the case of our blog post, we have a:
 - Start the Rails Console `rails c`
 -Run this command in your Rails Console
 ```rb
-$ rails generate model Post title:string intro:text body:text user_id:integer category_id:integer
+$ rails generate model Post title:string body:text user_id:integer category_id:integer
 ```
 -If successful, you should see a response like this:
 ```bash
@@ -89,6 +89,8 @@ Running via Spring preloader in process 2834
 ```
 </details>
 
+• Adding data attributes to an existing model:
+`$ rails generate migration AddSubHeaderToPosts subheader:string`
 
 ## 4.2 Active Record Interface
 

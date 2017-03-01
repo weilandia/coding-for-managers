@@ -101,7 +101,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 **CRUD:** (create, read, update, delete) reporesent the 4 main operations that you’ll run on data.
 • Create: Adds a new object to your database.
-- `Post.create(title: “My First Blog Post”, body: “lots of blog content”, intro_section: “here’s an overview to my blog post”`
+- `Post.create(title: “My First Blog Post”, body: “lots of blog content”)`
 - An alternative to the create method, is to create a blank new User object and then set their attributes and then save the object. NOTE: if you forget to save the object, it won’t be added to the database:
 ```rb
   my_first_post = Post.new

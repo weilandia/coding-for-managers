@@ -14,7 +14,7 @@ During this class, we will review together key concepts we learn about the Termi
 ## HTML
 Explain again what is HTML
 
-Find a harder exercise than in the previous sessions
+Let's build a personal landing page! Write the html of your landing page. 
 
 ## CSS
 Explain what is CSS again and emphasize on what the instructor thinks they had more difficulties (Selectors)

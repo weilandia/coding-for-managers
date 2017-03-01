@@ -101,13 +101,12 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 **CRUD:** (create, read, update, delete) reporesent the 4 main operations that you’ll run on data.
 • Create: Adds a new object to your database.
-- `Post.create(title: “My First Blog Post”, body: “lots of blog content”)`
+- `Post.create(title: "My First Blog Post", body: "lots of blog content")`
 - An alternative to the create method, is to create a blank new User object and then set their attributes and then save the object. NOTE: if you forget to save the object, it won’t be added to the database:
 ```rb
   my_first_post = Post.new
-  my_first_post.title = “My First Blog Post”
-  my_first_post.body = “lots of blog content”
-  my_first_post.intro_section = “here’s an overview to my blog post”
+  my_first_post.title = "My First Blog Post"
+  my_first_post.body = "lots of blog content"
   my_first_post.save!
 ```
 **In-Class Exercise: Create and save three blog posts using your rails console.**
@@ -118,8 +117,8 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 ```bash
   my_first_post = Post.new
-  my_first_post.title = “My First Blog Post”
-  my_first_post.body = “lots of blog content”
+  my_first_post.title = "My First Blog Post"
+  my_first_post.body = "lots of blog content"
   my_first_post.save!
 ```
 
@@ -144,22 +143,22 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
     Count the number of posts: `Post.count`
     Get the last post: `Post.last`
     Get ten posts: `Post.all.limit(10)`
-    Get posts that have the title of “My first post”: `Post.where(title: “My first post”)`
+    Get posts that have the title of "My first post": `Post.where(title: "My first post")`
 
 For more information on database migrations, check out: http://guides.rubyonrails.org/v3.2.21/migrations.html
 For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/active_record_querying.html
 
 - Update: 2 common ways of updating an object include the following:
 
-  `my_first_post = Post.where(title: “My first post”).first`
+  `my_first_post = Post.where(title: "My first post").first`
 
 - How to update (and save) a single attribute using a single method:
 
-  `my_first_post.update(body: “revamped body...”)`
+  `my_first_post.update(body: "revamped body...")`
 
 - How to update (and save) multiple attributes using a single method:
 
-  `my_first_post.update_attributes(body: “revamped body...”)`
+  `my_first_post.update_attributes(body: "revamped body...")`
 
 - Delete: Use the .destroy method to delete an object from your database.
 
@@ -170,7 +169,7 @@ NOTE: if you use the update_attributes method, along with updating the object, i
 def update
  if post.update_attributes(title: form_title, body: form_body)
  redirect_to posts_path else
- redirect_to edit_post_path, :alert => “Your updates were unsuccessful. Please re-enter” end
+ redirect_to edit_post_path, :alert => "Your updates were unsuccessful. Please re-enter" end
 end
 ```
 

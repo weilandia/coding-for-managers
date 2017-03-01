@@ -117,8 +117,8 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 ```bash
   my_first_post = Post.new
-  my_first_post.title = "My First Blog Post"
-  my_first_post.body = "lots of blog content"
+  my_first_post.title = "My second post"
+  my_first_post.body = "This is the body of my second post"
   my_first_post.save!
 ```
 
@@ -138,12 +138,12 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 - NOTE: The syntax used for ActiveRecord record query syntax mirrors that of the array methods that we learned when studying Ruby. Common queries would include `.first`, `.last`, etc.
 
 - Common ActiveRecord Queries:
-    Get all posts: `Post.all`
-    Get the first post: `Post.first`
-    Count the number of posts: `Post.count`
-    Get the last post: `Post.last`
-    Get ten posts: `Post.all.limit(10)`
-    Get posts that have the title of "My first post": `Post.where(title: "My first post")`
+    - Get all posts: `Post.all`
+    - Get the first post: `Post.first`
+    - Count the number of posts: `Post.count`
+    - Get the last post: `Post.last`
+    - Get ten posts: `Post.all.limit(10)`
+    - Get posts that have the title of "My first post": `Post.where(title: "My first post")`
 
 For more information on database migrations, check out: http://guides.rubyonrails.org/v3.2.21/migrations.html
 For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/active_record_querying.html
@@ -173,19 +173,19 @@ def update
 end
 ```
 
-**In-Class Exercise: Acces your second blog post. Update at least three attributes and save it.**
+**In-Class Exercise: Access your second blog post. Update its two attributes and save it.**
 
 
 <details><summary>Solution:</summary>
 - Use this format for multiple attributes:
 ```bash
-my_first_post.update_attributes({title: "newest title", intro: "a newer intro", body: "a newest body"})
+my_first_post.update_attributes({title: "newest title", body: "a newest body"})
 ```
 
 -If successful you should get this output:
 ```bash
    (0.2ms)  begin transaction
-  SQL (0.5ms)  UPDATE "posts" SET "title" = ?, "intro" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "newest title"], ["intro", "a newer intro"], ["body", "a newest body"], ["updated_at", "2016-11-30 15:51:11.623844"], ["id", 2]]
+  SQL (0.5ms)  UPDATE "posts" SET "title" = ?, "intro" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "newest title"], ["body", "a newest body"], ["updated_at", "2016-11-30 15:51:11.623844"], ["id", 2]]
    (12.0ms)  commit transaction
  => true
 ```

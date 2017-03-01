@@ -90,7 +90,7 @@ Running via Spring preloader in process 2834
 </details>
 
 • Adding data attributes to an existing model:
-`$ rails generate migration AddSubHeaderToPosts subheader:string`
+`$ rails generate migration AddSubTitleToPosts subtitle:string`
 
 ## 4.2 Active Record Interface
 
@@ -99,7 +99,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 **Naming:** models in activerecord are uppercase and singular: eg: Post or User. There active record models refer to lowercase plural database tables. `Post => posts, User =>users`.
 
-**CRUD:** (create, read, update, delete) reporesent the 4 main operations that you’ll run on data.
+**CRUD:** (Create, Read, Update, Delete) represent the 4 main operations that you’ll run on data.
 • Create: Adds a new object to your database.
 - `Post.create(title: "My First Blog Post", body: "lots of blog content")`
 - An alternative to the create method, is to create a blank new User object and then set their attributes and then save the object. NOTE: if you forget to save the object, it won’t be added to the database:
@@ -115,7 +115,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 <details><summary>Solution:</summary>
 - Follow this format when creating a new blogpost:
 
-```bash
+```rb
   my_first_post = Post.new
   my_first_post.title = "My second post"
   my_first_post.body = "This is the body of my second post"
@@ -164,14 +164,6 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 
   `my_first_post.destroy`
 
-NOTE: if you use the update_attributes method, along with updating the object, it will also return true, if the object is able to update. This will be incredibly helpful when you want to update objects (eg: a user when they use a form to update their account information) in your controllers, you could use a syntax like this:
-```rb
-def update
- if post.update_attributes(title: form_title, body: form_body)
- redirect_to posts_path else
- redirect_to edit_post_path, :alert => "Your updates were unsuccessful. Please re-enter" end
-end
-```
 
 **In-Class Exercise: Access your second blog post. Update its two attributes and save it.**
 
@@ -179,7 +171,7 @@ end
 <details><summary>Solution:</summary>
 - Use this format for multiple attributes:
 ```bash
-my_first_post.update_attributes({title: "newest title", body: "a newest body"})
+my_second_post.update_attributes({title: "newest title", body: "a newest body"})
 ```
 
 -If successful you should get this output:
@@ -194,45 +186,30 @@ my_first_post.update_attributes({title: "newest title", body: "a newest body"})
 
 ## 4.3 Models
 
+##### Validation
+
+**Validations:** The model allows you to ensure that all of the data that you want for a particular object is present. For example, for our Post model, we might want to require a title and body while leaving other attributes optional.
+
 ```rb
 class Post < ActiveRecord::Base
-  validates :title, :body, :user_id, :category_id, :intro, presence: true # Validation
-  belongs_to :user #belongs_to association
-  belongs_to :category # belongs_to association
-
-  def self.published # class method
-    ####some commands to run on the post model
-  end
-
-  def next_post #instance method
-    ####some commands to run on a single post
-  end
+  validates :title, :body, presence: true
 end
 ```
-**Validations:** The model allows you to ensure that all of the data that you want for a particular object is present. For example, for our Post model, we might want to include a title, image, etc.
 
-**In-Class Exercise: Add a validation that ensures that every blog post must have a title and body.**
+**In-Class Exercise: After adding our validations, try creating a new post without the required attributes.**
 
 
 <details><summary>Solution:</summary>
 
 ```rb
-class Post < ActiveRecord::Base
-  validates :title, :body, :user_id, :category_id, :intro, presence: true # Validation
-  belongs_to :user #belongs_to association
-  belongs_to :category # belongs_to association
-
-  def self.published # class method
-    ####some commands to run on the post model
-  end
-
-  def next_post #instance method
-    ####some commands to run on a single post
-  end
-end
+  result `Post.create(title: "this post will have no body!")`
+  puts result
+  posts_found = Post.where(title: "this post will have no body!")
+  posts_found
 ```
 
---We will see how this interacts when we begin dealing with forms and templates in the next lesson.  For now think of this as a prep step for validating information.
+NOTE: if you use the update_attributes method, along with updating the object, it will also return a boolean that reports on whether or not the model was able to save to the database. This will be incredibly helpful when you want to update records (eg: a user wants to update his/her account information) to send the client a success/failure message.
+
 </details>
 
 
@@ -242,13 +219,32 @@ end
 
 **has_many:** In order to complete the linkage between a Post and User we need to outline what type of association a Post has within the User model. One user can published many posts, we can therefore add a `has_many :posts` association to the user object. This allows us to easily access all of the posts that have been published by entering: `my_user.posts`
 
-### Instance Methods:
+##### Instance Methods:
 
 Instance methods are methods that are invoked on a single instance of a model. In the case of posts, an instance method would be invoked on a single blog post (eg: `my_post.next_post`)
 
-### Class Methods:
-Class methods are invoked on a model. For example, if we wanted to get all posts that have been published, we could use the ‘published’ class method: Post.published . If you would like to deepen your knowledge of class methods, read up on scopes (which allow you to create class methods that are re-usable active-record queries, eg: Post.published_this_century) : http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
+```ruby
+class Post < ActiveRecord::Base
+  validates :title, :body, presence: true
 
+  def length_of_post
+    self.title.length + self.body.length
+  end
+end
+```
+
+##### Class Methods:
+Class methods are invoked on a model at the class level. For example, if we wanted to get all posts that have been published, we could use the ‘published’ class method: Post.published . If you would like to deepen your knowledge of class methods, read up on scopes (which allow you to create class methods that are re-usable active-record queries, eg: Post.published_in_the_past_week) : http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
+
+```ruby
+class Post < ActiveRecord::Base
+  validates :title, :body, presence: true
+
+  def self.published
+    Post.where("published_at IS NOT NULL")
+  end
+end
+```
 
 **EXTRA RESOURCES:**
  1. Read Rails Sections 4.1 – 4.4 below
@@ -259,5 +255,5 @@ Class methods are invoked on a model. For example, if we wanted to get all posts
  3. Learn About Models
    • Watch Rails Zombie Video and do its Exercise on Models: http://railsforzombies.org/levels/2
 
-## Looking Forward:
+##### Looking Forward:
 In the upcoming lesson we will begin to incorporate controllers and views into our Rails application.

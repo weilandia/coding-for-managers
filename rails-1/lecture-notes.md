@@ -1,15 +1,14 @@
 # Intro to Rails
 
-|Objectives|
-|----------|
-|Learn what Rails is|
-|Become familiar with the docs|
-|Start a New Rails Project|
-|Manipulate the Models through Active Record|
-
-
 ## What is Rails?
 Rails is an open-source Model View Controller (MVC) framework that is built in Ruby. It does the hard work of designing the configurations and file structure you need to build your app. Rails includes a vast source of helper methods and functionally that speed up your web development process. On top of that, Rails integrates with ‘gems’ (similar to JavaScript libraries), which allow you to integrate additional functionality into your app, without building it yourself. Given the size of the Rails community, there is a high-quality, well-maintaned gem for almost any functionality you’d like to build.
+
+
+## What you will learn in this course
+* Learn what Rails is
+* Become familiar with the docs
+* Start a New Rails Project
+* Manipulate the Models through Active Record
 
 
 ## Rails MVC Structure
@@ -99,7 +98,9 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 **Naming:** models in activerecord are uppercase and singular: eg: Post or User. There active record models refer to lowercase plural database tables. `Post => posts, User =>users`.
 
-**CRUD:** (Create, Read, Update, Delete) represent the 4 main operations that you’ll run on data.
+
+**CRUD:** (create, read, update, delete) represent the 4 main operations that you’ll run on data.
+
 • Create: Adds a new object to your database.
 - `Post.create(title: "My First Blog Post", body: "lots of blog content")`
 - An alternative to the create method, is to create a blank new User object and then set their attributes and then save the object. NOTE: if you forget to save the object, it won’t be added to the database:
@@ -152,15 +153,16 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 
   `my_first_post = Post.where(title: "My first post").first`
 
-- How to update (and save) a single attribute using a single method:
+- How to update (and save) one or multiple attribute using a single method:
 
-  `my_first_post.update(body: "revamped body...")`
+  `my_first_post.update(body: “revamped body...”)`
+OR
+  `my_first_post.update_attributes(body: “revamped body...”)`
 
-- How to update (and save) multiple attributes using a single method:
+You can use `.update()` to update ONE or MULTIPLE attributes. However, `.update_attributes()` is only for MULTIPLE attributes.
 
-  `my_first_post.update_attributes(body: "revamped body...")`
 
-- Delete: Use the .destroy method to delete an object from your database.
+- Delete: Use the `.destroy()` method to delete an object from your database.
 
   `my_first_post.destroy`
 
@@ -181,6 +183,8 @@ my_second_post.update_attributes({title: "newest title", body: "a newest body"})
    (12.0ms)  commit transaction
  => true
 ```
+Don't forget to SAVE your variable in the database before updating it, otherwise you will have a "rollback transaction"
+
 </details>
 
 

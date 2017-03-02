@@ -223,7 +223,6 @@ try the following:
 
 
 ### Classes
-A class enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
 
 A `class` enables you to group a number of methods and variables together into a custom object. Classes act as re-usable factory-like structure.
 There are several important components to a `class`:

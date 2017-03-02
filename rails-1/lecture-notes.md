@@ -98,7 +98,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 **Naming:** models in activerecord are uppercase and singular: eg: Post or User. There active record models refer to lowercase plural database tables. `Post => posts, User =>users`.
 
-**CRUD:** (create, read, update, delete) reporesent the 4 main operations that you’ll run on data.
+**CRUD:** (create, read, update, delete) represent the 4 main operations that you’ll run on data.
 • Create: Adds a new object to your database.
 - `Post.create(title: “My First Blog Post”, body: “lots of blog content”, intro_section: “here’s an overview to my blog post”`
 - An alternative to the create method, is to create a blank new User object and then set their attributes and then save the object. NOTE: if you forget to save the object, it won’t be added to the database:
@@ -161,7 +161,7 @@ OR
 You can use `.update()` to update ONE or MULTIPLE attributes. However `.update_attributes()` is only for MULTIPLE attributes.
 
 
-- Delete: Use the .destroy method to delete an object from your database.
+- Delete: Use the `.destroy()` method to delete an object from your database.
 
   `my_first_post.destroy`
 
@@ -190,6 +190,8 @@ my_first_post.update_attributes({title: "newest title", intro: "a newer intro", 
    (12.0ms)  commit transaction
  => true
 ```
+Don't forget to SAVE your variable in the database before updating it, otherwise you will have a "rollback transaction"
+
 </details>
 
 

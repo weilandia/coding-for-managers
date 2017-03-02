@@ -19,7 +19,7 @@ end
 ```
 
 **Root Route**: Sets the controller and view that the user will be taken to if the visit your base url (eg:
-https://www.product-school-blog.com). Syntax: `root 'posts#index'`
+http://p-school-blog.herokuapp.com/). Syntax: `root 'posts#index'`
 
 **Resources**: Whenever you add a new controller `resource` to your `routes.rb` file (eg: `resources :posts`), it will register the controller actions for Index (read – all posts), show (read – a single post), new (get – a new empty post object), create (post – a new post based off of the content inputted), edit (get – the post object that you want to edit), update (patch – persisting the newly edited info to your blog post), destroy (delete – deleting post from database).
 

@@ -1,15 +1,14 @@
 # Intro to Rails
 
-|Objectives|
-|----------|
-|Learn what Rails is|
-|Become familiar with the docs|
-|Start a New Rails Project|
-|Manipulate the Models through Active Record|
-
-
 ## What is Rails?
 Rails is an open-source Model View Controller (MVC) framework that is built in Ruby. It does the hard work of designing the configurations and file structure you need to build your app. Rails includes a vast source of helper methods and functionally that speed up your web development process. On top of that, Rails integrates with ‘gems’ (similar to JavaScript libraries), which allow you to integrate additional functionality into your app, without building it yourself. Given the size of the Rails community, there is a high-quality, well-maintaned gem for almost any functionality you’d like to build.
+
+
+## What you will learn in this course
+* Learn what Rails is
+* Become familiar with the docs
+* Start a New Rails Project
+* Manipulate the Models through Active Record
 
 
 ## Rails MVC Structure

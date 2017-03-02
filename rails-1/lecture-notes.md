@@ -152,13 +152,14 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 
   `my_first_post = Post.where(title: “My first post”).first`
 
-- How to update (and save) a single attribute using a single method:
+- How to update (and save) one or multiple attribute using a single method:
 
   `my_first_post.update(body: “revamped body...”)`
-
-- How to update (and save) multiple attributes using a single method:
-
+OR
   `my_first_post.update_attributes(body: “revamped body...”)`
+
+You can use `.update()` to update ONE or MULTIPLE attributes. However `.update_attributes()` is only for MULTIPLE attributes.
+
 
 - Delete: Use the .destroy method to delete an object from your database.
 

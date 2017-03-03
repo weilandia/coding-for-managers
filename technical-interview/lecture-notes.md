@@ -18,7 +18,19 @@ ADD TYPICAL INTRO QUESTIONS
 ### Coding Challenges
 Coding challenges are around 30 minutes. There can be one or several coding problems.
 
-ADD SOME EXAMPLES OF QUESTIONS
+
+- Can you write code in Java or C++ to find the power set of a given set? For example if S={a,b} the power set is P={{},{a},{b},{a,b}} ( you can also choose any of your favorite programming language)
+
+- Write code in Java to find out whether a binary tree is a mirror image of itself or not. Should code be thread-safe?
+
+- Can you write code to implement your own hashtable in C++ or Java?
+
+- Write code to find out a number of occurrence of a number in a sorted array ?
+
+- Can you implement a Generic LRU Cache in Java ?
+
+- Write a program to solve a Rubik's cube in any programming language.
+
 
 ### Interviewee questions
 The final 5 minutes are reserved for the interviewee to ask questions.
@@ -33,7 +45,7 @@ PUT TYPICAL EXAMPLE QUESTIONS.
 MENTION THE FACT THAT THEY MIGHT BE ASKED HOW THEY TECHNICAL BACKGROUND WILL HELP THEM
 
 ### Advice
-IF YOU HAVE TECHNICAL CHALLENGE, ASK AS MANY QUESTIONS AS POSSIBLE 
+IF YOU HAVE TECHNICAL CHALLENGE, ASK AS MANY QUESTIONS AS POSSIBLE
 
 ## Whiteboard challenge
 Let's practice now! We're gonna divide the class into two groups. One group will be handled by your instructor and the other one by your Teaching Assistant.

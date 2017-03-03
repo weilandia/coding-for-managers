@@ -29,3 +29,8 @@
 
 - <a href="http://www.korenlc.com/rails-tutorial-authentication-with-devise/">Devise Tutorial</a>
 - <a href="https://github.com/plataformatec/devise">Devise Github</a>
+
+## Authorization
+
+- <a href="https://github.com/CanCanCommunity/cancancan">cancancan</a>
+- <a href="https://www.sitepoint.com/cancancan-rails-authorization-dance/">Rails Authorization</a>

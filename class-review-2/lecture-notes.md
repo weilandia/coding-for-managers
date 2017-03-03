@@ -51,6 +51,17 @@ Adding authentication and authorization is extremely vital to any modern web app
 - <a href="http://www.korenlc.com/rails-tutorial-authentication-with-devise/">Devise Tutorial</a>
 - <a href="https://github.com/plataformatec/devise">Devise Github</a>
 
+## <a href="https://github.com/product-school/authorization-rails">Authorization & Foreign Keys</a>
+
+Authorization is an important aspect to most any application. As a system, it is put in place to determine whether the current user has the permission to perform the requested action. Based on this, it typically happens after a user is authenticated, but before a request is processed.
+
+Today we will be generating a seperate project in order to fully understand the different aspects of the authentication and authorization process. We will add devise that gives us a user model, connect the user model with posts, and finally use a gem called CanCanCan in order to fully complete the authorization process.
+
+### Resources
+
+- <a href="https://github.com/CanCanCommunity/cancancan">cancancan</a>
+- <a href="https://www.sitepoint.com/cancancan-rails-authorization-dance/">Rails Authorization</a>
+
 
 ## Going Further: Other Back End programming languages PYTHON and PHP
 

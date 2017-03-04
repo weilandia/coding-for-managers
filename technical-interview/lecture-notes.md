@@ -1,17 +1,17 @@
 # Technical Interview
 
-As manager, you might be interested in applying for technical companies. In that case, you have a chance of being confronted to technical questions. That's why today, we will learn about what a technical interview looks like and what you should be prepared to as manager.
+As manager, you might be interested in applying for technical companies. In that case, you have a chance of being confronted by technical questions. That's why today we will learn about what a technical interview looks like and what you should be prepared for as a manager.
 
 ## What you will learn today
 * What is an engineer technical interview
-* What to expect from a technical interview as manager
+* What to expect from a technical interview as a manager
 * Practice one typical exercise: Whiteboard challenge
 
 ## Typical engineer interview
-A typical On-site interview is around 45 minutes divided in 3 parts. An introduction, a coding challenge and a part where the interviewee can ask questions. We will cover those three parts quickly so that you have a good overview of what an engineer interview looks like.
+A typical on-site interview can range from 1-5 hours; but is typically divided into 2 parts. An introduction/cultural fit portion, and the technical portion. The technical portion can be pair programming, an online coding challenge, whiteboarding, architecture overview, high-level conceptual questions, or a live demo and conversation of a project the candidate has previously worked on. We will cover each part so that you have a good overview of what an engineer interview looks like.
 
-### Introduction
-During the introduction part, you'll have around 5 minutes to introduce yourself and talk about your coding background.
+### Introduction / Cultural fit
+This is an engineers opportunity to demonstrate their soft skills, which many would argue are just as crucial as technical ability. Companies want a team player who knows how to communicate well, and who people enjoy working alongside with. Also, more and more companies (especially startups) look for candidates who are mission driven. 
 
 ADD TYPICAL INTRO QUESTIONS
 

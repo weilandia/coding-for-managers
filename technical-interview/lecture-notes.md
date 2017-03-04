@@ -52,8 +52,8 @@ Each software engineering candidate, or even product manager, should have at lea
 ### Interviewee questions
 The final 5 minutes are reserved for the interviewee to ask questions.
 
-## What to expect as manager
-As a manager, you won't have questions that are that complicated. However it might happen that your interviewer asks you questions about your technical background and want to verify it.
+## What to expect as a product manager
+As a product manager, you won't have questions that are that technically complicated. However it might happen that your interviewer asks you questions about your technical background and want to verify it.
 
 ### Easier technical questions
 

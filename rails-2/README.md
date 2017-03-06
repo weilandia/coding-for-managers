@@ -2,14 +2,28 @@
 
 Objectives|
 |---------|
+|Learn about Scaffolding|
 |Learn about Routes and Controllers|
 |Learn the different componenets of Routes and Controllers|
 |See how Routes, Controllers, and Models fit together|
 |Implement Routes/Controller for Posts|
 
+## Scaffolding
+`rails scaffold` will build all of the model, view and controller (MVC) files for a new model in the application. Before we scaffold, let's clean up our c9 workspace by destroying our previous Post model and cleansing our database:
+
+`rails destroy model Post`
+
+`rake db:drop`
+
+`rake db:create`
+
+Now let's remove our old practice migration files.
+
+Next, let's create a scaffold. Open a new scratch document in c9 and let's write our the specifications for our Post scaffold.
+
 ## Routes
 
-**Intro**: Your routes direct an incoming url with the appropriate controller and view.
+**Intro**: Your routes direct an incoming url with the appropriate controller and view. Let's find your routes.rb file:
 ```rb
 Rails.application.routes.draw do
   root 'posts#index'
@@ -18,49 +32,105 @@ Rails.application.routes.draw do
 end
 ```
 
-**Root Route**: Sets the controller and view that the user will be taken to if the visit your base url (eg:
-http://p-school-blog.herokuapp.com/). Syntax: `root 'posts#index'`
+**Root Route**: Sets the controller and view that the user will be taken to if the visit your base url (`/`) (eg: http://p-school-blog.herokuapp.com/). Syntax: `root 'posts#index'`
 
-**Resources**: Whenever you add a new controller `resource` to your `routes.rb` file (eg: `resources :posts`), it will register the controller actions for Index (read – all posts), show (read – a single post), new (get – a new empty post object), create (post – a new post based off of the content inputted), edit (get – the post object that you want to edit), update (patch – persisting the newly edited info to your blog post), destroy (delete – deleting post from database).
+**Resources**: Whenever you add a new controller `resource` to your `routes.rb` file (eg: `resources :posts`), it will register the controller actions for Index (read – all posts), show (read – a single post), new (get – a new empty post object), create (post – a new post based off of the entered content), edit (get – the post object that you want to edit), update (patch – persisting the newly edited info to your blog post), destroy (delete – deleting post from database).
 
-**Controller & View naming conventions**: Once you’ve created a route, if your view is set to the same name as your controller (eg: `posts#show` `show.html.erb`), it will automatically associate the controller and view.
-
-**Custom Routes**: If you want to create your own route, you can do so by entering: `get welcome => “home#welcome`
-
-## Controllers
-```rb
-class PostsController < ApplicationController
-before_filter:authenticate_user!,:except=>[:index,:show] #beforefilter
-
-  def show #CRUD controller action (posts#show)
-    @post = Post.find(params[:id])#Instance variable
-  end
-
-  def new
-    @post = Post.new
-  end
-
-  def post_params # strong parameters
-    params.require(:post).permit(:image, :title, :user_id, :category_id, :body, :caption, :intro)
-  end
-end
-```
-
-**before_filters**: Behavior that has to happen before a controller action is invoked. In the case of our posts controller, on all pages except for the index and show pages, which are publically viewable, we want to ensure that a person is a user before they can do something like creating a new blog entry.
-
-**Controller Actions**: Every page needs a controller action. In the sample Posts Controller above we have two controller actions, a new (for creating a new post) and a show (for viewing a single post) actions.
+We can look at all the routes that your app has by typing `rake routes`
 
 **CRUD & Route Resources**: There are 4 main actions a controller can take: Create, Read, Update, and Delete.
 
 HTTP Verb | Path            | Controller#Action | Use                                         |
 ----------|-----------------|-------------------|---------------------------------------------|
-GET       | /posts          |   posts #index    | display a list of all posts                 |
+GET       | /posts          |   posts#index     | display a list of all posts                 |
 GET       | /posts/new      |   posts#new       | return an HTML form for creating a new post |
 POST      | /posts          |   posts#create    | create a new post                           |
 GET       | /posts/:id      |   posts#show      | display a specific post                     |
 GET       | /posts/:id/edit |   posts#edit      | return an HTML form for editing a post      |
 PATCH/PUT | /posts/:id      |   posts#update    | update a specific post                      |
-DELETE    | /posts/:id      |   posts#destroy   | delete a specific post
+DELETE    | /posts/:id      |   posts#destroy   | delete a specific post                      |
+
+**Controller & View naming conventions**: Once you’ve created a route, if your view is set to the same name as your controller (eg: `posts#show` `show.html.erb`), it will automatically associate the controller and view.
+
+## Controllers
+```rb
+class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+
+  # GET /posts
+  # GET /posts.json
+  def index
+    @posts = Post.all
+  end
+
+  # GET /posts/1
+  # GET /posts/1.json
+  def show
+  end
+
+  # GET /posts/new
+  def new
+    @post = Post.new
+  end
+
+  # GET /posts/1/edit
+  def edit
+  end
+
+  # POST /posts
+  # POST /posts.json
+  def create
+    @post = Post.new(post_params)
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /posts/1
+  # PATCH/PUT /posts/1.json
+  def update
+    respond_to do |format|
+      if @post.update(post_params)
+        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.json { render :show, status: :ok, location: @post }
+      else
+        format.html { render :edit }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /posts/1
+  # DELETE /posts/1.json
+  def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_post
+      @post = Post.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def post_params
+      params.require(:post).permit(:title, :body)
+    end
+end
+```
+
+**before_action**: Behavior that has to happen before a controller action is invoked. In the case of our posts controller, on `show`, `update`, `edit` and `destroy`, we want to load the post that is required by the incoming request.
 
 **Instance Variables**: begin with an ‘@’ sign (eg: @post). Instance variables allow you to share objects from your controller into your associated view. For example, our posts#show controller action, which sets the @post instance variable enables our show.html.erb page to access the data for our blog post.
 
@@ -68,7 +138,7 @@ DELETE    | /posts/:id      |   posts#destroy   | delete a specific post
 
 ## Views
 
-**html.erb file format**: ERB allows ruby to be included in your html files. You can create an erb file by saving it as `you r_file_name.html.erb`
+**html.erb file format**: ERB allows ruby to be included in your html files. You can create an erb file by saving it as `your_file_name.html.erb`
 
 **Printing data in your view with ERB**: Use this syntax to print ruby in your view - `<%= ruby_content %>`.
 
@@ -95,8 +165,6 @@ DELETE    | /posts/:id      |   posts#destroy   | delete a specific post
   <%=link_to “Create User Account”, new_user_path %>
 <% end %>
 ```
-
-**In-Class Exercise**: We will do a walk through of making the `posts_controller`.  In doing so, we'll get a better understanding of how all of the parts work together.  You can refer to `posts_controller.rb` as a reference while we walk through the lesson.
 
 **Forms**: Form are key for creating and updating database objects. Rails offer a number of form helper methods to make creating forms much easier. Below is the general form syntax.
 ```html

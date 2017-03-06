@@ -68,11 +68,9 @@ In the case of our blog post, we want to have:
 
 • More on database migrations: http://guides.rubyonrails.org/v3.2.21/migrations.html
 
-
 <details><summary>Solution:</summary>
 - Open a new terminal window in C9
-- Start the Rails Console `rails c`
--Run this command in your Rails Console
+-Run this command:
 ```rb
 $ rails generate model Post title:string body:text user_id:integer category_id:integer
 ```
@@ -116,7 +114,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 <details><summary>Solution:</summary>
 - Follow this format when creating a new blogpost:
 
-```rb
+```ruby
   my_first_post = Post.new
   my_first_post.title = "My second post"
   my_first_post.body = "This is the body of my second post"
@@ -124,7 +122,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 ```
 
 - When successful you should see something similar to this:
-```bash
+```ruby
 2.3.0 :023 > my_second_post.save!
    (0.3ms)  begin transaction
   SQL (0.8ms)  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "My second post"], ["body", "This is the body of my second post"], ["created_at", "2016-11-30 15:40:11.660606"], ["updated_at", "2016-11-30 15:40:11.660606"]]
@@ -156,13 +154,13 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 - How to update (and save) one or multiple attribute using a single method:
 
   `my_first_post.update(body: “revamped body...”)`
-OR
-  `my_first_post.update_attributes(body: “revamped body...”)`
 
-You can use `.update()` to update ONE or MULTIPLE attributes. However, `.update_attributes()` is only for MULTIPLE attributes.
+You can use `.update` or `.update_attributes` to update ONE or MULTIPLE attributes.
 
+  `my_first_post.update_attributes(body: "revamped body...")`
+  `my_first_post.update(body: "revamped body...", title: "new title...")`
 
-- Delete: Use the `.destroy()` method to delete an object from your database.
+- Delete: Use the `.destroy` method to delete an object from your database. However, we will use this sparingly. Most data we will want to persist in our DB for later analysis.
 
   `my_first_post.destroy`
 
@@ -172,12 +170,12 @@ You can use `.update()` to update ONE or MULTIPLE attributes. However, `.update_
 
 <details><summary>Solution:</summary>
 - Use this format for multiple attributes:
-```bash
+```ruby
 my_second_post.update_attributes({title: "newest title", body: "a newest body"})
 ```
 
 -If successful you should get this output:
-```bash
+```ruby
    (0.2ms)  begin transaction
   SQL (0.5ms)  UPDATE "posts" SET "title" = ?, "intro" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "newest title"], ["body", "a newest body"], ["updated_at", "2016-11-30 15:51:11.623844"], ["id", 2]]
    (12.0ms)  commit transaction

@@ -1,15 +1,14 @@
 # Intro to Rails
 
-|Objectives|
-|----------|
-|Learn what Rails is|
-|Become familiar with the docs|
-|Start a New Rails Project|
-|Manipulate the Models through Active Record|
-
-
 ## What is Rails?
 Rails is an open-source Model View Controller (MVC) framework that is built in Ruby. It does the hard work of designing the configurations and file structure you need to build your app. Rails includes a vast source of helper methods and functionally that speed up your web development process. On top of that, Rails integrates with ‘gems’ (similar to JavaScript libraries), which allow you to integrate additional functionality into your app, without building it yourself. Given the size of the Rails community, there is a high-quality, well-maintaned gem for almost any functionality you’d like to build.
+
+
+## What you will learn in this course
+* Learn what Rails is
+* Become familiar with the docs
+* Start a New Rails Project
+* Manipulate the Models through Active Record
 
 
 ## Rails MVC Structure
@@ -69,11 +68,9 @@ In the case of our blog post, we want to have:
 
 • More on database migrations: http://guides.rubyonrails.org/v3.2.21/migrations.html
 
-
 <details><summary>Solution:</summary>
 - Open a new terminal window in C9
-- Start the Rails Console `rails c`
--Run this command in your Rails Console
+-Run this command:
 ```rb
 $ rails generate model Post title:string body:text user_id:integer category_id:integer
 ```
@@ -99,7 +96,9 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 
 **Naming:** models in activerecord are uppercase and singular: eg: Post or User. There active record models refer to lowercase plural database tables. `Post => posts, User =>users`.
 
-**CRUD:** (Create, Read, Update, Delete) represent the 4 main operations that you’ll run on data.
+
+**CRUD:** (create, read, update, delete) represent the 4 main operations that you’ll run on data.
+
 • Create: Adds a new object to your database.
 - `Post.create(title: "My First Blog Post", body: "lots of blog content")`
 - An alternative to the create method, is to create a blank new User object and then set their attributes and then save the object. NOTE: if you forget to save the object, it won’t be added to the database:
@@ -115,7 +114,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 <details><summary>Solution:</summary>
 - Follow this format when creating a new blogpost:
 
-```rb
+```ruby
   my_first_post = Post.new
   my_first_post.title = "My second post"
   my_first_post.body = "This is the body of my second post"
@@ -123,7 +122,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
 ```
 
 - When successful you should see something similar to this:
-```bash
+```ruby
 2.3.0 :023 > my_second_post.save!
    (0.3ms)  begin transaction
   SQL (0.8ms)  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "My second post"], ["body", "This is the body of my second post"], ["created_at", "2016-11-30 15:40:11.660606"], ["updated_at", "2016-11-30 15:40:11.660606"]]
@@ -152,16 +151,16 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 
   `my_first_post = Post.where(title: "My first post").first`
 
-- How to update (and save) a single attribute using a single method:
+- How to update (and save) one or multiple attribute using a single method:
 
-  `my_first_post.update_attribute(:body, "revamped body...")`
+  `my_first_post.update(body: “revamped body...”)`
 
-- How to update (and save) multiple attributes using a single method:
+You can use `.update` or `.update_attributes` to update ONE or MULTIPLE attributes.
 
   `my_first_post.update_attributes(body: "revamped body...")`
   `my_first_post.update(body: "revamped body...", title: "new title...")`
 
-- Delete: Use the `.destroy` method to delete an object from your database.
+- Delete: Use the `.destroy` method to delete an object from your database. However, we will use this sparingly. Most data we will want to persist in our DB for later analysis.
 
   `my_first_post.destroy`
 
@@ -171,17 +170,19 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 
 <details><summary>Solution:</summary>
 - Use this format for multiple attributes:
-```bash
+```ruby
 my_second_post.update_attributes({title: "newest title", body: "a newest body"})
 ```
 
 -If successful you should get this output:
-```bash
+```ruby
    (0.2ms)  begin transaction
   SQL (0.5ms)  UPDATE "posts" SET "title" = ?, "intro" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "newest title"], ["body", "a newest body"], ["updated_at", "2016-11-30 15:51:11.623844"], ["id", 2]]
    (12.0ms)  commit transaction
  => true
 ```
+Don't forget to SAVE your variable in the database before updating it, otherwise you will have a "rollback transaction"
+
 </details>
 
 

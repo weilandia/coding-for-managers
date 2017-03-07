@@ -36,6 +36,8 @@ What is the difference between Angular and React? In what situations would you u
 ### Live Demo
 Each software engineering candidate, or even product manager, should have at least one recent project that they can comfortably give a live demo of. A quick and simple description of what the app or website is, is sufficient; what is more interesting is the conversation around the technologies used (and why those), how you set up the database, and what the biggest technical challenges were. For a product manager, the conversation may revolve more around the product decisions- how did you prioritize what to build first? What is an example of a feature you chose to leave out, and why? How well did the team work together, and how could you remove future roadblocks? 
 
+### Example Questions
+
 - Can you write code in Java or C++ to find the power set of a given set? For example if S={a,b} the power set is P={{},{a},{b},{a,b}} ( you can also choose any of your favorite programming language)
 
 - Write code in Java to find out whether a binary tree is a mirror image of itself or not. Should code be thread-safe?
@@ -50,7 +52,11 @@ Each software engineering candidate, or even product manager, should have at lea
 
 
 ### Interviewee questions
-The final 5 minutes are reserved for the interviewee to ask questions.
+The final 5 minutes are reserved for the interviewee to ask questions. Some examples of good ones:
+- How does the typical production workflow look? How often is code pushed to production (live)? 
+- What is the biggest challenge on the product side?
+- How is the test coverage?
+- How is the engineering team organized? Are there sub-teams? 
 
 ## What to expect as a product manager
 As a product manager, you won't have questions that are that technically complicated. However it might happen that your interviewer asks you questions about your technical background and want to verify it.

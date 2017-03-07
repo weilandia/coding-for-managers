@@ -72,6 +72,8 @@ As a product manager, you won't have questions that are that technically complic
 - Ask clarifying questions before you just jump into the code, make sure you understand your challenge 100% before starting. Some interviewers will keep their instructions vague, to see if the interviewee will ask good clarifying questions. 
 - Never get frustrated or angry. Show persistance, and only give up if you absolutely are stuck. 
 - Always talk through your thoughts. Even if you had initial thoughts on how to solve a problem, which you realize are not correct, be sure to mention them to your interviewer and demonstrate an understanding of _why_ they are not an ideal solution. 
+- Write psuedocode before you jump into code. Psuedocode is step by step plain text description of your solution. This way you can stay organized, and demonstrate to the interviewer that you understand the bulk of the problem, and have a clear and systematic thought process. With great psuedocode, your interviewer may even choose to accept it as a solid answer, and will choose to move on before you even get to the code!
+- Always try to get the most simple solution down first. _Then_ go for optimizations, and handle for edge cases. Edge cases are strange inputs that are different in format, and may result in an error. For example, if your input expects an array of integers, what happens when your array is [], or when it is [-1,-1,-1,-1]... will your function still work? 
 
 ## Whiteboard challenge
 Let's practice now! We're gonna divide the class into two groups. One group will be handled by your instructor and the other one by your Teaching Assistant.

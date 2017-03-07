@@ -63,9 +63,10 @@ As a product manager, you won't have questions that are that technically complic
 
 ### Easier technical questions
 
-PUT TYPICAL EXAMPLE QUESTIONS.
-
-MENTION THE FACT THAT THEY MIGHT BE ASKED HOW THEIR TECHNICAL BACKGROUND WILL HELP THEM
+- Write a maxNum function that accepts an array of integers, and returns the largest integer
+- Write a class Dog, that has one function bark, which will print "Woof!"
+- Write a function add, that accepts two numbers, and returns the sum. 
+- Write a function that takes a string, and returns that string in snake format. snakeFormat('examplestring') => 'eXaMpLeStRiNg'
 
 ### Advice
 IF YOU HAVE TECHNICAL CHALLENGE, ASK AS MANY QUESTIONS AS POSSIBLE

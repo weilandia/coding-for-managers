@@ -1,6 +1,6 @@
 # Technical Interview
 
-As manager, you might be interested in applying for technical companies. In that case, you have a chance of being confronted by technical questions. That's why today we will learn about what a technical interview looks like and what you should be prepared for as a manager.
+As a manager, you might be interested in applying for technical companies. In that case, you have a chance of being confronted by technical questions. That's why today we will learn about what a technical interview looks like and what you should be prepared for as a manager.
 
 ## What you will learn today
 * What is an engineer technical interview
@@ -11,7 +11,7 @@ As manager, you might be interested in applying for technical companies. In that
 A typical on-site interview can range from 1-5 hours; but is typically divided into 2 parts. An introduction/cultural fit portion, and the technical portion. The technical portion can be pair programming, an online coding challenge, whiteboarding, architecture overview, high-level conceptual questions, or a live demo and conversation of a project the candidate has previously worked on. We will cover each part so that you have a good overview of what an engineer interview looks like.
 
 ### Introduction / Cultural fit
-This is an engineers opportunity to demonstrate their soft skills, which many would argue are just as crucial as technical ability. Companies want a team player who knows how to communicate well, and who people enjoy working alongside with. Also, more and more companies (especially startups) look for candidates who are mission driven. 
+This is an engineer's or manager's opportunity to demonstrate their soft skills, which many would argue are just as crucial as technical ability. Companies want a team player who knows how to communicate well, and who people enjoy working alongside with. Also, more and more companies (especially startups) look for candidates who are mission-driven. 
 
 ADD TYPICAL INTRO QUESTIONS
 
@@ -69,7 +69,9 @@ As a product manager, you won't have questions that are that technically complic
 - Write a function that takes a string, and returns that string in snake format. snakeFormat('examplestring') => 'eXaMpLeStRiNg'
 
 ### Advice
-IF YOU HAVE TECHNICAL CHALLENGE, ASK AS MANY QUESTIONS AS POSSIBLE
+- Ask clarifying questions before you just jump into the code, make sure you understand your challenge 100% before starting. Some interviewers will keep their instructions vague, to see if the interviewee will ask good clarifying questions. 
+- Never get frustrated or angry. Show persistance, and only give up if you absolutely are stuck. 
+- Always talk through your thoughts. Even if you had initial thoughts on how to solve a problem, which you realize are not correct, be sure to mention them to your interviewer and demonstrate an understanding of _why_ they are not an ideal solution. 
 
 ## Whiteboard challenge
 Let's practice now! We're gonna divide the class into two groups. One group will be handled by your instructor and the other one by your Teaching Assistant.

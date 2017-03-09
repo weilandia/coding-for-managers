@@ -1,4 +1,4 @@
-# Adding Users
+# Intro to Rails (Part 3)
 
 |Objectives|
 |----------|
@@ -17,7 +17,9 @@ Gems are libraries - collections of open source, pre-built functions and classes
 
 ## Add devise gem
 
-Adding authentication is vital to any modern web application. We will spend today adding the `devise` gem to our blog appliction. This is a program that will help us integrate the tools needed to authenticate and authorize users. With this gem we will not need to write the complicated code needed to add security to our pages.
+Adding authentication is vital to any modern web application. We will spend today adding the `devise` gem to our blog appliction. Devise is a powerful library that helps Rails developers integrate the tools needed to authenticate users and provide a security layer to the app.
+
+[More about devise](http://devise.plataformatec.com.br/)
 
 Open up your Gemfile and add this line
 ```rb
@@ -127,11 +129,4 @@ This will ensure that the user that creates or edits posts is the user and helps
 ```
 This will finally ensure that the post is associated with the user creating it.
 
-## Where we are going next:
-Thus far we have implemented two models (one for users's and one for posts).  We have added authentication and authorization.  We have created the routes and the views for all of our actions for the website.  
-
-In our next session we will be implementing Bootstrap styling to really give our website a look and feel that is more professional and pleasing.
-
-### Resources:
-https://github.com/plataformatec/devise
-http://www.korenlc.com/rails-tutorial-authentication-with-devise/
+Homework: [Add permissiong/authorization to your app using cancancan](../authorization)

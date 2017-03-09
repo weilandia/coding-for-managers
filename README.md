@@ -4,8 +4,8 @@
 
 Schedule:
 
-| Day | Date | Topic |
-|-----|-------|------|
+| Day | Topic |
+|-----|------|
 | Day 1 | [Intro and HTML](intro)
 | Day 2 | [CSS I](css-1)
 | Day 3 | [CSS II](css-2)

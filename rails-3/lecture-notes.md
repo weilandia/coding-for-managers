@@ -1,11 +1,10 @@
 # Intro to Rails (Part 3)
 
-|Objectives|
-|----------|
-|Understand the role of libraries/gems|
-|Install and configure devise for Rails|
-|Create views for registration process|
-|Register a new user|
+## What you will learn in this course
+* Understand the role of libraries/gems
+* Install and configure devise for Rails
+* Create views for registration process
+* Register a new user
 
 ## Gems
 

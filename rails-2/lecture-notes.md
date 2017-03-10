@@ -1,12 +1,11 @@
 # Intro to Rails (Part 2)
 
-Objectives|
-|---------|
-|Learn about Scaffolding|
-|Learn about Routes and Controllers|
-|Learn the different componenets of Routes and Controllers|
-|See how Routes, Controllers, and Models fit together|
-|Implement Routes/Controller for Posts|
+## What you will learn in this course
+* Learn about Scaffolding
+* Learn about Routes and Controllers
+* Learn the different components of Routes and Controllers
+* See how Routes, Controllers, and Models fit together
+* Implement Routes/Controller for Posts
 
 ## Scaffolding
 `rails scaffold` will build all of the model, view and controller (MVC) files for a new model in the application. Before we scaffold, let's clean up our c9 workspace by destroying our previous Post model and cleansing our database:

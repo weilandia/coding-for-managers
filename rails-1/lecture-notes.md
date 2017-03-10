@@ -160,7 +160,7 @@ You can use `.update` or `.update_attributes` to update ONE or MULTIPLE attribut
   `my_first_post.update_attributes(body: "revamped body...")`
   `my_first_post.update(body: "revamped body...", title: "new title...")`
 
-- Delete: Use the `.destroy` method to delete an object from your database. However, we will use this sparingly. Most data we will want to persist in our DB for later analysis.
+- Delete: Use the `.destroy` method to delete an object from your database. However, we will use this sparingly. We will want most data to persist in our DB for later analysis.
 
   `my_first_post.destroy`
 

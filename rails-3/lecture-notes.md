@@ -1,23 +1,22 @@
 # Intro to Rails (Part 3)
 
-|Objectives|
-|----------|
-|Understand the role of libraries/gems|
-|Install and configure devise for Rails|
-|Create views for registration process|
-|Register a new user|
+## What you will learn in this course
+* Understand the role of libraries/gems
+* Install and configure devise for Rails
+* Create views for registration process
+* Register a new user
 
 ## Gems
 
 **Introduction**:
 
-Gems are libraries - collections of open source, pre-built functions and classes that you can integrate into your Rails app to give it additional capabilities. One of the benefits of Rails is that it is a huge community with an abundance of high-quality, well-documented, well-maintened gems to help you with almost anything you need to build.
+Gems are libraries - collections of open source, pre-built functions and classes that you can integrate into your Rails app to give it additional capabilities. One of the benefits of Rails is that it is a huge community with an abundance of high-quality, well-documented, well-maintained gems to help you with almost anything you need to build.
 
 **Gemfile**: Include gems in your app by adding them to your Gemfile, using the syntax: `gem gem-name`.
 
 ## Add devise gem
 
-Adding authentication is vital to any modern web application. We will spend today adding the `devise` gem to our blog appliction. Devise is a powerful library that helps Rails developers integrate the tools needed to authenticate users and provide a security layer to the app.
+Adding authentication is vital to any modern web application. We will spend today adding the `devise` gem to our blog application. Devise is a powerful library that helps Rails developers integrate the tools needed to authenticate users and provide a security layer to the app.
 
 [More about devise](http://devise.plataformatec.com.br/)
 

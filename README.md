@@ -14,7 +14,7 @@ Schedule:
 | Day 6 | [Rails I](rails-1)
 | Day 7 | [Rails II](rails-2)
 | Day 8 | [Rails III](rails-3)
-| Day 9 | [Responsive Design](responsive-design)
+| Day 9 | [Bootstrap](bootstrap)
 | Day 10 | [Review I](review-1)
 | Day 11 | [Javascript I](javascript-1)
 | Day 12 | [Javascript II](javascrip-2)

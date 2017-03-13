@@ -34,23 +34,22 @@ Add the viewport meta tag and the <a href="http://getbootstrap.com/getting-start
 ### Bootstrap Grid System
 
 1.  `.container` class holds `.row` classes
-2.  Rows create horizontal groups of columns
-3.  Site content lives in columns
+2.  Rows create horizontal groups of columns, based on a system of 12 columns
 ```
 <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6">
-          <p>This column takes up half the page.</p>
-        </div>
-        <div class="col-sm-6">
-          <p>And so does this one!</p>
-        </div>
-      </div>
-    </div>
+	<div class="container-fluid">
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-6 col-md-3">
+	      <p>I take up a quarter of the page on a medium device and above.</p>
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-md-3">
+	      <p>I take up half the page on a small device</p>
+	    </div>
+	  </div>
+	</div>
 </body>
 ```
-4.  `xs-*`, `sm-*`, `md-*`, `lg-*` refer to targeted device sizes  
+4.  `xs-*`, `sm-*`, `md-*`, `lg-*` refer to targeted device sizes ([spec reference](http://getbootstrap.com/css/#buttons-options))
 5.  The best way to learn about the Bootstrap grid system is to see it in action:
 
 - <b><a href="https://www.instacart.com/">Instacart</a></b><br>
@@ -83,11 +82,11 @@ In this lesson we will explore two ways with which you can import Bootstrap into
 
 1. Add the necessary gems to our Gemfile.
 
-Much like in our last lesson, we will be making use of installing gems into our application.  In order to use Bootstrap for our blogs in this class we will be adding two different gems:  `bootstrap-sass` and `autoprefixer-rails`.  The `bootstrap-sass` gem will integrate all of the components of Bootstrap.  The `autoprefixer-rails` gem will automatically add the proper vendor prefixes when our CSS code is compiled.
+Much like in our last lesson, we will be making use of installing gems into our application.  In order to use Bootstrap for our blogs in this class we will be adding two different gems:  `bootstrap-sass` and `autoprefixer-rails`.  The `bootstrap-sass` gem will integrate all of the components of Bootstrap.  The `autoprefixer-rails` gem will automatically add the proper vendor (browser) prefixes when our CSS code is compiled.
 
 ```rails
   # Gemfile
-  gem 'bootstrap-sass', '~> 3.2.0'
+  gem 'bootstrap-sass'
   gem 'autoprefixer-rails'
 ```
 
@@ -112,7 +111,7 @@ Next, you will add the following code to `app/assets/javascripts/application.js`
 //= require bootstrap-sprockets
 ```
 
-It is important to note that placement of this line is extremely important.  You will want the structure of the file to look like this:
+It is important to note that placement of this line is important.  You will want the structure of the file to look like this:
 ```rb
 //= require jquery
 //= require jquery_ujs
@@ -121,18 +120,21 @@ It is important to note that placement of this line is extremely important.  You
 //= require_tree .
 ```
 
-Once you have completed the alteration of these files you should save your changes and open your project in your browser.  In order to know that you have Bootstrap implemented you should see a change in the font of your page and potentially a flash message!
+### Let's add in some Bootstrap styling to our blog app
 
-It could look like this:
-![bootstrap](https://cloud.githubusercontent.com/assets/8397980/21191761/3194529e-c1f4-11e6-82b8-504ee9a0210c.png)
+**Exercise: add the `table` and `table-hover` classes to the table of posts in your posts `index.html` file.**
 
+**Exercise: add a `bg-warning` to your alert in your `application.html.erb` file.**
 
+**Exercise: add a `nav` around your sign in logic in your `application.html.erb` file. Give that div the following two classes: `nav navbar-inverse`.**
 
-### Using different themes for inspiration:
+**Exercise: add the classes `btn btn-default navbar-btn` to the links in your nav. Change the defualt styling of a few of the buttons by using this guide: http://getbootstrap.com/css/#buttons-options**
 
-From here I would go to a website like: https://bootswatch.com/ in order to look at different styling elements.  I usually will follow the source code and integrate it into my application.  I tend to go piece by piece as far as integrating the content of the code into my individual page.  
+### Using themes for inspiration:
 
-Luckily, Bootswatch has a gem for us to use to easily implement different themes into our page.  I will use the initial steps from http://stackoverflow.com/questions/14796962/mongoose-schema-reference as a guide for how to use that gem.
+From here I would go to a website like: https://bootswatch.com/ in order to look at different styling elements. You can follow the source code and integrate it into your application.
+
+Luckily, Bootswatch has a gem for us to use to easily implement different themes into our page. We can use the initial steps from http://stackoverflow.com/questions/14796962/mongoose-schema-reference as a guide for how to use that gem.
 
 1. Install `gem 'bootswatch-rails'` into your Gemfile.
 2. Edit your `application.css.scss` to look like this:
@@ -156,7 +158,7 @@ body { padding-top: 60px; }
 ```
 In this case we're using the 'Cerulean' theme by Bootswatch.
 
-3. You can easily change the theme within your `application.css.scss` file to adjust the look of your application.
+3. You can easily edit/overwrite styles the theme within your `application.css.scss` file to adjust the look of your application.
 4. Once you have the them you want you will be able to use the source code in the examples provided by Bootswatch in order to customize you page.
 
 
@@ -167,6 +169,5 @@ https://github.com/maxim/bootswatch-rails
 
 ## Where we are going from here:
 
-Up to this point you have now created your application, added the associated models, routes, and views.  You have also integrated authentication and authorization for the users of your application.  Now your application has the elements of style that you can edit to give it a more personal and professional touch.  In our next lesson we will be integrating JQuery into our application for dynamic interaction with the user.
-
+Up to this point you have now created your application, added the associated models, routes, and views.  You have also integrated authentication and authorization for the users of your application.  Now your application has the elements of style that you can edit to give it a more personal and professional touch. In our review class, we'll be adding a landing page as well as improving some functionality on the rails side.
 

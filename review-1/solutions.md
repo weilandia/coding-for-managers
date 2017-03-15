@@ -1,0 +1,1 @@
+You can find today's solutions in Cloud9 on my shared rails project.

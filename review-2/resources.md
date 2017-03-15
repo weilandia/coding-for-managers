@@ -1,36 +1,39 @@
 # Resources
 
-## Intro to Ruby
+## Bootstrap
 
-- <a href="http://rubymonk.com/learning/books/1-ruby-primer">Ruby Monk</a>
-- <a href="http://www.ruby-doc.org/core-2.2.0/">Ruby Lessons</a>
-- <a href="http://www.ruby-doc.org/core-2.2.0/Array.html">Arrays and Methods</a>
-- <a href="http://www.ruby-doc.org/core-2.2.0/Hash.html">Hashes and Methods</a>
+### Responsive Design
 
-## Intro to Rails
+- <a href="https://scotch.io/tutorials/understanding-the-bootstrap-3-grid-system">Understanding the Bootstrap System</a>
+- <a href="http://expo.getbootstrap.com/">Inspiring Uses of Bootstrap</a>
+- <a href="http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302">Some Wireframing Tools</a>
+- <a href="https://startbootstrap.com/bootstrap-resources/">Some Bootstrap Resources</a>
+- <a href="http://www.w3schools.com/bootstrap/">W3 Schools Bootstrap Tutorial</a>
+- <a href="https://www.youtube.com/watch?v=gqOEoUR5RHg">YouTube Bootstrap Tutorial</a>
 
-- <a href="http://edgeguides.rubyonrails.org/active_record_basics.html">ActiveRecord Basics</a>
-- <a href="http://railsforzombies.org/levels/1">Rails for Zombies</a>
-- <a href="http://railsforzombies.org/levels/2">Rails for Zombies Pt. 2</a>
+### Integration
 
-## Rails II
+- <a href="https://www.railstutorial.org/book/filling_in_the_layout">Rails Tutorial</a>
+- <a href="https://bootswatch.com/">Bootswatch</a>
+- <a href="https://github.com/maxim/bootswatch-rails">Bootswatch-Rails Github</a>
 
-- <a href="https://www.ruby-toolbox.com/">Ruby Toolbox</a>
-- <a href="https://www.codeschool.com/courses/rails-for-zombies-redux">Rails for Zombies(for learning more about routing)</a>
-- <a href="https://www.codeschool.com/courses/rails-for-zombies-redux">Rails for Zombies(for learning more about views)</a>
-- <a href="http://guides.rubyonrails.org/routing.html">Routing Guides</a>
-- <a href="http://guides.rubyonrails.org/form_helpers.html">Form Helpers</a>
+## JavaScript & JQuery
+- <a href="https://www.codecademy.com/learn/javascript">Codecademy</a>
+- <a href="https://www.tutorialspoint.com/javascript/">Tutorials Point</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JS Basics</a>
 
-## Rails III
-- <a href="http://guides.rubyonrails.org/getting_started.html">Getting Started with Rails</a>
+- <a href="http://www.tutorialspoint.com/jquery/">Tutorials Point</a>
+- <a href="https://learn.jquery.com/">Learn JQuery</a>
+- <a href="https://www.codecademy.com/learn/jquery">Codecademy</a>
 
+## Testing
 
-## Authentication
+- <a href="http://blog.teamtreehouse.com/an-introduction-to-rspec">Treehouse</a>
+- <a href="http://rspec.info/">RSpec Info</a>
 
-- <a href="http://www.korenlc.com/rails-tutorial-authentication-with-devise/">Devise Tutorial</a>
-- <a href="https://github.com/plataformatec/devise">Devise Github</a>
+## Heroku Deployment
 
-## Authorization
-
-- <a href="https://github.com/CanCanCommunity/cancancan">cancancan</a>
-- <a href="https://www.sitepoint.com/cancancan-rails-authorization-dance/">Rails Authorization</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publising</a>
+- <a href="https://devcenter.heroku.com/articles/rails4" target="_blank">Rails 4 on Heroku</a>
+- <a href="https://devcenter.heroku.com/articles/heroku-postgresql" target="_blank">Heroku Postgres</a>
+- <a href="https://devcenter.heroku.com/articles/rake" target="_blank">Running Rake Commands</a>

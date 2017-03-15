@@ -6,9 +6,17 @@ We have covered a lot of ground so far in this course. Today we'll be building a
 
 Exercise 1:
 
-**We need a new route/controller for our landing page. It is not explicitly part of our posts, so it should be a separate concern. Generate a `home` controller using `$ rails g controller home`. After it has been generated, go into the controller file and add an index method.** *Hint: the index method should be empty.*
+**We need a new route/controller for our landing page. It is not explicitly part of our posts, so it should be a separate concern. Generate a `home` controller using `$ rails g controller home`. This should also generate a view directory for home - add a file named index.html.erb in that directory and write 'HELLO WORLD' in it for a temporary identifier. Go into the controller file and add an index method. Remember, the controller method and the view filename should match.** *Hint: the index method should be empty.*
 
 Exercise 2:
+
+**We need to change our `root` route. Adjust it to point to your new controller's index action instead of `posts#index`. Let's test it out - try going to your site's base URL. It doesn't work - we don't see HELLO WORLD. Why not?**
+
+Exercise 3:
+
+**Our authentication is blocking users from going anywhere on our site without an account. How can we allow them to view our lading page without creating/logging into an account? We need to make an exception for the home controller's `index` action. Add `skip_before_action :authenticate_user!, only: [:index]` to the second line of your home controller. This will bypass the top-level before_action in our application controller and let users see our landing page.**
+
+Exercise 4:
 
 **We need to change our `root` route. Adjust it to point to your new controller's index action instead of `posts#index`.**
 

@@ -28,11 +28,6 @@ a {
   flex-direction: row;
 }
 
-.name {
-  margin-top: 10px;
-  text-decoration: none;
-}
-
 #about-list-item, #contact-list-item, #blog-list-item {
   margin:10px;
 }

@@ -1,3 +1,3 @@
 # Exercises
 
-Homework: [Add permissiong/authorization to your app using cancancan](../authorization)
+Homework: [Add permissions/authorization to your app using cancancan](../authorization)

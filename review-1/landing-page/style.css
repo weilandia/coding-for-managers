@@ -6,7 +6,7 @@ a {
   text-decoration: none;
 }
 .background-image{
-  background-image: url("generic_background.jpg");
+  background-image: url("img/generic_background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

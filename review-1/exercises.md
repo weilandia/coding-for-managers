@@ -1,4 +1,4 @@
-# Review (HTML/CSS/GIT/RUBY/RAILS)
+# Review (HTML/CSS/RUBY/RAILS)
 
 We have covered a lot of ground so far in this course. Today we'll be reviewing what we've learned by building a home page and touching up your blog. Time permitting, we'll also be going over the solution for the authorization homework using CanCanCan. I'll want you to do something called **pair programming** today. Team up with a partner sitting next to you to go through today's exercises. Don't be shy!
 
@@ -39,3 +39,7 @@ Exercise 2:
 Exercise 3:
 
 **Add nice Bootstrap buttons to all the links on your blog's post index. Look at how we made the nav bar buttons for log in / sign up.** *Bonus: use non-default stying on some of the buttons for added effect.*
+
+Homework:
+
+**Use your HTML/CSS skills to beautify your homepage. You can remove/add anything, add a new background picture etc. If you have time, use your Rails/Ruby skills to customize the blog section of your website.**

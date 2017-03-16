@@ -22,7 +22,7 @@ Exercise 4:
 
 Exercise 5:
 
-**Let's add a way for users to get back to our homepage. We can add a Bootstrap-styled button just outside of our sign up logic inside of our main nav element in our `application.html.erb` file that will show regardless of whether a user is signed in or not.** *Hint: follow the formatting for the other `link_to` links and use `root_path` as the path.* 
+**Let's add a way for users to get back to our homepage. We can add a Bootstrap-styled button just outside of our sign up logic inside of our main nav element in our `application.html.erb` file that will show regardless of whether a user is signed in or not.** *Hint: follow the formatting for the other `link_to` links and use `root_path` as the path.*
 
 Exercise 6:
 

@@ -54,10 +54,6 @@ Test-driven development (TDD) is a software development process that relies on t
 - <a href="http://blog.teamtreehouse.com/an-introduction-to-rspec">Treehouse</a>
 - <a href="http://rspec.info/">RSpec Info</a>
 
-## <a href="https://github.com/product-school/heroku-lesson">Heroku Deployment</a>
-
-In this lesson we discussed deploying your website to the interenet.  We also did a walk through of how to deploy your website through Heroku, a popular and free service for website deployment.
-
 ### Resources
 
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publising</a>

@@ -10,7 +10,7 @@ Exercise 1:
 
 Exercise 2:
 
-**Our application won't send users to our home page yet because we haven't assigned a route to it. We need to change our `root` route. Adjust it to point to your new controller's index action instead of `posts#index`. Let's test it out - try going to your site's base URL. Hmmm... It doesn't work - we don't see HELLO WORLD. Why not?**
+**Our application won't send users to our home page yet because we haven't assigned a route to it. We need to change our `root` route. Adjust it to point to your new controller's index action instead of `posts#index`. Let's test it out - try going to your site's base URL while LOGGED OUT. Hmmm... It doesn't work - we don't see HELLO WORLD. Why not?**
 
 Exercise 3:
 

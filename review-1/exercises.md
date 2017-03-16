@@ -21,9 +21,11 @@ Exercise 4:
 **Let's add an HTML with some CSS and an image for our home page. Where do these files go?**
 
 Exercise 5:
+
 **Let's add a way for users to get back to our homepage. We can add a Bootstrap-styled button just outside of our sign up logic inside of our main nav element in our `application.html.erb` file that will show regardless of whether a user is signed in or not.** *Hint: follow the formatting for the other `link_to` links and use `root_path` as the path.* 
 
 Exercise 6:
+
 **We don't want our blog's nav to be on our home page. How can we NOT display our blog's nav element when we're at our root path.** *Hint: we need to add some logic into our application.html.erb that determines if we're on our root page. We can use the following method to check: `current_page?(root_url)`. That method will provide us with a boolean value we can use in a conditional statement.*
 
 ## Touching up the blog

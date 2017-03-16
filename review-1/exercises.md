@@ -28,6 +28,10 @@ Exercise 6:
 
 **We don't want our blog's nav to be on our home page. How can we NOT display our blog's nav element when we're at our root path.** *Hint: we need to add some logic into our application.html.erb that determines if we're on our root page. We can use the following method to check: `current_page?(root_url)`. That method will provide us with a boolean value we can use in a conditional statement.*
 
+Exercise 7:
+
+**How do we get to the blog section of our website? Let's update the blog link that is currently pointing at `#contact`** *Hint: This is an ERB file so we can add some Rails logic into it. What would give us a proper PATH to our blog? This path exists in another part of our app already.*
+
 ## Touching up the blog
 
 Exercise 1:

@@ -14,7 +14,7 @@ Exercise 2:
 
 Exercise 3:
 
-**Our authentication is blocking users from going anywhere on our site without an account. How can we allow them to view our lading page without creating/logging into an account? We need to make an exception for the home controller's `index` action. Add `skip_before_action :authenticate_user!, only: [:index]` to the second line of your home controller. This will bypass the top-level before_action in our application controller and let users see our home page.**
+**Our authentication is blocking users from going anywhere on our site without an account. How can we allow them to view our lading page without creating/logging into an account? We need to make an exception for the home controller's `index` action. Add `skip_before_action :authenticate_user!, only: [:index]` to the second line of your home controller (inside of the class definition, but not inside of the index method). This will bypass the top-level before_action in our application controller and let users see our home page.**
 
 Exercise 4:
 

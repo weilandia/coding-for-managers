@@ -1,1 +1,3 @@
-You can find today's solutions in Cloud9 on my shared rails project.
+# Solution
+
+[Cloud 9](https://ide.c9.io/cdepman/rails-practice)

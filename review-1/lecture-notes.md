@@ -61,8 +61,3 @@ Today we will be generating a seperate project in order to fully understand the 
 
 - <a href="https://github.com/CanCanCommunity/cancancan">cancancan</a>
 - <a href="https://www.sitepoint.com/cancancan-rails-authorization-dance/">Rails Authorization</a>
-
-
-## Going Further: Other Back End programming languages PYTHON and PHP
-
-Present latest version of both and talk about their popular frameworks.

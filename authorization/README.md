@@ -1,7 +1,8 @@
 # Authorization for Rails
 
-## What you will learn in this course
+## What you will learn in this homework
 * Explain how authorization differs from authentication
+* Further practice using gems
 * Use CanCanCan to implement authorization helpers in a Rails application
 
 Authorization is an important aspect to most any application. As a system, it is put in place to determine whether the current user has the permission to perform the requested action. Based on this, it typically happens after a user is authenticated, but before a request is processed.

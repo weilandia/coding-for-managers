@@ -8,79 +8,43 @@ Authorization is an important aspect to most any application. As a system, it is
 
 ### Adding cancancan
 
-1. Add the gem 'cancancan' to your Gemfile.
-2. run 'bundle install' in the terminal.
-3. Add this to your application controller:
+1. Add the gem `cancancan` to your Gemfile.
+2. run `bundle install` in the terminal.
+3. Add this into your Application Controller class:
 ```rb
-  class ApplicationController < ActionController::API
-    include CanCan::ControllerAdditions
-  end
+  include CanCan::ControllerAdditions
 ```
 This line will load the functionality of CanCanCan into your application.  This functionality comes with some key words that help you define which users CAN (get it) do things and which ones cannot.
 
- 4.  Now define abilities running the command 'rails g cancan:ability' in the terminal.  This will create an 'ability.rb' file that you will use to help set the authorization of the users in the application.
- 5.  In your 'ability.rb' file add this block of code:
+ 4.  Now define abilities running the command `rails g cancan:ability` in the terminal.  This will create an `ability.rb` file that you will use to help set the authorization of the users in the application.
+ 5.  In your `ability.rb` file add this block of code:
  ```rb
  class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new # guest user (not logged in)
-    can :read, Post
-
-    can [:create, :update, :destroy], Post do |post|
-      post.user == user
-    end
+    user = user || User.new # guest user (not logged in)
+    can [:read], Post
+    can [:create, :update, :destroy], Post, user_id: user.id
   end
 end
 ```
 This code allows all users to read all posts.  However, the user can only create, update, and destroy posts if the user.id of the post matches their id.
 
-6. At the top of the 'posts_controller.rb' add this line before your definitions of your method: 'load_and_authorize_resource only: [:edit, :update, :destroy]'
-and also comment out 'before_action :set_post, only: [:show, :edit, :update, :destroy]'
+6. At the top of the `posts_controller.rb` add this line before your definitions of your method: `load_and_authorize_resource only: [:edit, :update, :destroy]`
+and also delete `before_action :set_post, only: [:show, :edit, :update, :destroy]` as this new `load_and_authorize_resource` will be doing the same thing for us but only after running the resource through the cancancan check.
 
 ```rb
-class PostsController < ApplicationController
-  # before_action :set_post, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource  only: [:edit, :update, :destroy]
 ```
 
-6. In the 'posts_controller.rb' for your CRUD actions you will need to set the instance of a user to the current user like so:
+7. You will want to have an alert message to let the user know that have tried to access a page they are not authorized to do so. Add the following inside your Application  Controller class, right under `include CanCan::ControllerAdditions`:
 ```rb
- # GET /posts/new
-  def new
-    @user = current_user
-    @post = Post.new
-  end
-```
-This will ensure that the user that creates or edits posts is the user and helps to check the authorization.
-
-7. In the 'posts_controller.rb' modify the instance of a post in your create method to look like this:
-```rb
-@post = @user.posts.build(post_params)
-```
-This will finally ensure that the post is associated with the user creating it.
-
-8. In the 'posts_controller.rb' modify the instance of a post in your show method to look like this:
-```rb
- # GET /posts/1
- # GET /posts/1.json
- def show
-   @user = current_user
-   @post = Post.find(params[:id])
- end
-```
-This will ensure that you will have access to the correct post on that page
-
-9. You will want to have a flash message to let the user know that have tried to access a page they are not authorized to do so:
-```rb
-# application_controller.rb
-
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:notice] = "Access denied!"
-    flash.keep(:notice)
-    redirect_to root_url
+    flash[:alert] = "You must be the owner of this resource to modify it!"
+    flash.keep(:alert)
+    redirect_to posts_path
   end
-  ```
+```
 
-At this point you should be able to create different users and make posts for those users.  When an unauthorized user tries to modify or delete a posts they will not be able to and be met with an error saying so.
+At this point you should be able to create different users and make posts for those users.  When an unauthorized user tries to modify or delete a posts they will not be able to and be met with an alert saying so.

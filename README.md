@@ -17,7 +17,7 @@ Schedule:
 | Day 9 | [Bootstrap](bootstrap)
 | Day 10 | [Review I](review-1)
 | Day 11 | [Javascript I](javascript-1)
-| Day 12 | [Javascript II](javascrip-2)
+| Day 12 | [Javascript II](javascript-2)
 | Day 13 | [Public APIs](public-apis)
 | Day 14 | [Review II](review-2)
 | Day 15 | [Deployment](deployment)

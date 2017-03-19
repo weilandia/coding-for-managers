@@ -13,7 +13,7 @@
 |Complete a practice problem|
 
 
-Like Java, Python, and Ruby, JavaScript is a scripting language that allows you to build systems that do cool things. One of the benefits of JavaScript is that it can run in your browser, serving as a ‘client-side’ scripting language. Any cool effects that you see on a webpage are likely enabled by JavaScript.
+Like Java, Python, and Ruby, JavaScript is a scripting language that allows you to build systems that do cool things. One of the benefits of JavaScript is that it can run in your browser, serving as a `client-side` scripting language. Through technologies like Node.js, JacaScript is also used as a `server-side` language. Any cool effects that you see on a webpage are likely enabled by JavaScript.
 
 
 #### Background:
@@ -22,12 +22,13 @@ JavaScript was created in 1995 by Brendan Eich, an engineer at Netscape, and fir
 JavaScript is the only scripting language that can be run by your browser.
 
 
-#### In-Class Exercises - Running code in the browser console:
+#### In-Class Exercises - Running code in the chrome dev console:
 
-* Calculate the total number of dollars you spent today
-* Type out your name in quotes
+* alert(5 + 7)
+* answer = prompt("What is your favorite park in San Francisco?")
+* console.log("Your favorite park is", answer)
 
-#### Writing JavaScript scripts in HTML files and linking
+#### Writing JavaScript directly within HTML files and linking to external scripts
 
 **Within the head or body of your HTML Files:**
 
@@ -40,15 +41,15 @@ Your JavaScript code.....
 **Linking to external JavaScript files:**
 
 ```html
- <script type="text/JavaScript" src="/path-to-your-file-file"></script>
+ <script src="/relative-path-to-your-file-file"></script>
  ```
 
 
 ### Data Types, Arithmetic Operators, & Comparisons
 
 * Number: 1
-* String: ‘Hello World’
-* Boolean: true/false Object
+* String: 'Hello World'
+* Boolean: true/false
 * Function:
 * Array: [1, 2, 3]
 * Date: RegExp:
@@ -58,29 +59,29 @@ Your JavaScript code.....
 
 ### Arithmetic Operators: 5 operators with the same order of operations as your traditional arithmetic
 
-* Multiplication: ‘*’. Eg: 5 * 10 = 50;
-* Division: ‘/’. Eg: 10/5 = 2;
-* Addition: ‘+’. Eg: 5 + 7 = 12;
-* Subtraction: ‘-’. Eg: 7 - 5 = 2;
-* Modulus: ‘%’: Performs division and returns the remainder. Eg: 6 % 3 = 0; Eg: 7 % 3 = 1;
+* Multiplication: `*`. Eg: 5 * 10 = 50;
+* Division: `/`. Eg: 10/5 = 2;
+* Addition: `+`. Eg: 5 + 7 = 12;
+* Subtraction: `-`. Eg: 7 - 5 = 2;
+* Modulus: `%`: Performs division and returns the remainder. Eg: 6 % 3 = 0; Eg: 7 % 3 = 1;
 
 
 ### Making Comparisons: JavaScript evaluates the comparison, returning true or false
 
-* Greater than: ‘>’
-* Less than: ‘<’
-* Equality: ‘==’; Converts operands if they aren’t the same type, then applies strict equality; Eg: 1 == ‘1’
-* Strict Equality: ‘===’ Two operands are equal without type conversion: Eg: 1 === 1
+* Greater than: `>`
+* Less than: `<`
+* Equality: `==`; Converts operands if they aren`t the same type, then applies strict equality; Eg: 1 == `1`
+* Strict Equality: `===` Two operands are equal without type conversion: Eg: 1 === 1
 * Not equal: !=
 * Strict not equal: !===
 * Greater or equal: >=
 * Less or equal: <=
 
 
-* Strings: Collection of characters used to represent text. Eg: ‘Hello World’
+* Strings: Collection of characters used to represent text. Eg: `Hello World`
 * Concatenation: Combines strings together. Eg: “Today is the ” + 10 + “th day at” + “Product” + “School”
 * Booleans: true & false
-* Null: empty / ‘no value present’
+* Null: empty / `no value present`
 * Undefined: original value of an object. Eg: var yourName;
 * Arrays: A variable that can hold one or more values at a time.
 * Variables: Symbolic names for values in an application
@@ -141,7 +142,7 @@ Alternate function definition syntax:
 * Scope:
 ```js
 var helloWorld = function() {
-  console.log(‘Hello World’);
+  console.log('Hello World');
 }
 
 var afterTaxIncome = function(income, taxrate) {
@@ -150,7 +151,7 @@ var afterTaxIncome = function(income, taxrate) {
 ```
 
 * **Global Variable:** Defined outside of functions. Once defined, its value can be set later on the file, either inside or outside of functions.
-* **Local Variables:** Defined inside a function. A local variable is only accessible from within the function in which it was defined. If a local variable is referenced from anywhere outside of the function, it will be ‘undefined’.
+* **Local Variables:** Defined inside a function. A local variable is only accessible from within the function in which it was defined. If a local variable is referenced from anywhere outside of the function, it will be `undefined`.
 
 ```js
   var globalVariable = 7;
@@ -176,7 +177,7 @@ Conditional statements allow you to execute code only if a certain condition is 
 if (condition) {
   code to be executed if the condition is true }
 } elseif (condition) {
-code to be executed if this condition is true and the one(s) above it aren’t true
+code to be executed if this condition is true and the one(s) above it aren`t true
 } else {
  code to be executed if the two conditions above are not true
 }
@@ -211,9 +212,9 @@ while (start < 10) {
 
 ### In-Class Exercise/Homework:
 
-- Using the JavaScript you’ve learned so far and HTML, create a program that prompts the user to enter an integer and returns “fizz” if the integer is divisible by 3, “buzz” if the integer is divisible by 5, “fizzbuzz” if the integer is divisible by 3 & 5, and otherwise simply returns the integer.
+- Using the JavaScript you`ve learned so far and HTML, create a program that prompts the user to enter an integer and returns “fizz” if the integer is divisible by 3, “buzz” if the integer is divisible by 5, “fizzbuzz” if the integer is divisible by 3 & 5, and otherwise simply returns the integer.
 
-**HINT: The only JavaScript methods you might need, other than what you already know so far are: alert(‘message’); and prompt(‘question’). Feel free to look those up.**
+**HINT: The only JavaScript methods you might need, other than what you already know so far are: alert('message'); and prompt('question'). Feel free to look those up.**
 
 ### Extra Resources
 * https://www.codecademy.com/learn/javascript

@@ -16,7 +16,7 @@ Like Java, Python, and Ruby, JavaScript is a scripting language that allows you 
 JavaScript was created in 1995 by Brendan Eich, an engineer at Netscape, and first released with Netscape 2 early in 1996.
 JavaScript is the only scripting language that can be run by your browser.
 
-**Practice 1:**
+**Practice 1: Interacting with the user directly through the browser**
 
 JavaScript is powerful because it allows us to interact with the user through the browser.
 * open a tab in Chrome and try the following:
@@ -62,9 +62,11 @@ JavaScript is powerful because it allows us to interact with the user through th
 </html>
 ```
 
-**Practice 2:**
+**Practice 2: Interacting with the DOM directly through Javascript**
 
-Javascript allows us to interact with HTML/CSS by directly manipulating items on the DOM - we can select elements by using CSS/Element selectors and change them dynamically. An event listener is one of the most important pieces aspects of interactivity on a webpage. It allows us to execute code when a certain user action takes place, like a `click`. Add the following code into the `script` section in your HTML file:
+JavaScript allows us to interact with HTML/CSS by directly manipulating items on the DOM (Document Object Model, a structured programming interface for HTML elements) - we can select DOM elements by using CSS/Element selectors and change them dynamically. We can also create elements on the fly. All of this functionality is accessed off of the `document` object in the browser. Let's check it out in our chrome developer console.
+
+Event listeners are one of the most important components of interactivity on a webpage. They allow us to execute code when a certain user action takes place, like a `click`. Add the following code into the `script` section in your HTML file:
 
  ```js
 var playerTitleElement = document.getElementById('player_title');
@@ -95,6 +97,22 @@ if (dayIndex === 1){
 }
 ```
 
+#### JS Functions
+
+Similar to Ruby function, JS functions take optional arguments and return values. The default return value is `undefined` and we must explicitly use the `return` keyword to return anything else. There are several ways to define a function:
+
+```js
+   var threeTimes = function(num) {
+     return num * 3;
+   }
+
+  function threeTimes(num) {
+    return num * 3;
+  }
+
+  console.log(threeTimes(5)); 
+```
+
 **Exercise 1:**
 
 Add another user prompt into the `updateName()` function. It should ask the user to enter a color. Store that color into a new variable called `color`. Then use that variable to change the color of the playerTitle element's background. *Hint: you can access an element's css through its `.style` property. You can change it by simply reassigning the value to the new color*
@@ -107,9 +125,9 @@ Add another user prompt into the `updateName()` function. It should ask the user
 
 **Exercise 2:**
 
-Let's move our JavaScript into an external file. Name it `script.js`. Reference it in the `<script>` tag by defining the relative path of the file in the `src` property.
+Let's move our JavaScript into an external file. Name it `script.js`. Reference it in the `<script>` tag by defining the relative path of the file in the `src` property. Make sure it's working by testing out the functionality of the `player` button.
 
-### Data Types, Arithmetic Operators, & Comparisons
+#### Data Types, Arithmetic Operators, & Comparisons
 JavaScript has many of the same datatypes as Ruby:
 
 * Number: 1, 23452345
@@ -118,7 +136,18 @@ JavaScript has many of the same datatypes as Ruby:
 * Array: [1, 2, 3]
 * Null, Undefined
 
-### Arithmetic Operators: 5 operators with the same order of operations as your traditional arithmetic
+#### Making Comparisons: JavaScript evaluates the comparison, returning true or false
+
+* Greater than: `>`
+* Less than: `<`
+* Equality: `==`; Converts operands if they aren't the same type, then applies strict equality; Eg: 1 == "1"
+* Strict Equality: `===` Two operands are equal without type conversion: Eg: 1 === 1
+* Not equal: !=
+* Strict not equal: !==
+* Greater or equal: >=
+* Less or equal: <=
+
+#### Arithmetic Operators: 5 operators with the same order of operations as your traditional arithmetic
 
 * Multiplication: `*`. Eg: 5 * 10 = 50;
 * Division: `/`. Eg: 10/5 = 2;
@@ -139,26 +168,11 @@ Let's create a simple tip calculator. Under the `player_title` `div`, let's add:
 <div id="total_cost"></div>
 ```
 
-Create a function called `AddTip` that has a `prompt` in it that asks the user how much tip they want to leave. The prompt should store a value into a variable called `tipAmount`. You can get the meal price from the input box by selecting the element using its ID and then accessing the `value` property. Save this amount into another variable called `mealPrice`. Try doing some simple arithmetic and update the `textContent` of the `total_cost` div with the total amount. Finally, add a `click` listener onto the `add_tip` button and specify your `AddTip` function as the callback.
+Create a function called `AddTip` that has a `prompt` in it that asks the user what percent tip they want to leave. The prompt should store the value into a variable called `tipAmount`. You can get the meal price from the input box by selecting the element using its ID and then accessing the `value` property. Save this amount into another variable called `mealPrice`. Try doing some simple arithmetic and update the `textContent` of the `total_cost` div with the total amount. Finally, add a `click` listener onto the `add_tip` button and specify your `AddTip` function as the callback. *Your solution will have a small but critical issue - what is it any why is it happening?*
 
+#### JS Objects:
 
- `<input>` tag with the `type` property set to `number` and `id` property set to `meal_cost`. Next, create 3 `<button>`s containing the text `15`, `18`, `20`. Next, create a `<div>` with an `id` of `total_cost`.
-
-### Making Comparisons: JavaScript evaluates the comparison, returning true or false
-
-* Greater than: `>`
-* Less than: `<`
-* Equality: `==`; Converts operands if they aren`t the same type, then applies strict equality; Eg: 1 == `1`
-* Strict Equality: `===` Two operands are equal without type conversion: Eg: 1 === 1
-* Not equal: !=
-* Strict not equal: !==
-* Greater or equal: >=
-* Less or equal: <=
-
-
-* Objects: A collection of properties representing key-values pairs.
-
-### Example of an Object:
+JS objects are similar to hashes in Ruby. One critical difference is that a JS object can have a functions as a value. The `this` keyword refers to the object itself, much like in ruby when `self` is used to refer to current Class or Instance.
 
 ```js
 var harry = {};
@@ -166,70 +180,18 @@ harry.height = "6 feet";
 harry.weight = "190 lbs";
 harry.profession = "Barber";
 harry.children = ["Jack", "Jill", "Gretta"];
+harry.praiseChildren = function(){
+  var praises = ["kind", "curious", "adventurous", "hard working", "musically gifted"];
+  for (var i = 0; i < this.children.length; i++){
+    console.log(this.children[i], "is so", praises[Math.floor(Math.random()*3)])
+  }
+}
+```
 
- harry : {height: "6 feet", weight: "190lbs", job: "Barber", children: ["Jack", "Jill", "Gretta"]};
- ```
 * Methods: JavaScript objects, arrays and functions each have their own unique properties and methods available to them
-https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
-Full list of array, function, and object methods:
-    Common array properties and methods: length, pop(), push(), slice(), sort(), reverse()
-•
 • Full list of built in JavaScript methods: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Methods_Index
 
-
-### JS Functions
-
-Similar to Ruby function, JS functions take optional arguments and return values. The default return value is `undefined` and we must explicitly use the `return` keyword to return anything else. There are several ways to define a function:
-
-```js
-   var threeTimes = function(num) {
-     return num * 3;
-   }
-
-  function threeTimes(num) {
-    return num * 3;
-  }
-
-  console.log(threeTimes(5)); 
-```
-
-* **Global Variable:** Defined outside of functions. Once defined, its value can be set later on the file, either inside or outside of functions.
-* **Local Variables:** Defined inside a function. A local variable is only accessible from within the function in which it was defined. If a local variable is referenced from anywhere outside of the function, it will be `undefined`.
-
-```js
-  var globalVariable = 7;
-
-  function double(x) {
-    var localVariable = x; //localVariable is only accessible within this function (it has local scope). return x*2;
-  }
-
-  function makeFour(variable) {
-    variable = 4;
-  }
-
-  makeFour(globalVariable); //transforms the value of globalVariable from 7 to 4.
-```
-
-### Conditionals
-
-**Create a function that accommodates a number of different scenarios.**
-Conditional statements allow you to execute code only if a certain condition is met. They enable to you to
-
-```js
-
-if (condition) {
-  code to be executed if the condition is true }
-} elseif (condition) {
-code to be executed if this condition is true and the one(s) above it aren`t true
-} else {
- code to be executed if the two conditions above are not true
-}
-
-```
-For a conditional, the first if statement if required, subsequent `elseif` and `else` statements are optional. You can include as many elseif conditions as you would like.
-
-
-### Loops/Iterators
+#### Loops/Iterators
 **Loops allow you to execute a block of code multiple times until a condition is met**
 
 * For Loops: executed until a specific condition returns false.
@@ -249,17 +211,16 @@ for (var i = 0; i < ages.length; i++) {
 ```js
 var start = 1;
 while (start < 10) {
-  console.log("start: " + start); start++;
+  console.log("start: " + start); 
+  start++; // shorthand for start = start + 1
 }
 ```
 
-### In-Class Exercise/Homework:
+**Exercise 4:**
 
-- Using the JavaScript you`ve learned so far and HTML, create a program that prompts the user to enter an integer and returns "fizz" if the integer is divisible by 3, "buzz" if the integer is divisible by 5, "fizzbuzz" if the integer is divisible by 3 & 5, and otherwise simply returns the integer.
+Using a `while` loop, create a number guessing game. You will need two variables, one for the guess and one for the answer. To supercharge your game, give the user hints about whether their number is high or low depending on their guess - you can use conditionals and comparison operators for this. *Hint: The computer can choose a starting number between 0-100 by using `Math.round(Math.random()*100)`*
 
-**HINT: The only JavaScript methods you might need, other than what you already know so far are: alert('message'); and prompt('question'). Feel free to look those up.**
-
-### Extra Resources
+#### Extra Resources
 * https://www.codecademy.com/learn/javascript
 * https://www.tutorialspoint.com/javascript/
 * https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics

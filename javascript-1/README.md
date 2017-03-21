@@ -20,10 +20,10 @@ JavaScript is the only scripting language that can be run by your browser.
 
 JavaScript is powerful because it allows us to interact with the user through the browser.
 * open a tab in Chrome and try the following:
-    * alert(5 + 7)
-    * alert("The date and time is now " + new Date());
-    * var favPark = prompt("What is your favorite park in San Francisco?")
-    * console.log("Your favorite park in SF is", favPark)
+    * `alert(5 + 7)`
+    * `alert("The date and time is now " + new Date());`
+    * `var favPark = prompt("What is your favorite park in San Francisco?")`
+    * `console.log("Your favorite park in SF is", favPark)`
 
 #### Writing JavaScript directly within HTML files and linking to external scripts
 

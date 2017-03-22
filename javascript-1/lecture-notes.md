@@ -1,15 +1,14 @@
 # Javascript
 
-|Objectives|
-|----------|
-|Understand what JavaScript is|
-|Learn about 'Data Types' in JS|
-|Learn what a function is and how to write it|
-|Understand Control Flow|
-|Understand how JS is used in the browswer|
+## What you'll learn in this course
+* Understand what JavaScript is
+* Learn about 'Data Types' in JS
+* Learn what a function is and how to write it
+* Understand Control Flow
+* Understand how JS is used in the browser
 
 
-Like Java, Python, and Ruby, JavaScript is a scripting language that allows you to build dyanmic software systems. One of the benefits of JavaScript is that it can run in your browser, serving as a client-side scripting language. Through technologies like Node.js, JavaScript can also be used as a server-side scripting language. Almost all interactive effects that you see on a webpage are likely enabled by JavaScript.
+Like Java, Python, and Ruby, JavaScript is a scripting language that allows you to build dynamic software systems. One of the benefits of JavaScript is that it can run in your browser, serving as a client-side scripting language. Through technologies like Node.js, JavaScript can also be used as a server-side scripting language. Almost all interactive effects that you see on a webpage are likely enabled by JavaScript.
 
 #### Background:
 
@@ -81,7 +80,7 @@ function updateName() {
 
 #### JS Syntax
 
-Javascript is similar to Ruby with some notable exceptions: 
+Javascript is similar to Ruby with some notable exceptions:
 * instead of using the `end` keyword to the delimit the bounds of a function, conditional or loop, JS makes heavy use of curly braces `{}`.
 * in a conditional statement, the condition (that evaluates to true/false) must go inside of parentheses `()`.
 * JS uses the `var` keyword to define a variable and the `function` keyword to define a function.
@@ -110,7 +109,7 @@ Similar to Ruby function, JS functions take optional arguments and return values
     return num * 3;
   }
 
-  console.log(threeTimes(5)); 
+  console.log(threeTimes(5));
 ```
 
 **Exercise 1:**
@@ -211,7 +210,7 @@ for (var i = 0; i < ages.length; i++) {
 ```js
 var start = 1;
 while (start < 10) {
-  console.log("start: " + start); 
+  console.log("start: " + start);
   start++; // shorthand for start = start + 1
 }
 ```

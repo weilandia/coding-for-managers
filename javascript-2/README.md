@@ -2,9 +2,13 @@
 
 |Objectives|
 |----------|
-|Learn what JQuery is|
+|Better understand the DOM|
+|Learn what JQuery is and practice with it|
 |See how we might integrate JQuery into our website|
-|Apply examples of JQuery in Bootstrap|
+
+## DOM Review
+
+The DOM (Docuemnt Object Model) is a structure, object-oriented representation of a webpage. Each element, whether it's `<body>` or `<div>` or `<p>` etc., is represented by a JavaScript object that has methods and properties. You can think of the overall structure as a tree with parents, siblings, and children. 
 
 ## Intro to jQuery
 
@@ -103,6 +107,23 @@ var elements = document.getElementsByClassName('page-title')
 elements[0].appendChild(newDiv);
 ```
 
+**Adding Event Listeners**
+
+```js
+// jquery
+$('.page-title').on('click', doTitleClickedActions)
+function doTitleClickedActions(event){
+  $(this).css({color: "green"});
+}
+
+// vanilla js
+var title = document.getElementsByClassName('page-title');
+title[0].addEventListener('click', doTitleClickedActions);
+function doTitleClickedActions(event){
+  event.target.style.color = "green";
+}
+```
+
 ### Including jQuery
 
 To use jQuery, you must include the library in your page. The quickest way to include jQuery in your project is to copy the link to the CDN (content delivery network) and put it into a script tag at the bottom of your HTML `<body>`. You can get the CDN by searching for "jQuery" on <a href="https://cdnjs.com" target="_blank">cdnjs</a>.
@@ -120,20 +141,26 @@ To use jQuery, you must include the library in your page. The quickest way to in
   <div id="greeting">Hello There</div>
 
   <!-- jquery -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
   <!-- custom script that relies on jQuery-->
-  <script type="text/javascript" src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
 ```
 
-**Exercise 1**
-Use jQuery to select the element containing the words "Hello There" in the snippet above. Use jQuery to change the text by invoking the `.text()` method on the WRAPPED element and passing in a string as an argument. Then change the `color` and `fontSize` of the text using the `.css()` method and passing in a hash with properties and values.
-
 ### jQuery and Rails
 
-jQuery comes bundled with Rails by default. It's already included in your project! Let's open up c9.io and go to your blog.
+jQuery comes bundled with Rails by default. It's already included in your project! Let's open up c9.io and go to your blog. We're going to be working on your landing page, so let's open the `home/index.html.erb` file up and add a `<script>` tag down before the closing `</body>` tag.
 
 **Exercise 1**
-Let's give your landing page a little animation when the user loads the page.
+First do this in the Chrome dev console, then, after it is working, transfer it into your `index.html.erb` file's `<script>` tag. Use jQuery (`$`) to select the element with the class `title-1` and save that into a variable. That variable will now contain a jQuery-WRAPPED element. Change the text by invoking the `.text()` method on the WRAPPED element and passing in a string as an argument. Then change the `color` and `fontSize` of the text using the `.css()` method and passing in a hash with the css properties and your own custom values. *Hint: follow the syntax in the css example above*
+
+**Exercise 2**
+Let's add a little interactive component to your landing page. Create a function called `changeTitleColor`. Inside the function, you should save a random color into a variable using the function below, `getRandomColor()`. Then, use jQuery to select the `title-1` element and update its css to change the font color to the random color you saved into the variable. Finally, add a click listener onto the `background-image` that triggers the `changeTitleColor` function.
+
+```js
+function getRandomColor(){
+  return "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+}
+```

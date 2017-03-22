@@ -16,38 +16,77 @@ jQuery is a **powerful, easy-to-use JavaScript library**. It was invented in 200
 * **Less Buggy:** ensures JavaScript DOM manipulation works the same, cross-browser.
 * **Popular:** [60 - 70%](https://trends.builtwith.com/javascript/jQuery) of the most visited websites use jQuery.
 
+### jQuery Syntax
+
+With jQuery, you'll be using the `$` function to select and manipulate DOM items. To select an item, simply pass a string identifier (using familiar CSS selectors like element name (`div`), class name (`.content`), or id name (`#main_title`)) into the function.
+
+The element or elements you get returned from that function call are not WRAPPED elements. They are WRAPPED with jQuery functionality -- they now have powerful methods and properties bestowed upon them by the library. How do we access those methods and properties? Use `dot notation` to call methods and access properties, just like we did in Ruby and vanilla JS:
+
+```js
+element = $(".some-class-name");
+element.methodName()
+element.propertyName
+```
+
+Since many sites include the jQuery library, all you have to do is open up the Chrome Developer Console on one of those sites to start experimenting with this new syntax. Let's use this page as an example: https://api.jquery.com/
+
 ### jQuery vs. Vanilla JS
 
 Here are some of the basic differences:
 
-**Selecting Elements**
+**Selecting Elements and manipulating them**
 
 ```js
 // jquery
-var divs = $('div');
+var paragraphs = $('p');
+paragraphs.hide();
 
 // vanilla js
-var divs = document.querySelectorAll('div');
+var paragraphs = document.querySelectorAll('p');
+paragraphs.forEach((paragraph) => { paragraph.style.display = 'none' })
 ```
 
-**Selecting Elements by Class**
+**Selecting Elements by Class and adding css transitions to them**
 
 ```js
 // jquery
-var content = $('.content');
+var content = $('.entry-title');
+content.fadeOut(1500);
 
 // vanilla js
-var content = document.getElementsByClassName('content');
+var content = document.getElementsByClassName('entry-title');
+function fadeOut(el) {
+  el.style.opacity = 1;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 400;
+    last = +new Date();
+
+    if (+el.style.opacity > 0) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 100);
+    }
+  };
+
+  tick();
+}
+for (var i = 0; i < content.length; i++){
+  fadeOut(content[i])
+}
 ```
 
-**Selecting Elements by Id**
+**Selecting Elements by Id and manipulating CSS**
 
 ```js
 // jquery
-var about = $('#about');
+var main = $('#main');
+main.css({backgroundColor: "green", borderColor: "white", borderRadius: "20px"})
 
 // vanilla js
-var about = document.getElementById('about');
+var main = document.getElementById('main');
+main.style.backgroundColor = "green";
+main.style.borderColor = "white";
+main.style.borderRadius = "20px";
 ```
 
 **Creating Elements**
@@ -55,18 +94,20 @@ var about = document.getElementById('about');
 ```js
 // jquery
 var newDiv = $('<div>Hello World!</div>');
-$('body').append(newDiv);
+$('.page-title').append(newDiv);
 
 // vanilla js
 var newDiv = document.createElement('div');
-document.body.appendChild(newDiv);
+newDiv.textContent = "Hello World!";
+var elements = document.getElementsByClassName('page-title')
+elements[0].appendChild(newDiv);
 ```
 
 ### Including jQuery
 
 To use jQuery, you must include the library in your page. The quickest way to include jQuery in your project is to copy the link to the CDN (content delivery network) and put it into a script tag at the bottom of your HTML `<body>`. You can get the CDN by searching for "jQuery" on <a href="https://cdnjs.com" target="_blank">cdnjs</a>.
 
-**Important:** Your JavaScript file MUST come after jQuery in the order you require scripts. This is because the page loads in order, so the jQuery library must be loaded before you can use any of it's functionality.
+**Important:** Your JavaScript file MUST come after jQuery in the order you require scripts. This is because the page loads in order, so the jQuery library must be loaded before you can use any of its functionality.
 
 ``` html
 <!DOCTYPE html>
@@ -76,104 +117,23 @@ To use jQuery, you must include the library in your page. The quickest way to in
 </head>
 <body>
   <!-- html code here -->
+  <div id="greeting">Hello There</div>
 
   <!-- jquery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-  <!-- custom script -->
+  <!-- custom script that relies on jQuery-->
   <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
 ```
 
-Sites like GitHub, CSS-Tricks, and jquery.com (!) all include the jQuery library on their page. This means all you have to do is open up the Chrome Developer Console on one of those sites, and you can start experimenting with jQuery on the page.
+**Exercise 1**
+Use jQuery to select the element containing the words "Hello There" in the snippet above. Use jQuery to change the text by invoking the `.text()` method on the WRAPPED element and passing in a string as an argument. Then change the `color` and `fontSize` of the text using the `.css()` method and passing in a hash with properties and values.
 
-## Challenges
+### jQuery and Rails
 
-### Draw a Tree
+jQuery comes bundled with Rails by default. It's already included in your project! Let's open up c9.io and go to your blog.
 
-1. Draw the structure of the following HTML document:
-
-  ``` html
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>My Site</title>
-  </head>
-  <body>
-    <div class="header">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h1>Welcome to my site!</h1>
-      <img src="say-cheese.jpg">
-      <p>Words and <a href="/">links</a></p>
-    </div>
-
-    <div class="footer">
-      <small>Copyright 2015 Jon Doe.</small>
-    </div>
-  </body>
-  </html>
-  ```
-
-  * How many children does the `<div>` with class `header` have?
-  * What is the direct child of the `<p>` element?
-  * What is the direct parent of the `<p>` element?
-
-### CSS Selectors
-
-For the following code blocks, come up with as many CSS selectors as you can think of to select the HTML elements in **red**, and *only* the elements in red.
-
-#### Code Block #1:
-
-<img src="https://cloud.githubusercontent.com/assets/7833470/10717913/b94098a2-7b22-11e5-8115-decf62e0b65b.png">
-
-#### Code Block #2:
-
-<img src="https://cloud.githubusercontent.com/assets/7833470/10717912/b9405ed2-7b22-11e5-9a64-07a19d7473d7.png">
-
-#### Code Block #3:
-
-<img src="https://cloud.githubusercontent.com/assets/7833470/10717909/b93ebabe-7b22-11e5-95a6-605fb5ca9312.png">
-
-#### Code Block #4:
-
-<img src="https://cloud.githubusercontent.com/assets/7833470/10717911/b940228c-7b22-11e5-84f5-0ee1b941f45e.png">
-
-#### Code Block #5:
-
-<img src="https://cloud.githubusercontent.com/assets/7833470/10717910/b93fc8dc-7b22-11e5-8fc7-44d9f96e3fab.png">
-
-### jQuery Selectors
-
-1. Use jQuery to select the element containing the words "Hello There" with as many different selectors as you can think of:
-
-  ``` html
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Example 1</title>
-  </head>
-  <body>
-    <div id="greeting">Hello There</div>
-  </body>
-  </html>
-  ```
-
-2. How would you *get* the value "Hello There"?
-3. How would you change (or *set*) the value to "Hola"?
-4. How would you add an `<h1>` to the page that says "A Spanish Greeting"?
-5. How would you add a second greeting ("Que tal?") below the first?
-6. How would you add the class "section" to both greetings?
-
-
-### Where we are going next:
-Thus far you have a blog with style, routes, models, and views.  This will help you better understand what is happening with your page as a user interacts with it.  In our next lesson we'll be using RSpec for testing the functionality of our app.  This will allow us to know what parts of our application are working and know that they are working correctly.
+**Exercise 1**
+Let's give your landing page a little animation when the user loads the page.

@@ -6,32 +6,17 @@
 |See how we might integrate JQuery into our website|
 |Apply examples of JQuery in Bootstrap|
 
-## What is the DOM?
-
-DOM stands for **Document Object Model**. It's a fancy way of describing what's going on in your browser when you visit a website. You may think a webpage is just a chunk of HTML, CSS, and JavaScript code. But, there's an important step between a webpage being pure data (text) and being a rendered page users can explore. Everything you interact with in the browser can be represented as a JavaScript object. For example, this paragraph is an object, and it's full of information about being an HTML `<p>` tag.
-
-### DOM Analogy: The Human Body
-
-* HTML = Skeleton
-* Javascript = Muscles, Brain, and Organs
-* CSS = Skin and Clothing
-
-![muscles](https://cloud.githubusercontent.com/assets/7833470/10700126/8e2997da-7970-11e5-96ba-1e5eaf793394.jpg)
-
 ## Intro to jQuery
 
 jQuery is a **powerful, easy-to-use JavaScript library**. It was invented in 2005 and has made our lives as developers better ever since. The slogan for jQuery is "write less, do more". jQuery is a great toolbox that provides convenient functions we can use as opposed to writing the functionality we need from scratch.
 
 *We use jQuery because it's:*
 
-* **Convenient:** solves problems developers commonly face.
+* **Convenient:** provides an easy and consistent API for developers to manipulate the DOM.
 * **Less Buggy:** ensures JavaScript DOM manipulation works the same, cross-browser.
-* **Modern:** brings JavaScript DOM manipulation into the 21st century.
-* **Popular:** 26.95% of all sites use jQuery!
+* **Popular:** [60 - 70%](https://trends.builtwith.com/javascript/jQuery) of the most visited websites use jQuery.
 
 ### jQuery vs. Vanilla JS
-
-It's important to note that any DOM manipulation done with jQuery can also be done with pure (vanilla) JavaScript. Some argue <a href="http://youmightnotneedjquery.com" target="_blank">you might not need jQuery</a>. It can be overkill, depending on what you're doing.
 
 Here are some of the basic differences:
 
@@ -39,7 +24,7 @@ Here are some of the basic differences:
 
 ```js
 // jquery
-var $divs = $('div');
+var divs = $('div');
 
 // vanilla js
 var divs = document.querySelectorAll('div');
@@ -49,7 +34,7 @@ var divs = document.querySelectorAll('div');
 
 ```js
 // jquery
-var $content = $('.content');
+var content = $('.content');
 
 // vanilla js
 var content = document.getElementsByClassName('content');
@@ -59,7 +44,7 @@ var content = document.getElementsByClassName('content');
 
 ```js
 // jquery
-var $about = $('#about');
+var about = $('#about');
 
 // vanilla js
 var about = document.getElementById('about');
@@ -69,8 +54,8 @@ var about = document.getElementById('about');
 
 ```js
 // jquery
-var $newDiv = $('<div></div>');
-$('body').append($newDiv);
+var newDiv = $('<div>Hello World!</div>');
+$('body').append(newDiv);
 
 // vanilla js
 var newDiv = document.createElement('div');

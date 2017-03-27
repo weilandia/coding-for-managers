@@ -44,53 +44,59 @@ Routing in rails is as easy as specifying an HTTP method (`GET`, `POST` etc.), a
 Let's create a custom route for our weather service in `routes.rb`.
 
 ```rb
-get "weather" => "weather#get_weather"
+get "api/v1/weather" => "api/v1/weather#get_weather"
 ```
 
 We need to make the corresponding controller and action.
 
-Create a new controller file called `weather_controller.rb` and add the following lines:
+Create a new directory in the `controllers` directory named `api` and inside of that create another directory named `v1`. Inside of the `v1` directory, add a controller file named `weather_controller.rb` and add the following lines:
 
 ```rb
-class WeatherController < ApplicationController
+class Api::V1::WeatherController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:get_weather]
+
   def get_weather
     render :json => Weather.get_weather_at_coordinates(params[:coordinates])
   end
 end
 ```
 
-
+Where's the Weather class coming from? We need to make it. Let's create a new `Weather` model that will handle the application logic for our weather service. In the models directory add a file names `weather.rb`. Let's add the following code to the file:
 
 ```ruby
 class Weather
-    def self.get_weather_in_sf
-        uri = URI.parse("https://api.darksky.net/forecast/4e462be9ffa5f2bdf402db75864370f7/37.8267,-122.4233")
+    def self.get_weather_at_coordinates(coordinates)
+        lat = "37.8267"
+        lon = "-122.4233"
+        uri = URI.parse("https://api.darksky.net/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{lat},#{lon}")
+
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
+        
         data = http.get(uri.request_uri)
-        parsed_body_data = JSON.parse(data.body)
-        parsed_body_data["currently"]
+        data.body
     end
 end
 ```
 
-```ruby
-get "weather" => "weather#get_weather"
-```
+### Making an HTTP request
+Let's step through the code above in our console to learn about the various parts of an HTTP (Hyper Text Transport Protocol) request.
+  * URI
+  * host
+  * port
+  * ssl
 
-```ruby
-class WeatherController < ApplicationController
-  def get_weather
-    render :json => Weather.get_weather_at_coordinates(params[:coordinates])
-  end
-end
-```
+### JSON data format
+JSON is composed of key-value pairs much like Ruby hashes and JavaScript objects. It is currently the de facto way of transferring pieces of data across the web and has largely replaced XML. How can we explore that object in our browser? Let's use the API endpoint we just made!
+
+### AJAX Request
+How do we get the data off our server an into the browser without going directly to the URL and getting shown a bunch of jumbled text? We have to use JavaScript! JQuery provides us with an easy interface for making requests to our server - AJAX (Asynchronous Javascript and XML). Paste the following code into your index.html.erb file for your home view (landing page):
 
 ```js
 $.ajax({
-    url: 'weather',
+    url: 'api/v1/weather',
     type: 'GET',
-    data: { lat: lat, lng: lng} ,
+    data: { lat: lat, lon: lng} ,
     contentType: 'application/json; charset=utf-8',
     success: function (response) {
         console.log(response);
@@ -101,69 +107,5 @@ $.ajax({
 }); 
 ```
 
-
-
-
-uri = URI('http://example.com/cached_response')
-req = Net::HTTP::Get.new(uri.request_uri)
-
-require 'net/http'
-require 'uri'
-uri = URI('https://api.darksky.net/forecast/4e462be9ffa5f2bdf402db75864370f7/37.8267,-122.4233')
-req = Net::HTTP::Get.new(uri.request_uri)
-res = Net::HTTP.start(uri.hostname, uri.port) do |http|
-  http.request(req)
-
-end
-
-ForecastIO.configure do |c|
-  c.api_key = "4e462be9ffa5f2bdf402db75864370f7"
-end
-
-$.ajax({
-        url: 'weather',
-        type: 'GET',
-        data: { lat: lat, lng: lng} ,
-        contentType: 'application/json; charset=utf-8',
-        success: function (response) {
-            //your success code
-        },
-        error: function () {
-            //your error code
-        }
-    }); 
-
-## Google Sheets
-
-go to: https://developers.google.com/sheets/api/quickstart/ruby
-
-Step 1: Turn on the Google Sheets API. Use the wizard!
-  * Add credentials to your project
-  * Which API are you using? `Google Sheets API`
-  * Where will you be calling the API from? `Web server`
-  * What data will you be accessing? `Application Data`
-  * Service account name? `rails blog`
-  * Role? `owner`
-  * Key type? `JSON`
-
-
-
-
-`gem 'rest-client'`
-`bundle install`
-
- 
- 
-
- def send_simple_message
-    RestClient.post "https://api:key-6fc1ef9ffcd281f295aa4e1b7ba355f8"
-        "@api.mailgun.net/v3/sandbox76993f9f5efb4b39a308b7c886862ea4.mailgun.org/messages",
-        :from => "Mailgun Sandbox <postmaster@sandbox76993f9f5efb4b39a308b7c886862ea4.mailgun.org>",
-        :to => "charlie <cdepman@gmail.com>",
-        :subject => "Hello charlie",
-        :text => "Congratulations charlie, you just sent an email with Mailgun!  You are truly awesome!"
-end
-
-
-`gem install`
-
+**Exercise 1**
+Inside of our success function in the above AJAX object, we have access to the data that was sent from our server. Instead of just console logging our result, let's show it to our users. Use JQuery to select an element (maybe `.title-2`) and update its textContent to be either the current weather description, the current temperature, or a forecast.

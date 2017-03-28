@@ -1,14 +1,13 @@
 # JQuery
 
-|Objectives|
-|----------|
-|Better understand the DOM|
-|Learn what JQuery is and practice with it|
-|See how we might integrate JQuery into our website|
+## What you'll learn in this course
+* Better understand the DOM
+* Learn what JQuery is and practice with it
+* See how we might integrate JQuery into our website
 
 ## DOM Review
 
-The DOM (Docuemnt Object Model) is a structure, object-oriented representation of a webpage. Each element, whether it's `<body>` or `<div>` or `<p>` etc., is represented by a JavaScript object that has methods and properties. You can think of the overall structure as a tree with parents, siblings, and children. 
+The DOM (Document Object Model) is a structure, object-oriented representation of a webpage. Each element, whether it's `<body>` or `<div>` or `<p>` etc., is represented by a JavaScript object that has methods and properties. You can think of the overall structure as a tree with parents, siblings, and children.
 
 ## Intro to jQuery
 
@@ -58,7 +57,7 @@ var content = $('.entry-title');
 content.fadeOut(1500);
 
 // vanilla js
-var content = document.getElementsByClassName('entry-title');
+var content = document.getElementsByClassName('page-title');
 function fadeOut(el) {
   el.style.opacity = 1;
 

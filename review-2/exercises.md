@@ -1,8 +1,6 @@
 # Review (JS/JQUERY/APIs)
 
-At the end of the day, programming is about storing, fetching, manipulating and presenting data. With JS/jQuery, we learned about manipulating and presenting data to our users. With APIs we learned about fetching data from an external server and from our own server. Today we'll be extending this knowledge by handling user input, interacting with the HTML `<form>` API
-
-## Giving life to your form
+At the end of the day, programming is about storing, fetching, manipulating and presenting data. With JS/jQuery, we learned about manipulating and presenting data to our users. With APIs we learned about fetching data from an external server and from our own server. Today we'll be extending this knowledge by handling user input, interacting with the HTML `<form>` API, and adding some user interaction to our blog posts. As with last review class, we'll be `pair-programming`, working through these exercises with a partner.
 
 Exercise 1:
 
@@ -55,19 +53,16 @@ Exercise 1:
 
 Exercise 2:
 
-**Create a thank-you page for your user to see after they submit your form. This requires the creation of a new view (I would name it `thanks.html.erb` and put it under the `home` views directory), a new `HomeController` method. You must also create a custom route for the thank-you page. For now, the page should be very simple - it shoud thank the user and offer him/her a link back to your home/landing (*hint: `root`*) page. If you are feeling extra clever, you can use a JavaScript `setTimeout` to automatically send the user back to your root page. Add `<input type="hidden" name="_next" value="https://name-of-your-workspace.c9users.io/thanks"/>` into your form. This will tell Formspree that you want to direct your user to a certain page after the submission succeeds.**
+**The blog still doesn't look super great, especially the post index page. Let's make it look much nicer. First, in your `posts/index.html.erb` file, let's display each post's author's `email` instead of his/her `user_id`. Let's get rid of displaying the category right now since we haven't implemented it yet and it is taking up valuable room. Let's also get rid of the table header `<thead>` and rename the `<h1>` heading to `Posts`. If you haven't done so already, let's make the `show`, `edit`, `destroy` buttons into Bootstrap buttons. Also rename `destroy` to `delete` to sound less violent.** 
 
 Exercise 3:
 
-**The blog still doesn't look super great, especially the post index page. Let's make it look much nicer. First, in your `posts/index.html.erb` file, let's display each post's author's `email` instead of his/her `user_id`. Let's get rid of displaying the category right now since we haven't implemented it yet and it is taking up valuable room. Let's also get rid of the table header `<thead>` and rename the `<h1>` heading to `Posts`. If you haven't done so already, let's make the `show`, `edit`, `destroy` buttons into Bootstrap buttons. Also rename `destroy` to `delete` to sound less violent.** 
+**Let's add a quick favoriting system to your blog entries. Bootstrap comes with a nice [icon set](http://getbootstrap.com/components/#glyphicons) that can be accessed using CSS. Create a new `<td>` at the beginning of the `<tr>` and inside of that, create an empty `<div>`. Then let's give that div the following classes: `glyphicon glyphicon-star-empty favorite`. Great! You should see an empty star displayed next to each of your posts. Now let's bring it to life using JavaScript! Find your `posts.coffee` file and rename it `posts.js`, making sure to comment out the first three lines using `//` or by highlighting that content and pressing `command /`. In this file, set up a jQuery click listener on your `favorite` class. This will listen to click events on every element that has the `favorite` class. Create a function called `handleFavoriteClicked` - inside, the `this` keyword represents the target element. Select the `this` target element using jQuery (`$(this)`) and use a method called `removeClass` to remove the `glyphicon-star-empty` class by passing that class's name into the function as an argument. Next, use a method called `addClass` to add the class `glyphicon-star` in a similar fashion. Once this is done, clicking on an empty star will replace it with a filled-in star!** 
 
-Exercise 4:
+Exercise 4 (optional):
 
-**Let's add a quick favoriting system to the blog entries. Bootstrap comes with a nice [icon set](http://getbootstrap.com/components/#glyphicons) that can be accessed using CSS. Create a new `<td>` at the beginning of the `<tr>` and inside of that, create an empty `<div>`. Then let's give that div the following classes: `glyphicon glyphicon-star-empty favorite`. Great! You should see an empty star displayed next to each of your posts. Now let's bring it to life using JavaScript! Find your `home.coffee` file and rename it `home.js`, making sure to comment out the first three lines using `//` or by highlighting that content and pressing `command /`. In this file, set up a jQuery click** 
-
-
-*Hint: the index method should be empty.*
+**Create a thank-you page for your user to see after they submit your form. This requires the creation of a new view (I would name it `thanks.html.erb` and put it under the `home` views directory), a new `HomeController` method. You must also create a custom route for the thank-you page. For now, the page should be very simple - it shoud thank the user and offer him/her a link back to your home/landing (*hint: `root`*) page. If you are feeling extra clever, you can use a JavaScript `setTimeout` to automatically send the user back to your root page. Add `<input type="hidden" name="_next" value="https://name-of-your-workspace.c9users.io/thanks"/>` into your form. This will tell Formspree that you want to direct your user to a certain page after the submission succeeds.**
 
 Homework:
 
-**Use your HTML/CSS skills to beautify your homepage. You can remove/add anything, add a new background picture etc. If you have time, use your Rails/Ruby skills to customize the blog section of your website.**
+**Spend time touching up your blog and getting it ready to be deployed. Next class we'll be launching it onto Heroku!**

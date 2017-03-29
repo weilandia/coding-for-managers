@@ -4,7 +4,7 @@ At the end of the day, programming is about storing, fetching, manipulating and 
 
 Exercise 1:
 
-**Currently, the form on our homepage doesn't do anything when you press `submit`. That's pretty useless. A form like this is a powerful tool for gathering user input - if you choose to, you can send the user's repsonse to you server, analyze his/her input and perform a certain action depending on what he/she wrote. We're going to do something simpler, but still very useful - we're going to send the form data to your email! Use the following code snippet to get started - use it to replace the existing form on you landing page:** 
+**Currently, the form on our homepage doesn't do anything when you press `submit`. That's pretty useless. A form like this is a powerful tool for gathering user input - if you choose to, you can send the user's repsonse to you server, analyze his/her input and perform a certain action depending on what he/she wrote. We're going to do something simpler, but still very useful - we're going to send the form data to your email! Use the following code snippet to get started - use it to replace the existing form on your landing page:** 
 
 ```html
 <div id="contact">

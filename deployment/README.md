@@ -1,5 +1,7 @@
 # Deploying to Heroku with Git, Rails & Postgres
 
+Deployment is generally the last stage of development (after thorough testing) and creates/replaces your public production application with a new version of your app. Deployment involves not only transferring new code to a live server, but also configuring that server to deal with your files and run your application. In the simplest terms, this means telling the server what files to execute when it receives an incoming request. Luckily, Heroku does almost all of this configuration for us.
+
 ## Add Source Control
 
 1. Run `git init` on the command line to add source control to your project. Then commit everything you have so far using `git add .` to stage your files and then `git commit -m "put your message here"` to freeze them into a commit.
@@ -91,63 +93,69 @@ production:
 
 ## Deploy to Heroku
 
-1. You should be all set up now, so add and commit your changes, then push to Heroku:
+1. You should be all set up now, so add and commit your new changes, then push to Heroku:
 
-  ```sh
-  $ git status
-  $ git add -A
-  $ git commit -m "update for initial deploy"
-  $ git push heroku master
-  ```
+```s
+$ git status
+$ git add .
+$ git commit -m "update for initial deploy"
+```
 
-  Your Terminal output should look something like this (but a little longer):
+2. Push to Heroku:
+```s
+$ git push heroku master
+```
 
-  ```s
-  Initializing repository, done.
-  Counting objects: 64, done.
-  Delta compression using up to 4 threads.
-  Compressing objects: 100% (53/53), done.
-  Writing objects: 100% (64/64), 14.57 KiB | 0 bytes/s, done.
-  Total 64 (delta 5), reused 0 (delta 0)
+3. Hold onto your seat, grab some popcorn, and watch the deploy sequence.
 
-  -----> Ruby app detected
-  -----> Compiling Ruby/Rails
-  -----> Using Ruby version: ruby-2.0.0
-  -----> Installing dependencies using 1.5.2
-         New app detected loading default bundler cache
-         Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
-         Fetching gem metadata from https://rubygems.org/..........
-         Fetching additional metadata from https://rubygems.org/..
-         Using i18n (0.6.9)
-         .
-         .
-         .
-         Installing sass-rails (4.0.3)
-         Installing rails (4.0.4)
-         Your bundle is complete!
-         Gems in the groups development and test were not installed.
-         It was installed into ./vendor/bundle
-         Bundle completed (11.82s)
-         Cleaning up the bundler cache.
-  -----> Writing config/database.yml to read from DATABASE_URL
-  -----> Preparing app for Rails asset pipeline
-         Running: rake assets:precompile
-         I, [2014-05-02T18:02:09.672047 #732]  INFO -- : Writing /tmp/build_625a98e6-1b9e-4e57-ba48-8f9cd7bf7d18/public/assets/application-c8d048bf2b32f85ef4807549fa44b21b.js
-         I, [2014-05-02T18:02:09.694428 #732]  INFO -- : Writing /tmp/build_625a98e6-1b9e-4e57-ba48-8f9cd7bf7d18/public/assets/application-d0b54dd563966c42aad5fd85b1c1f713.css
-         Asset precompilation completed (6.52s)
-         Cleaning assets
-         Running: rake assets:clean
-  -----> WARNINGS:
-         Include 'rails_12factor' gem to enable all platform features
-         See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
+Your Terminal output should look something like this (but a little longer):
 
-  -----> Compressing... done, 21.4MB
-  -----> Launching... done, v6
-         http://thingsthingsthings.herokuapp.com/ deployed to Heroku
+```s
+Initializing repository, done.
+Counting objects: 64, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (53/53), done.
+Writing objects: 100% (64/64), 14.57 KiB | 0 bytes/s, done.
+Total 64 (delta 5), reused 0 (delta 0)
 
-  To git.heroku.com/YOUR_APP_NAME.git
-   * [new branch]      master -> master
-  ```
+-----> Ruby app detected
+-----> Compiling Ruby/Rails
+-----> Using Ruby version: ruby-2.0.0
+-----> Installing dependencies using 1.5.2
+        New app detected loading default bundler cache
+        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+        Fetching gem metadata from https://rubygems.org/..........
+        Fetching additional metadata from https://rubygems.org/..
+        Using i18n (0.6.9)
+        .
+        .
+        .
+        Installing sass-rails (4.0.3)
+        Installing rails (4.0.4)
+        Your bundle is complete!
+        Gems in the groups development and test were not installed.
+        It was installed into ./vendor/bundle
+        Bundle completed (11.82s)
+        Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+        Running: rake assets:precompile
+        I, [2014-05-02T18:02:09.672047 #732]  INFO -- : Writing /tmp/build_625a98e6-1b9e-4e57-ba48-8f9cd7bf7d18/public/assets/application-c8d048bf2b32f85ef4807549fa44b21b.js
+        I, [2014-05-02T18:02:09.694428 #732]  INFO -- : Writing /tmp/build_625a98e6-1b9e-4e57-ba48-8f9cd7bf7d18/public/assets/application-d0b54dd563966c42aad5fd85b1c1f713.css
+        Asset precompilation completed (6.52s)
+        Cleaning assets
+        Running: rake assets:clean
+-----> WARNINGS:
+        Include 'rails_12factor' gem to enable all platform features
+        See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
+
+-----> Compressing... done, 21.4MB
+-----> Launching... done, v6
+        http://thingsthingsthings.herokuapp.com/ deployed to Heroku
+
+To git.heroku.com/YOUR_APP_NAME.git
+  * [new branch]      master -> master
+```
 
 2. run `$ heroku run rake db:migrate` to migrate the database onto the production Postgres database
 
@@ -156,7 +164,7 @@ production:
 
 ## Debugging
 
-When visiting your deployed app for the first time, you may experiece 
+When visiting your deployed app for the first time, you may experiece an error or two.
 1. If this happens to you, check your Heroku logs in the terminal:
 
   ```s
@@ -183,3 +191,34 @@ When visiting your deployed app for the first time, you may experiece
 Your Heroku collaborators should add the project's Heroku remote to their local git repositories.
 
 *  <a href="https://help.github.com/articles/adding-a-remote/" target="_blank">Adding a remote (GitHub Help)</a>
+
+
+## Extra Credit / Homework
+
+Let's make those stars persist.
+
+What is the broad overview of what we want to achieve with our persistent stars?
+* see an empty star icon (if the user hasn't starred) and a cumulative start count
+* see a full star icon and cumulative star count if user has starred
+* when the user clicks on a star, an ajax request is made to the server
+* the server receives the ajax request, creates a UserStar record
+* a response is sent back to the client indicating the new star count for the post
+* in the success handler for the AJAX call we update the UI with the new star count and a new icon
+
+So what do we need?
+* a join table for counting stars
+* each join record should have a `post_id` and a `user_id`
+* run `rails g model CreateJoinTableUserStars user_id:integer post_id:integer`
+* check the migration file to make sure it's what we want
+* run `rake db:migrate` to update the database schema accordint to the migration file
+* In our Post model add `has_many :user_stars`
+* In our User model add `has_many :user_stars`
+* in our PostsController we need to handle the case of an incoming ajax call
+* ...
+* in the AJAX success function, we need to data the reponse data star_count
+* find the right post using the data component or the post_id and the right `.star-count-display`
+* use the jQuery `.text()` method to update the text to the new count
+
+BONUS:
+How can we control for one star per user per post?
+How can we allow a user to retract his/her star vote?

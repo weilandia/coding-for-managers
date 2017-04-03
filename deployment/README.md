@@ -83,17 +83,34 @@ production:
   timeout: 5000
 ``` 
 
-## Prepare Your App for Deploy III: Assets, Secrets, ENV
+## Prepare Your App for Deploy III: Assets, ENV
   1. We need to use a special Rails image helper for our langing page image. Add the following css rule inside of the `.background-image` selector.
   ```css
     background-image: image_url("generic_background.jpg");
   ```
 
-  2. in `production.rb`, copy and add your ENV variable for Dark Sky that is currently in `development.rb`.
+  2. Copy and remove your ENV variable for Dark Sky that is currently in `development.rb`. This is especially important if we're putting this code into github where it can be seen by the public.
+
+  3. In Cloud9, set the ENV variable on the cloud9 server by executing the following command:
+
+  ```s
+  $ echo "export DARK_SKY_API_KEY=yourDarkSkyAPIKey" >> ~/.profile
+  ```
+
+  4. In the Heroku app web console, go to you app and click on the settings tab. There you will find a button that says `Reveal Config Vars`. Click on that and enter `DARK_SKY_API_KEY` as a key and your API key as the value.
 
 ## Prepare Your App for Deploy IV: Personalize Generic Items
   1. This website will be live for the public to view (if they have a link). All places with {your name here} or something similar should have real content instead of placeholder material. One generic item might be the title of your site that gets shown in the browser tab. Replace that with something more meaningful.
 
+## Prepare Your App for Deploy V: Put your code on Github
+
+1. Go to github.com and log in. Create a new repository with a blog-worthy name. Leave all the defaults and click on `Create Repository`. On the next screen, copy the HTTPS link.
+
+2. Back in Cloud9, enter the following command in the terminal: `git remote add origin https://github.com/yourname/your-repo-name.git`
+
+3. To confirm this worked, try `git remote -v` and you should see two new entries.
+
+4. Push your code to github by entering the following command: `git push origin master`
 
 ## Deploy to Heroku
 

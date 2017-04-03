@@ -1,18 +1,13 @@
-[List of public APIs](https://github.com/toddmotto/public-apis)
-
-[Another collection of public APIs](https://any-api.com/)
-
 # APIs
 
-|Objectives|
-|----------|
-|Understand the role of an API|
-|Learn about environment variables|
-|Learn how to create a custom Rails route|
-|Learn how to make an HTTP request with an API key|
-|Understand the JSON data format|
-|Learn how to make an AJAX request|
-|Understand the asynchronous nature of JavaScript|
+## What you'll learn in this course
+* Understand the role of an API
+* Learn about environment variables
+* Learn how to create a custom Rails route
+* Learn how to make an HTTP request with an API key
+* Understand the JSON data format
+* Learn how to make an AJAX request
+* Understand the asynchronous nature of JavaScript
 
 
 ### The role of an API
@@ -68,11 +63,11 @@ class Weather
     def self.get_weather_at_coordinates(coordinates)
         lat = "37.7767"
         lon = "-122.4233"
-        
+
         uri = URI.parse("https://api.darksky.net/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{lat},#{lon}")
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
-        
+
         data = http.get(uri.request_uri)
         data.body
     end
@@ -104,13 +99,11 @@ $.ajax({
     error: function () {
         console.log(response);
     }
-}); 
+});
 ```
 
 **Exercise 1**
-
 Inside of our success function in the above AJAX object, we have access to the data that was sent from our server. Instead of just console logging our result, let's show it to our users. Use JQuery to select an element (maybe `.title-2`) and update its text to be either the current weather description, the current temperature, or a forecast.
 
 **Exercise 2**
-
 Use the HTML5 [geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) to get the user's current location. Send that the latitude and longitude your server using the AJAX data property. You can access the browser's HTML5 geolocation API using JavaScript with `navigator.geolocation.getCurrentPosition((location) => {console.log(location)})`

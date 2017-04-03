@@ -8,15 +8,13 @@
 
 ## Create Your Heroku App
 
-1. Add a new remote to your project repository that points to Heroku's servers.
+  1. Add a new app using the heroku toolbelt command. In the Terminal, from your project's root directory, run:
 
-  In the Terminal, from your project's root directory, run:
+```sh
+$ heroku create YOUR_APP_NAME
+```
 
-	```sh
-  $ heroku create YOUR_APP_NAME
-	```
-
-  If you don't supply a name for your app, Heroku will create a random one for you. It's generally a good idea to give your app a name to personalize it and reflect its purpose.
+*If you don't supply a name for your app, Heroku will create a random one for you. It's generally a good idea to give your app a name to personalize it and reflect its purpose.*
 
 2. Let's check the status of our remote repositories:
 
@@ -31,7 +29,7 @@
   $ heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
   ```
 
-## Prepare Your App for Deploy: Update the `Gemfile`
+## Prepare Your App for Deploy I: Update the `Gemfile`
 
 1. SQLite3 was not meant to be used in production and Heroku doesn't support it. We're going to be adding a different SQL database, Postgres, to our project.
 
@@ -71,7 +69,7 @@
   $ bundle install
   ```
 
-## Prepare Your App for Deploy: Update your database config
+## Prepare Your App for Deploy II: Update your database config
 
 1. Open `database.yml` (search for the file using `cmd p`)
 2. Now we need to update our `production` settings to use Postgres. Your production config should look like the following:
@@ -84,13 +82,13 @@ production:
   timeout: 5000
 ``` 
 
-## Prepare Your App for Deploy: Assets and ENV
-1. We need to use a special Rails image helper for our langing page image. Add the following css rule in the 
-```css
-  background-image: image_url("generic_background.jpg");
-```
+## Prepare Your App for Deploy III: Assets and ENV
+  1. We need to use a special Rails image helper for our langing page image. Add the following css rule inside of the `.background-image` selector.
+  ```css
+    background-image: image_url("generic_background.jpg");
+  ```
 
-2. in `production.rb`, copy and add your ENV variable for Dark Sky that is currently in `development.rb`.
+  2. in `production.rb`, copy and add your ENV variable for Dark Sky that is currently in `development.rb`.
 
 ## Deploy to Heroku
 

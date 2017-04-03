@@ -19,13 +19,13 @@ $ heroku create YOUR_APP_NAME
 
 2. Let's check the status of our remote repositories:
 
-```sh
+```s
 $ git remote -v
 ```
 
 You should see something like this:
 
-```sh
+```s
 $ heroku	https://git.heroku.com/YOUR_APP_NAME.git (fetch)
 $ heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
 ```
@@ -83,13 +83,17 @@ production:
   timeout: 5000
 ``` 
 
-## Prepare Your App for Deploy III: Assets and ENV
+## Prepare Your App for Deploy III: Assets, Secrets, ENV
   1. We need to use a special Rails image helper for our langing page image. Add the following css rule inside of the `.background-image` selector.
   ```css
     background-image: image_url("generic_background.jpg");
   ```
 
   2. in `production.rb`, copy and add your ENV variable for Dark Sky that is currently in `development.rb`.
+
+## Prepare Your App for Deploy IV: Personalize Generic Items
+  1. This website will be live for the public to view (if they have a link). All places with {your name here} or something similar should have real content instead of placeholder material. One generic item might be the title of your site that gets shown in the browser tab. Replace that with something more meaningful.
+
 
 ## Deploy to Heroku
 

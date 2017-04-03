@@ -1,4 +1,4 @@
-# Deploying to Heroku with Rails & Postgres
+# Deploying to Heroku with Git, Rails & Postgres
 
 ## Add Source Control
 
@@ -9,29 +9,28 @@
 ## Create Your Heroku App
 
   1. Add a new app using the heroku toolbelt command. In the Terminal, from your project's root directory, run:
+  *If you don't supply a name for your app, Heroku will create a random one for you. The name must be unique across all of Heroku and the command line interface will tell you if the name you want is already taken. It's generally a good idea to give your app a name to personalize it and reflect its purpose.*
 
 ```sh
 $ heroku create YOUR_APP_NAME
 ```
 
-*If you don't supply a name for your app, Heroku will create a random one for you. It's generally a good idea to give your app a name to personalize it and reflect its purpose.*
-
 2. Let's check the status of our remote repositories:
 
-  ```sh
-  $ git remote -v
-  ```
+```sh
+$ git remote -v
+```
 
-  You should see something like this:
+You should see something like this:
 
-  ```sh
-  $ heroku	https://git.heroku.com/YOUR_APP_NAME.git (fetch)
-  $ heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
-  ```
+```sh
+$ heroku	https://git.heroku.com/YOUR_APP_NAME.git (fetch)
+$ heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
+```
 
 ## Prepare Your App for Deploy I: Update the `Gemfile`
 
-1. SQLite3 was not meant to be used in production and Heroku doesn't support it. We're going to be adding a different SQL database, Postgres, to our project.
+1. SQLite3 was not meant to be used in production and Heroku doesn't support it. We're going to be adding a different SQL database, Postgres, to our project. Postgres is more robust, more scalable, and is supported by Heroku.
 
   * first, move the `gem 'sqlite3'` into the `group :development` section. The section should now look like this:
   ```ruby

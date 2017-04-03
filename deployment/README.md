@@ -1,99 +1,108 @@
-# Deploying to Heroku with Rails & Postgres
+# Deploying to Heroku with Git, Rails & Postgres
 
-## Before You Do Anything
+## Add Source Control
 
-1. Make sure your app is under version control with `git`.  If you're not sure if your project is under version control yet, you definitely haven't been committing often enough. Run `git status` to check if your project directory is a git repo. If not, run `git init` to make it into one, then commit everything you have so far. **If you have any secret keys (such as API keys), <a href="https://github.com/bkeepers/dotenv" target="_blank">hide them in environment variables</a> before committing!**
+1. Run `git init` on the command line to add source control to your project. Then commit everything you have so far using `git add .` to stage your files and then `git commit -m "put your message here"` to freeze them into a commit.
 
-2. If you haven't already, sign up for a <a href="https://www.heroku.com" target="_blank">Heroku account</a>.
-
-3. If you haven't already, install the <a href="https://toolbelt.heroku.com" target="_blank">Heroku toolbelt</a>.
+2. Sign up for a <a href="https://www.heroku.com" target="_blank">Heroku account</a>.
 
 ## Create Your Heroku App
 
-1. Add a new remote to your project repository that points to Heroku's servers. **Your project must be a git repo to continue.**
+  1. Add a new app using the heroku toolbelt command. In the Terminal, from your project's root directory, run:
+  *If you don't supply a name for your app, Heroku will create a random one for you. The name must be unique across all of Heroku and the command line interface will tell you if the name you want is already taken. It's generally a good idea to give your app a name to personalize it and reflect its purpose.*
 
-  In the Terminal, from your project's root directory, run:
+```sh
+$ heroku create YOUR_APP_NAME
+```
 
-	```zsh
-	➜  heroku create YOUR_APP_NAME
-	```
+2. Let's check the status of our remote repositories:
 
-  If you don't supply a name for your app, Heroku will create a random one for you. We strongly suggest giving your app a name to personalize it and reflect its purpose.
+```sh
+$ git remote -v
+```
 
-2. Also in the Terminal, from your project's root directory, run:
+You should see something like this:
 
-  ```zsh
-  ➜  git remote -v
-  ```
+```sh
+$ heroku	https://git.heroku.com/YOUR_APP_NAME.git (fetch)
+$ heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
+```
 
-  You should see something like this:
+## Prepare Your App for Deploy I: Update the `Gemfile`
 
-  ```zsh
-  heroku	https://git.heroku.com/YOUR_APP_NAME.git (fetch)
-  heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
-  origin	https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPO_NAME.git (fetch)
-  origin	https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPO_NAME.git (push)
-  ```
+1. SQLite3 was not meant to be used in production and Heroku doesn't support it. We're going to be adding a different SQL database, Postgres, to our project. Postgres is more robust, more scalable, and is supported by Heroku.
 
-## Prepare Your App for Deploy
-
-1. Check your `Gemfile` to make sure you're using the `pg` gem:
-
+  * first, move the `gem 'sqlite3'` into the `group :development` section. The section should now look like this:
   ```ruby
-  #
-  # Gemfile
-  #
+  group :development do
+    # Access an IRB console on exception pages or by using <%= console %> in views
+    gem 'web-console', '~> 2.0'
 
-  gem 'pg'
+    # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+    gem 'spring'
+    # Use sqlite3 as the database for Active Record
+    gem 'sqlite3'
+  end
   ```
-
-2. Add the `rails_12factor` gem to your `Gemfile` in the production group:
-
+  * second, create a `group :production` section and add in the Postgres gem `gem 'pg'`:
   ```ruby
-  #
-  # Gemfile
-  #
-
   group :production do
+    gem 'pg'
+  end
+  ```
+
+2. Ideally, Rails does not serve up assets. But in our case, we need to tell Rails to serve up our JS/CSS/Images. We'll use the `rails_12factor` gem.
+  
+  * add the gem `rails_12factor` into the `group :production` section:
+  ```ruby
+  group :production do
+    gem 'pg'
     gem 'rails_12factor'
   end
   ```
 
-3. Also, move the sqlite3 gem into the development/test block in the Gemfile:
 
-   ```ruby
-  #
-  # Gemfile
-  #
+3. Run this command in your Terminal to bundle install:
 
-  group :development, :test do
-
-    gem 'sqlite3'
-  end
+  ```sh
+  $ bundle install
   ```
 
+## Prepare Your App for Deploy II: Update your database config
 
-3. Run this command in your Terminal to bundle install locally:
+1. Open `database.yml` (search for the file using `cmd p`)
+2. Now we need to update our `production` settings to use Postgres. Your production config should look like the following:
 
-  ```zsh
-  ➜  bundle install --without production
+```rb
+production:
+  adapter: postgresql
+  database: my_database_production
+  pool: 5
+  timeout: 5000
+``` 
+
+## Prepare Your App for Deploy III: Assets and ENV
+  1. We need to use a special Rails image helper for our langing page image. Add the following css rule inside of the `.background-image` selector.
+  ```css
+    background-image: image_url("generic_background.jpg");
   ```
+
+  2. in `production.rb`, copy and add your ENV variable for Dark Sky that is currently in `development.rb`.
 
 ## Deploy to Heroku
 
 1. You should be all set up now, so add and commit your changes, then push to Heroku:
 
-  ```zsh
-  ➜  git status
-  ➜  git add -A
-  ➜  git commit -m "ready for deploy"
-  ➜  git push origin master
-  ➜  git push heroku master
+  ```sh
+  $ git status
+  $ git add -A
+  $ git commit -m "update for initial deploy"
+  $ git push heroku master
   ```
 
   Your Terminal output should look something like this (but a little longer):
 
-  ```zsh
+  ```s
   Initializing repository, done.
   Counting objects: 64, done.
   Delta compression using up to 4 threads.
@@ -140,73 +149,22 @@
    * [new branch]      master -> master
   ```
 
-2. **This is a common point for people to run into errors.** The most common error that happens here is your assets failing to compile. **If you have errors, try this possible solution:**
+2. run `$ heroku run rake db:migrate` to migrate the database onto the production Postgres database
 
-  * From the Terminal, precompile your assets:
+3. run `$ heroku info` to see the URL of your deployed app. Go check it out!
 
-    ```zsh
-    ➜  rake assets:precompile
-    ```
-
-  * Add and commit new changes, then try pushing to Heroku again:
-
-    ```zsh
-    ➜  git status
-    ➜  git add -A
-    ➜  git commit -m "precompiling assets"
-    ➜  git push origin master
-    ➜  git push heroku master
-    ```
-
-3. Your deployed app has a separate database from your development environment. To set up your Heroku database, run your migrations in production:
-
-  ```zsh
-  ➜  heroku run rake db:migrate
-  ```
-
-4. If all went well, you should be able to visit your live application by running:
-
-  ```zsh
-  ➜  heroku open
-  ```
 
 ## Debugging
 
-Hopefully your app works on Heroku, however, you may see a sad page that looks like this...
+When visiting your deployed app for the first time, you may experiece 
+1. If this happens to you, check your Heroku logs in the terminal:
 
-![heroku-application-error](https://cloud.githubusercontent.com/assets/7833470/10436335/9a97efce-70da-11e5-87ba-bdb4ae0c8596.png)
-
-1. If this happens to you, check your Heroku logs in the Terminal:
-
-  ```zsh
-  ➜  heroku logs
+  ```s
+  $ heroku logs
   ```
 
-2. Scan all of the logs for error messages. If you see obvious error messages, google what they mean. If you still can't find a solution, now would be a good time to ask an instructor for help.
+2. Scan all of the logs for error messages. If you see obvious error messages, google what they mean. If you still can't find a solution, ask!
 
-## Add Your API Keys
-
-1. Set environment variables on Heroku:
-
-  *Change MY_API_KEY to your variable name and your actual key*
-
-  ```zsh
-  ➜  heroku config:set MY_API_KEY=0932nv8d17vhd72o2e8cfv82csd9n1dcd98
-  ```
-
-2. Check that it worked:
-
-  ```zsh
-  ➜  heroku config
-  MY_API_KEY: 0932nv8d17vhd72o2e8cfv82csd9n1dcd98
-  ```
-
-3. If you made a mistake and need to unset an API key:
-
-  ```zsh
-  ➜  heroku config:unset MY_API_KEY
-  Unsetting MY_API_KEY and restarting myapp... done, v13
-  ```
 
 ## Heroku Doc References
 

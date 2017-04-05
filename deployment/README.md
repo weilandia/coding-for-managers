@@ -4,7 +4,7 @@ Deployment is generally the last stage of development (after thorough testing) a
 
 ## Add Source Control
 
-1. Run `git init` on the command line to add source control to your project. Then commit everything you have so far using `git add .` to stage your files and then `git commit -m "put your message here"` to freeze them into a commit.
+1. Run `git init` on the command line to add source control to your project. We don't want to make our first commit yet since there are some secrets / API keys we don't want to share with the rest of the world.
 
 2. Sign up for a <a href="https://www.heroku.com" target="_blank">Heroku account</a>.
 
@@ -34,7 +34,7 @@ $ heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
 
 1. SQLite3 was not meant to be used in production and Heroku doesn't support it. We're going to be adding a different SQL database, Postgres, to our project. Postgres is more robust, more scalable, and is supported by Heroku.
 
-  * first, move the `gem 'sqlite3'` into the `group :development` section. The section should now look like this:
+  * first, move the `gem 'sqlite3'` into the `group :development` section. This will ensure that we only use SQLite3 when we're in the development environment (on your local machine or on Cloud9) The section should now look like this:
   ```ruby
   group :development do
     # Access an IRB console on exception pages or by using <%= console %> in views
@@ -110,7 +110,11 @@ production:
 
 3. To confirm this worked, try `git remote -v` and you should see two new entries.
 
-4. Push your code to github by entering the following command: `git push origin master`
+4. Run `git add .` to stage all the files in your app that aren't excluded in the `.gitignore` file.
+
+5. Run `git commit -m "initial commit"` to commit or freeze that version of all the files into source control.
+
+6. Push your code to github by entering the following command: `git push origin master`
 
 ## Deploy to Heroku
 
@@ -127,7 +131,7 @@ $ git commit -m "update for initial deploy"
 $ git push heroku master
 ```
 
-3. Hold onto your seat, grab some popcorn, and watch the deploy sequence.
+3. Hold onto your seat, grab some popcorn, and watch the deploy sequence (you'll need to complete steps 4 and 5 for the .
 
 Your Terminal output should look something like this (but a little longer):
 
@@ -178,9 +182,9 @@ To git.heroku.com/YOUR_APP_NAME.git
   * [new branch]      master -> master
 ```
 
-2. run `$ heroku run rake db:migrate` to migrate the database onto the production Postgres database
+4. run `$ heroku run rake db:migrate` to migrate the database onto the production Postgres database
 
-3. run `$ heroku info` to see the URL of your deployed app. Go check it out!
+5. run `$ heroku info` to see the URL of your deployed app. Go check it out!
 
 
 ## Debugging
@@ -189,7 +193,7 @@ When visiting your deployed app for the first time, you may experiece an error o
 1. If this happens to you, check your Heroku logs in the terminal:
 
   ```s
-  $ heroku logs
+  $ heroku logs -t
   ```
 
 2. Scan all of the logs for error messages. If you see obvious error messages, google what they mean. If you still can't find a solution, ask!

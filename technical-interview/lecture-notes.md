@@ -34,17 +34,19 @@ What is the difference between Angular and React? In what situations would you u
 #### Live Demo
 Each software engineering candidate, or even product manager, should have at least one recent project that they can comfortably give a live demo of. A quick and simple description of what the app or website is, is sufficient; what is more interesting is the conversation around the technologies used (and why those), how you set up the database, and what the biggest technical challenges were. For a product manager, the conversation may revolve more around the product decisions- how did you prioritize what to build first? What is an example of a feature you chose to leave out, and why? How well did the team work together, and how could you remove future roadblocks?
 
-#### Example Questions
+#### Example Technical Challenges
 
-- Can you write code in Java or C++ to find the power set of a given set? For example if S={a,b} the power set is P={{},{a},{b},{a,b}} ( you can also choose any of your favorite programming language)
+- Reverse a string two different ways iteratively and one way recursively. Which solution is most efficient and why?
 
-- Write code in Java to find out whether a binary tree is a mirror image of itself or not. Should code be thread-safe?
+- Write an algorithm in Java or C++ to find the power set of a given set. For example if S = [a,b] the power set is P = [[],[a],[b],[a,b]] (you can also choose any of your favorite programming language)
 
-- Can you write code to implement your own hashtable in C++ or Java?
+- Write an algorithm in Java to find out whether a binary tree is a mirror image of itself or not. What is the algorithmic complexity of your solution?
 
-- Write code to find out a number of occurrence of a number in a sorted array ?
+- Implement your own hashtable in C++ or Java.
 
-- Can you implement a Generic LRU Cache in Java ?
+- Write an algorithm to determine the number of occurrences of a number in a sorted array. Is there a more efficient way of implementing this?
+
+- Implement a generic LRU cache in the language of your choice.
 
 - Write a program to solve a Rubik's cube in any programming language.
 

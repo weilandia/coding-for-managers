@@ -54,9 +54,9 @@ Each software engineering candidate, or even product manager, should have at lea
 #### Interviewee questions
 The final 5 minutes are reserved for the interviewee to ask questions. Some examples of good ones:
 - How does the typical production workflow look? How often is code pushed to production (live)?
-- What is the biggest challenge on the product side?
+- What is the project management process you use - do you use Agile or Scrum?
 - How is the test coverage?
-- How is the engineering team organized? Are there sub-teams?
+- How is the engineering team organized/structured? Are there sub-teams?
 
 ## What to expect as a manager
 As a manager, you won't have questions that are that technically complicated. However it might happen that your interviewer asks you questions about your technical background and want to verify it.

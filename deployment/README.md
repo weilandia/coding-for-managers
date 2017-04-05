@@ -216,34 +216,3 @@ When visiting your deployed app for the first time, you may experiece an error o
 Your Heroku collaborators should add the project's Heroku remote to their local git repositories.
 
 *  <a href="https://help.github.com/articles/adding-a-remote/" target="_blank">Adding a remote (GitHub Help)</a>
-
-
-## Extra Credit / Homework
-
-Let's make those stars persist.
-
-What is the broad overview of what we want to achieve with our persistent stars?
-* see an empty star icon (if the user hasn't starred) and a cumulative start count
-* see a full star icon and cumulative star count if user has starred
-* when the user clicks on a star, an ajax request is made to the server
-* the server receives the ajax request, creates a UserStar record
-* a response is sent back to the client indicating the new star count for the post
-* in the success handler for the AJAX call we update the UI with the new star count and a new icon
-
-So what do we need?
-* a join table for counting stars
-* each join record should have a `post_id` and a `user_id`
-* run `rails g model CreateJoinTableUserStars user_id:integer post_id:integer`
-* check the migration file to make sure it's what we want
-* run `rake db:migrate` to update the database schema accordint to the migration file
-* In our Post model add `has_many :user_stars`
-* In our User model add `has_many :user_stars`
-* in our PostsController we need to handle the case of an incoming ajax call
-* ...
-* in the AJAX success function, we need to data the reponse data star_count
-* find the right post using the data component or the post_id and the right `.star-count-display`
-* use the jQuery `.text()` method to update the text to the new count
-
-BONUS:
-How can we control for one star per user per post?
-How can we allow a user to retract his/her star vote?

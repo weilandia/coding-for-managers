@@ -138,14 +138,21 @@ solution:
   }
 ```
 
-9. At this point you should have a working solution. The only thing left to do is 
+9. At this point you should have a working solution. The only thing left to do is make the star stay filled in if a user has already liked it. You'll notice that if you navigate away and back tot he index page the stars don't persist. How can we fix this? By using the `favorites` method on the user and seeing if one of their favorites matches the id of the post. We'll need to add some conditional logic into the `index.html.erb`. If `post.favorites.find_by(user_id: current_user.id)` is true, we should show the `glyphicon-star`, otherwise we should show the `glyphicon-star-empty`.
 
-
-
-
-
-
+solution:
+```html
+<td>
+  <% if post.favorites.find_by(user_id: current_user.id) %>
+    <div data-id="<%= post.id %>" class="glyphicon glyphicon-star favorite"></div>
+  <% else %>
+    <div data-id="<%= post.id %>" class="glyphicon glyphicon-star-empty favorite"></div>
+  <% end %>
+  <div data-id="<%= post.id %>" class="favorite-count"><%= post.favorites.count %></div>
+</td>
+```
 
 EXTRA CREDIT:
 How can we control for one star per user per post?
 How can we allow a user to retract his/her star vote?
+How can we create a favorite posts section for each user?

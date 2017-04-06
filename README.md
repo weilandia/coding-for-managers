@@ -21,4 +21,4 @@ Schedule:
 | Day 13 | [Public APIs](public-apis)
 | Day 14 | [Review II](review-2)
 | Day 15 | [Deployment](deployment)
-| Day 16 | [Technical Interviews](technical-interviews)
+| Day 16 | [Technical Interviews](technical-interview)

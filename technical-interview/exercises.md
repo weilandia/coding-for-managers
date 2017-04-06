@@ -3,20 +3,26 @@
 We're going to add some real functionality to the favoriting system
 
 What is the broad overview of what we want to achieve with our persistent favorites?
+
 * current user sees an empty star icon (if the current user hasn't favorited it yet) next to each post and a cumulative favorited count from all users
+
 * see a full star icon if the current user has favorited it
 
 What is the broad overview of how we might achieve this?
+
 * when the user clicks on a star, an ajax request is made to the server
+
 * the server receives the ajax request, creates a record of the favorite, noting both the primary key (id) of both the user and the post so that they can be linked together.
+
 * a response is sent back to the client with data indicating the new favorite count for the post
+
 * in the success handler for the AJAX call we update the UI with the favorite count and a new full star icon
 
 So what do we need?
 
 1. A [join table](https://en.wikipedia.org/wiki/Associative_entity) and model for favorites
 
-`$ rails g model favorites user_id:integer post_id:integer`
+To create this table, run: `$ rails g model favorites user_id:integer post_id:integer`
 
 You should be presented with a migration file like so:
 ```rb
@@ -34,7 +40,7 @@ end
 
 2. Some model logic to record / count favorites
 
-Inside of your `favorite.rb`, create a class-level (`def self.method_name`) method named `mark_favorite` that takes two arguments: `post_id` and `user_id`. The first order of business is to create a database record with those two pieces of information. We can do that with `Favorite.create(user_id: user_id, post_id: post_id)`. *this will ensure that each favorite record will have a `post_id` and a `user_id`, linking the primary id's together* Next, we want to count all the favorites for the relevant post. We can do that by querying all the favorite entries using the `where` method with the post's id and asking for the count. That should be one line and should be the last line in the method - therefore it will also be the return value, handing off the cumulative favorite count to the controller.
+Inside of your `favorite.rb`, create a class-level (`def self.method_name`) method named `mark_favorite` that takes two arguments: `post_id` and `user_id`. The first order of business is to create a database record with those two pieces of information. We can do that with `Favorite.create(user_id: user_id, post_id: post_id)`. *This will ensure that each favorite record will have a `post_id` and a `user_id`, linking the primary id's together*. Next, we want to count all the favorites for the relevant post. We can do that by querying all the favorite entries using the `where` method with the post's id and asking for the count. That should be one line and should be the last line in the method - therefore it will also be the return value, handing off the cumulative favorite count to the controller.
 
 solution:
 ```rb

@@ -63,5 +63,3 @@ Test-driven development (TDD) is a software development process that relies on t
 
 
 ## Going Further: JavaScript Environment
-
-Talk about AJAX, NODE.JS etc.

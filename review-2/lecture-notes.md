@@ -1,67 +1,47 @@
-# <img src="https://cloud.githubusercontent.com/assets/8397980/19818474/bd21af4c-9d04-11e6-8df6-1ed154718dce.png" height="60">
+## <a href="https://github.com/product-school/ruby-lesson">Intro to Ruby</a>
 
-# Course Review II : Back End Development
-Today we will review what we've learnt in Ruby. You will be able to ask questions and clarify some specific points you want to clarify.
-
-## <a href="https://github.com/product-school/bootstrap-lesson">Bootstrap/Responsive Design</a>
-
-Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. Unlike many web frameworks, it concerns itself with front-end development only. -Wikipedia
-
-### Resources
-- <a href="https://scotch.io/tutorials/understanding-the-bootstrap-3-grid-system">Understanding the Bootstrap System</a>
-- <a href="http://expo.getbootstrap.com/">Inspiring Uses of Bootstrap</a>
-- <a href="http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302">Some Wireframing Tools</a>
-- <a href="https://startbootstrap.com/bootstrap-resources/">Some Bootstrap Resources</a>
-- <a href="http://www.w3schools.com/bootstrap/">W3 Schools Bootstrap Tutorial</a>
-- <a href="https://www.youtube.com/watch?v=gqOEoUR5RHg">YouTube Bootstrap Tutorial</a>
-
-## <a href="https://github.com/product-school/javascript-lesson">Javascript</a>
-
-Like Java, Python, and Ruby, JavaScript is a scripting language that allows you to build systems that do cool things. One of the benefits of JavaScript is that it can run in your browser, serving as a ‘client-side’ scripting language. Any cool effects that you see on a webpage are likely enabled by JavaScript.
+Ruby is a backend scripting language. Many of the JavaScript constructs that you learned, such as functions, variables, objects, iterators, and conditionals, are very similar to those used in Ruby. The main difference between Ruby and JavaScript is that JavaScript is asynchronous (multiple tasks can be running at one time), while Ruby is synchronous (tasks must be run sequentially). One of the benefits of Ruby is that it includes a huge library of methods and built in functionality, which makes your life a lot easier. Another benefit of Ruby, is that Rails, a Model-View-Controller (MVC) framework with an abundance of open-source functionality plug-ins that you can integrate into your app, is built on top of it enabling you to combine the two to quickly build awesome websites.
 
 ### Resources
 
-- <a href="https://www.codecademy.com/learn/javascript">Codecademy</a>
-- <a href="https://www.tutorialspoint.com/javascript/">Tutorials Point</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JS Basics</a>
+- <a href="http://rubymonk.com/learning/books/1-ruby-primer">Ruby Monk</a>
+- <a href="http://www.ruby-doc.org/core-2.2.0/">Ruby Lessons</a>
+- <a href="http://www.ruby-doc.org/core-2.2.0/Array.html">Arrays and Methods</a>
+- <a href="http://www.ruby-doc.org/core-2.2.0/Hash.html">Hashes and Methods</a>
 
-## <a href="https://github.com/product-school/bootstrap-rails">Bootstrap Integration</a>
+## <a href="https://github.com/product-school/rails-lesson">Intro to Rails</a>
 
-Earlier in the curriculum we learned about the different ways one could use Bootstrap to help ease styling.  In this lesson we take a closer look at how to integrate different templates into the Rails platform and how to use these templates to help make your style look more professional.
-
-### Resources
-
-- <a href="https://www.railstutorial.org/book/filling_in_the_layout">Rails Tutorial</a>
-- <a href="https://bootswatch.com/">Bootswatch</a>
-- <a href="https://github.com/maxim/bootswatch-rails">Bootswatch-Rails Github</a>
-
-## <a href="https://github.com/product-school/jquery-lesson">JQuery</a>
-
-DOM stands for **Document Object Model**. It's a fancy way of describing what's going on in your browser when you visit a website. You may think a webpage is just a chunk of HTML, CSS, and JavaScript code. But, there's an important step between a webpage being pure data (text) and being a rendered page users can explore. Everything you interact with in the browser can be represented as a JavaScript object. For example, this paragraph is an object, and it's full of information about being an HTML `<p>` tag.
+Rails is an open-source Model View Controller (MVC) framework that is built in Ruby. It does the hard work of designing the configurations and file structure you need to build your app. Rails includes a vast source of helper methods and functionally that speed up your web development process. On top of that, Rails integrates with ‘gems’ (similar to JavaScript libraries), which allow you to integrate additional functionality into your app, without building it yourself. Given the size of the Rails community, there is a high-quality, well-maintained gem for almost any functionality you’d like to build.
 
 ### Resources
 
-- <a href="http://www.tutorialspoint.com/jquery/">Tutorials Point</a>
-- <a href="https://learn.jquery.com/">Learn JQuery</a>
-- <a href="https://www.codecademy.com/learn/jquery">Codecademy</a>
+- <a href="http://edgeguides.rubyonrails.org/active_record_basics.html">ActiveRecord Basics</a>
+- <a href="http://railsforzombies.org/levels/1">Rails for Zombies</a>
+- <a href="http://railsforzombies.org/levels/2">Rails for Zombies Pt. 2</a>
 
-## <a href="https://github.com/product-school/unit-testing">RSPec Testing</a>
-
-Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: requirements are turned into very specific test cases, then the software is improved to pass the new tests, only. This is opposed to software development that allows software to be added that is not proven to meet requirements. -Wikipedia
-
-### References
-
-- <a href="http://blog.teamtreehouse.com/an-introduction-to-rspec">Treehouse</a>
-- <a href="http://rspec.info/">RSpec Info</a>
+## <a href="https://github.com/product-school/rails-pt2-lesson">Rails: Part Two</a>
 
 ### Resources
 
-- <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publising</a>
-- <a href="https://devcenter.heroku.com/articles/rails4" target="_blank">Rails 4 on Heroku</a>
-- <a href="https://devcenter.heroku.com/articles/heroku-postgresql" target="_blank">Heroku Postgres</a>
-- <a href="https://devcenter.heroku.com/articles/rake" target="_blank">Running Rake Commands</a>
+- <a href="https://www.ruby-toolbox.com/">Ruby Toolbox</a>
+- <a href="https://www.codeschool.com/courses/rails-for-zombies-redux">Rails for Zombies(for learning more about routing)</a>
+- <a href="https://www.codeschool.com/courses/rails-for-zombies-redux">Rails for Zombies(for learning more about views)</a>
+- <a href="http://guides.rubyonrails.org/routing.html">Routing Guides</a>
+- <a href="http://guides.rubyonrails.org/form_helpers.html">Form Helpers</a>
 
+## <a href="https://github.com/product-school/rails-putting-it-all-together">Rails: Putting it all together</a>
 
-## Going Further: JavaScript Environment
+In this lesson we put all of the different components of Rails together in a comprehensive fashion.
 
-Talk about AJAX, NODE.JS etc.
+### Resources
+
+- <a href="http://guides.rubyonrails.org/getting_started.html">Getting Started with Rails</a>
+
+## <a href="https://github.com/product-school/rails-devise">Authentication with Devise</a>
+
+Adding authentication and authorization is extremely vital to any modern web application. The need for basic security and authenticaiton is essential for good data and customer experience. We will spend today adding the 'Devise' gem to our blog appliction. This is a program that will help us integrate the tools needed to authenticate and authorize users. With this gem we will not need to write the complicated code needed to add security to our pages.
+
+### Resources
+
+- <a href="http://www.korenlc.com/rails-tutorial-authentication-with-devise/">Devise Tutorial</a>
+- <a href="https://github.com/plataformatec/devise">Devise Github</a>

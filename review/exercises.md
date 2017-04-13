@@ -1,4 +1,4 @@
-# Review (HTML/CSS/RUBY/RAILS)
+# Review 1 (HTML/CSS/RUBY/RAILS)
 
 We have covered a lot of ground so far in this course. Today we'll be reviewing what we've learned by building a home page and touching up your blog. Time permitting, we'll also be going over the solution for the authorization homework using CanCanCan. I'll want you to do something called **pair programming** today. Team up with a partner sitting next to you to go through today's exercises. Don't be shy!
 

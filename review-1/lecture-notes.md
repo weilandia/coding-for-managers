@@ -26,4 +26,3 @@ The basic functionality of git allows developers to track specific versions of t
 
 
 ## Going Further: Sass
-Explain to Students what is out there and can be useful to them to know. Sass can be useful as it automates CSS for example.

@@ -1,51 +1,383 @@
-# Review (HTML/CSS/RUBY/RAILS)
+# Exercise
 
-We have covered a lot of ground so far in this course. Today we'll be reviewing what we've learned by building a home page and touching up your blog. Time permitting, we'll also be going over the solution for the authorization homework using CanCanCan. I'll want you to do something called **pair programming** today. Team up with a partner sitting next to you to go through today's exercises. Don't be shy!
+We've covered a lot of front-end concepts in these firsts courses. Let's put all together by building a simple landing page for our project. We'll do something called **pair programming** today. Team up with a partner sitting next to you to go through today's exercises. Don't be shy!
 
-## Creating a new route/controller in Rails for our home page
+If at one point, you feel stuck, you can check the [solution](solutions) to get help with your code.
 
-Exercise 1:
+## Set up
+First, let's create a new Cloud 9 project, that we will call `landing-page`. Once everything is loaded, you can remove all the different folders and files that are preloaded so that you can start from scratch.
 
-**We need a new route/controller for our home page. It is not explicitly part of our posts, so it should be a separate concern. Generate a `home` controller using `$ rails g controller home`. This should also generate a view directory for home - add a file named index.html.erb in that directory and write 'HELLO WORLD' in it for a temporary identifier. Go into the controller file and add an index method. Remember, the controller method and the view filename should match.** *Hint: the index method should be empty.*
+### Create a `landing-page` folder
+Once everything is removed, go on your console and create a `landing-page`folder. This is where we will build our landing page project.
 
-Exercise 2:
+**Hint:** Use command lines
 
-**Our application won't send users to our home page yet because we haven't assigned a route to it. We need to change our `root` route. Adjust it to point to your new controller's index action instead of `posts#index`. Let's test it out - try going to your site's base URL while LOGGED OUT. Hmmm... It doesn't work - we don't see HELLO WORLD. Why not?**
+**Reminder:**
+Create a folder: `$ mkdir nameoffolder`
 
-Exercise 3:
 
-**Our authentication is blocking users from going anywhere on our site without an account. How can we allow them to view our lading page without creating/logging into an account? We need to make an exception for the home controller's `index` action. Add `skip_before_action :authenticate_user!, only: [:index]` to the second line of your home controller (inside of the class definition, but not inside of the index method). This will bypass the top-level before_action in our application controller and let users see our home page.**
+### Create an `img` folder
+Within your `landing-page` folder, we need now to have an `img` folder to store the image we are going to use as background.
 
-Exercise 4:
+**Hint:** You need first to inside `landing-page` before creating `img`
 
-**Let's add an HTML with some CSS and an image for our home page. Where do these files go?**
+**Reminder:**
+Create a folder: `$ mkdir nameoffolder`
+Move inside a folder: `$ cd nameoffolder`
+Move outside a folder: `$ cd ..`
 
-Exercise 5:
 
-**Let's add a way for users to get back to our homepage. We can add a Bootstrap-styled button just outside of our sign up logic inside of our main nav element in our `application.html.erb` file that will show regardless of whether a user is signed in or not.** *Hint: follow the formatting for the other `link_to` links and use `root_path` as the path.*
+### Create an `index.html` file
+Now we need to create our HTML file where we will write our code. Create a file called `index.html`.
 
-Exercise 6:
+**Hint:** Careful, this is a file and not a folder
 
-**We don't want our blog's nav to be on our home page. How can we NOT display our blog's nav element when we're at our root path.** *Hint: we need to add some logic into our application.html.erb that determines if we're on our root page. We can use the following method to check: `current_page?(root_url)`. That method will provide us with a boolean value we can use in a conditional statement.*
+**Reminder:**
+Create a file: `$ touch nameoffile`
+Remove file: `$ rm nameoffile`
+Move a file to another place: `mv nameoffile pathWhereYouWantToMoveYouFile/nameoffile`
 
-Exercise 7:
+### Create a `style.css` file
+Now we need to create our style sheet, to be able to have a nice looking landing page! Create a `style.css`file.
 
-**How do we get to the blog section of our website? Let's update the blog link that is currently pointing at `#contact`** *Hint: This is an ERB file so we can add some Rails logic into it. What would give us a proper PATH to our blog? This path exists in another part of our app already.*
+**Reminder:**
+Create a file: `$ touch nameoffile`
+Remove file: `$ rm nameoffile`
+Move a file to another place: `mv nameoffile pathWhereYouWantToMoveYouFile/nameoffile`
 
-## Touching up the blog
+##  Writing HTML
+Congrats! Everything is set up now. You can actually start coding. First, we need to build the skeleton of our webpage. For our landing page, we will need:
+- A Header where we'll have a background image and a big title
+- An About Me section so that people will know a little more about you.
+- A Contact section so that people can reach out to you
+- A Footer to put copyrights
 
-Exercise 1:
+But first, let's set up our page with classic tags
 
-**The buttons we added have a displeasing font color scheme - this happens after they are clicked once and is a result of the `:visited` pseudo-selector. Your task is to find the CSS that is committing this crime and get rid of it.** *Hint: it is in the same place as where we got rid of the black box background on `:hover`.*
+### Classic tags
+#### DOCTYPE HTML
+First you need to tell your browser that your file is of type HTML.
 
-Exercise 2:
+**Hint:** Check the very first self closing of every html page (you can go on any website and open the web console)
 
-**The alert section above the nav bar has some spacing between it and the nav bar that doesn't look great. How can we get rid of that awkward white space?** *Hint: inspect the element and see what property is making this happen. You can play around with adjusting various attributes to see what might fix it. The solution is just one line of CSS on an existing class that overrides some Bootstrap styling.*
+#### html tags
+Now that we have our document specified as HTML, we need to put our html tags. Put an opening and closing html tags. We'll put the our code inside those tags.
 
-Exercise 3:
+**Hint:** HTML tags look like this `<html></html>`
 
-**Add nice Bootstrap buttons to all the links on your blog's post index. Look at how we made the nav bar buttons for log in / sign up.** *Bonus: use non-default stying on some of the buttons for added effect.*
+#### Head tags
+We need to set up our **head tags**. Inside those head tags we want our landing to have a **title** and we need to specify **characters** that we will use.
 
-Homework:
+**Reminders:**
+```html
+<html>
+  <head>
+    <title>Title of your webpage</title>
+    <meta charset="iso-8859-7">
+  </head>
+</html>
+```
+#### Body tags
+Now that our webpage has a title and browser recognize all the characters we are going to use. We need to specify the body of our webpage. Put body tags after your closing `</head>`
 
-**Use your HTML/CSS skills to beautify your homepage. You can remove/add anything, add a new background picture etc. If you have time, use your Rails/Ruby skills to customize the blog section of your website.**
+### Header
+Let's write a nice header for our landing page.
+
+#### Navigation bar
+After our opening `<body>` tag, let's add a `<div></div>` tags with a class of `background-image`. Everything that we'll need for our header will be written inside those tags.
+
+**Reminder:**
+To add a class: `<div class="name_of_your_class"></div>`
+
+We want a navigation bar so that users can click and be redirected to the corresponding section. Let's build a Nav Bar. Give it a class of `navigation-bar`
+
+**Hint:**
+Nav tags: `<nav></nav>`
+
+Inside this Nav Bar, we'll need to write an **unordered list** with a class of `navigation-items`. Within it create **list items** that users can click on. Give respectively an id of:
+- about-list-item
+- contact-list-item
+- blog-list-item
+
+**Hint:**
+Unordered List: `<ul></ul>`
+List items: `<li></li>`
+(Careful: List items need to always be inside an ordered or unordered list)
+Add an id: `<div id="name_of_id"></div>`
+
+Those **list items** must redirect to the corresponding section of the page. To do this, we need to put those list items in between **anchor** elements.
+
+**Hint:**
+Anchor tags: `<a href="link_to_redirect"></a>`
+(To redirect to a section of your html page, you just need to put "#name_of_the_id_element_you_want_your_link_to_redirect" inside your href attribute)
+
+#### Welcome Title
+Create another `<div></div>`. We are going to put our welcome title inside those divs. Give it a class of `first_section`
+
+Write a title saying : "Hi, I'm {{Your Name}}" with a class of `title-1`
+Write a subtitle saying: "Welcome to my website" with a class of `title-2`
+
+**Hints:**
+h1 tags : `<h1></h1>`
+h2 tags : `<h2></h2>`
+h3 tags : `<h3></h3>`
+h4 tags : `<h1></h1>`
+h5 tags : `<h5></h5>`
+
+
+### About Me
+Good Job! You have a written a nice header! Now let's make an About me section. Let's create 2 other `<div></div>` where we'll put all our About Me code in. The first one will have a class of `container`, the second one will have a class of `second_section`
+
+#### Title
+Create a `<div></div>` and give it the same id that you put in your **about Anchor tag**.
+Create a title called: "About Me" with a class of `about-title`
+
+**Hint:**
+h2 tags : `<h2></h2>`
+id attribute: `<h2 id="your_id"></h2>`
+IF you want your `<a>` to redirect to your `<h2>` section, href attribute must target the `<h2>` id.
+Ex:
+```html
+`<h2 id="your_id">HELLO WORLD</h2>`
+  <a href="#your_id">This link will redirect to HELLO WORLD</a>
+```
+
+#### Skills section
+Let's make 2 other `<div></div>`. The first will wrap both Skills and Passion section and the second one  will only wrap our Skills section. Give the first div a class of `skills_passions_container` and the second one a class of `skills`
+
+Inside that:
+- create a title saying: "My Skills" with a class of `skills_title`
+- create a list of your skills with a class of `skills_list`
+
+**Hints:**
+Use `<h3></h3>` for your title
+Use `<ul></ul>` for your list
+Don't forget `<li></li>` inside your unordered list.
+
+#### Passions section
+We want to also show our passions in our website. Let's do the exact same as we did for our skills but replace by our Passions. Replace `skills`, `skills_title` & `skills_list` by `passions`, `passions_title` and `passions-list`
+
+
+### Contact Form
+Great! We have our About Me written. Now what if someone would to contact you? We need a form to handle that!
+
+First, let's put an `<hr></hr>` to separate our Contact Section from our About me.
+Then let's create a `<div></div>` where we'll put our form and give this div an id of `contact` (if our put "#contact" in your href attribute of your Contact anchor tag)
+
+#### Title
+
+Create a title for your section called: "Contact Me" with the class of `contact-title`
+
+#### Form
+Now we need to create an actual form. Follow those steps
+
+1. Create a `<form></form>` with an id of `contact_me`
+2. Inside it create a first `<div></div>`
+3. Inside it create an `<input/>` and give it the following attributes:
+  - required attribute of `required`
+  - type attribute of `text`
+  - Value attribute of `Name`
+
+4. Outside of the first div, create a second `<div></div>`
+5. Inside it create an `<input/>` and give it the following attributes:
+  - required attribute of `required`
+  - type attribute of `email`
+  - Value attribute of `Email`
+
+5. Outside of the second div, create a third `<div></div>`
+6. Inside it create an `<textarea></textarea>`
+7. Outside of the third div, create a fourth and final `<div></div>`
+8. Inside it create an `<input/>` with a class of `submit-button` and give it the following attributes:
+  - required attribute of `required`
+  - type attribute of `submit`
+  - Value attribute of `Submit`
+
+### Footer
+We are almost there! We just need to put a footer now and our skeleton will be done.
+
+Create a `<footer></footer>` and a `<div></div>` with a class of `copyright` within it.
+
+Inside the div, create `<p></p>`. You will write something like this in it: Copyright (c) 2017 Copyright {Your Name} All Rights Reserved.
+
+## Style your page
+Great! Our HTML is written but our page is a little boring, we need to style it!
+Let's first link our style sheet to our HTML page.
+
+Inside your `<head></head>` link your `style.css` file.
+
+**Reminder:***
+
+```html
+    <link rel="stylesheet" href="style.css">
+```
+
+We also need to set up basic styling as follow:
+- Default margin for every element must be 0
+- Default link shouldn't have text-decoration and be white.
+
+**Reminder:**
+Select all elements: `* {property-1: value;}`
+Select anchor elements: `a {propert-1: value;}`
+
+### Style background image
+Let's first put a background image for our header. Download the [image](img) and put in your `img` folder in your C9 project.
+
+target the `background-image` class and give it the following properties:
+-   background-image: url("img/generic_background.jpg");
+- background-repeat: no-repeat;
+- background-position: center;
+- background-size: cover;
+
+
+### Style Nav bar
+Now that we have our Background Image set, we should do something about our Navigation bar.
+
+Target the `navigation-bar` class and give it the following properties:
+- background-color: rgba(0,0,0, 0.01);
+- display:flex;
+- justify-content: flex-end;
+- font-size: 20px;
+- padding-right: 30px;
+- padding-left: 30px;
+
+
+Our list items appear vertically and with those bullet points in front of them. Let's fix this
+
+Target the `navigation-items` class and give it the following properties:
+
+- list-style: none;
+- display:flex;
+- flex-direction: row;
+
+We have now our list items display in row but they are all stuck together.
+
+Target `about-list-item, contact-list-item, blog-list-item` ids and give them 10px margin.
+
+As you can see our header all squished on the top of your page.
+
+Target `first_section` class and give it the following properties:
+- display:flex;
+- flex-direction: column;
+- align-items: center;
+- justify-content: center;
+- height:80vh;
+
+Let's style our titles a little bit. Let's do the following:
+- Give both `title-1` and `title-2` classes a margin of 10px and color of white
+- Give `title-1` a font-size of 60px
+- Give `title-2` a font-size of 30px
+
+### Style Skills and Passion Section
+Our header looks great! Let's tackle our About section.
+
+First, our font color.
+
+Target `about-title, li, h3` elements and give them the color of black
+
+We need to give a bigger height for our second section.
+
+Target `second-section` class and give it a height of 60vh
+
+Our "About Me" title needs to be taken care of. Target `about` id and give it the following properties:
+
+- display:flex;
+- justify-content: center;
+- margin:20px;
+- padding-bottom: 40px;
+- font-size:25px;
+
+Let's now focus on our skills and passions.
+
+Target the `h3` elements and give them the following properties:
+- display:flex;
+- justify-content: center;
+- margin:10px;
+
+We want to put both our skills and passions div at the same level.
+
+Target `skills_passions_container` class and give it the following properties:
+- display: flex;
+- flex-direction: row;
+- justify-content: center;
+
+Let's style our divs. Target `skills` and `passions` classes and give them the following properties:
+- border: 2px solid black;
+- border-radius: 5px;
+- font-size:20px;
+
+Our divs are stuck to each other, let's fix this but giving `skills` a 100px right margin.
+
+Finally our divs a little too small. Target `skills-list` and `passions-list` classes and give them the following padding:
+- padding: 20px 70px 30px 70px;
+
+
+### Style Form
+Our form is not very sexy right now. If we want someone to actually contact us we need to fix this.
+
+Let's start by separating our About section and Contact section by style `hr` element. Target `hr` and give it the following properties:
+
+- margin:20px auto 70px;
+- width: 60%;
+
+Let's now style our title. Target `contact-title` class and give it the following properties:
+- color:black;
+- font-size: 35px;
+- margin:20px;
+- display: flex;
+- justify-content: center;
+
+
+Now let's style our form itself. First target `contact_me` id and give it the following properties:
+- color:black;
+- display:flex;
+- align-items: center;
+- flex-direction: column;
+- margin: 20px;
+- margin-left: 80px;
+
+Let's now give a little more space in between each fields. Target each `div` inside `contact_me` id and give them the following properties:
+- margin:20px;
+- width:40%;
+
+
+We need to style our `input` elements. Target them inside `contact_me` and give them the following properties:
+- width: 80%;
+- height:30px;
+- font-size: 15px;
+- border:1px solid grey;
+- border-radius: 3px;
+
+We need to style our `textarea` now. Let's target it inside `contact_me` and give it the following properties:
+
+- width: 80%;
+- height: 100px;
+- font-size: 15px;
+- border: 1px solid grey;
+- border-radius:3px;
+
+Finally let's style our button. Target `submit-button`and give it the following properties:
+
+- background-color:#17a5e8;
+- color:white;
+
+
+
+### Style Footer
+Almost done! We now need a final thing: Styling our footer
+
+Target your `footer` element and give it the following properties:
+- background-color: lightgrey;
+- margin-top: 10px;
+- padding: 10px;
+- text-align: center;
+
+
+## Homework
+
+HOORAY! You built a nice landing page for your blog!
+
+But there are few things you need to fix. One of them is that your site is not responsive.
+
+Using Media Queries, style your landing page so that it looks great on any device.
+
+Don't forget to use Developer tools in your browser to help you with sizing. 

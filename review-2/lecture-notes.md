@@ -45,3 +45,15 @@ Adding authentication and authorization is extremely vital to any modern web app
 
 - <a href="http://www.korenlc.com/rails-tutorial-authentication-with-devise/">Devise Tutorial</a>
 - <a href="https://github.com/plataformatec/devise">Devise Github</a>
+
+## <a href="https://github.com/product-school/bootstrap-lesson">Bootstrap/Responsive Design</a>
+
+Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. Unlike many web frameworks, it concerns itself with front-end development only. -Wikipedia
+
+### Resources
+- <a href="https://scotch.io/tutorials/understanding-the-bootstrap-3-grid-system">Understanding the Bootstrap System</a>
+- <a href="http://expo.getbootstrap.com/">Inspiring Uses of Bootstrap</a>
+- <a href="http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302">Some Wireframing Tools</a>
+- <a href="https://startbootstrap.com/bootstrap-resources/">Some Bootstrap Resources</a>
+- <a href="http://www.w3schools.com/bootstrap/">W3 Schools Bootstrap Tutorial</a>
+- <a href="https://www.youtube.com/watch?v=gqOEoUR5RHg">YouTube Bootstrap Tutorial</a>

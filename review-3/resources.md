@@ -21,8 +21,6 @@
 - <a href="http://rogerdudler.github.io/git-guide/">Git Guide</a>
 - <a href="https://guides.github.com/">Github Guides</a>
 
-# Resources
-
 ## Bootstrap
 
 ### Responsive Design

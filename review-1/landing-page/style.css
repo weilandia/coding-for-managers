@@ -4,17 +4,17 @@
 
 a {
   text-decoration: none;
+  color: white;
 }
 .background-image{
-  background-image: url("generic_background.jpg");
+  background-image: url("img/generic_background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 .navigation-bar{
   background-color: rgba(0,0,0, 0.01);
-  position: sticky;
-  top:10px;
   display:flex;
   justify-content: flex-end;
   font-size: 20px;
@@ -37,7 +37,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height:80vh;
 }
 
@@ -48,17 +47,10 @@ a {
 
 .title-1 {
   font-size:60px;
-  color: white;
 }
 
 .title-2 {
   font-size:30px;
-  color: white;
-}
-
-.container {
-  margin:auto;
-  width: 90%;
 }
 
 .about-title, li, h3 {
@@ -137,7 +129,6 @@ hr {
   font-size: 15px;
   border:1px solid grey;
   border-radius: 3px;
-  color:black;
 }
 
 #contact_me textarea {
@@ -146,7 +137,6 @@ hr {
   font-size: 15px;
   border: 1px solid grey;
   border-radius:3px;
-  color:black;
 }
 
 

@@ -2,16 +2,16 @@
 
 ## Javascript Basic
 
-[Exercise 1](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-1.php)
-[Exercise 2](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-2.php)
-[Exercise 3](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-3.php)
-[Exercise 4](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-4.php)
-[Exercise 5](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-5.php)
-[Exercise 6](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-6.php)
-[Exercise 7](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-7.php)
-[Exercise 8](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-8.php)
-[Exercise 9](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php)
-[Exercise 10](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-10.php)
+- [Exercise 1](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-1.php)
+- [Exercise 2](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-2.php)
+- [Exercise 3](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-3.php)
+- [Exercise 4](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-4.php)
+- [Exercise 5](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-5.php)
+- [Exercise 6](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-6.php)
+- [Exercise 7](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-7.php)
+- [Exercise 8](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-8.php)
+- [Exercise 9](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php)
+- [Exercise 10](http://www.w3resource.com/javascript-exercises/javascript-basic-exercise-10.php)
 
 
 ## Functions

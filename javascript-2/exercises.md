@@ -1,15 +1,15 @@
 # Exercises
 
-## Insert Yes at the end of a <p> element
+## Insert Yes at the end of a `<p>` element
 
 [W3Schools](https://www.w3schools.com/jquery/exercise.asp?filename=exercise_add1)
 
 
-## Insert a third <li> element
+## Insert a third `<li>` element
 
 [W3Schools](https://www.w3schools.com/jquery/exercise.asp?filename=exercise_add2)
 
-## Insert Hello at the beginning of a <p> element
+## Insert Hello at the beginning of a `<p>` element
 
 [W3Schools](https://www.w3schools.com/jquery/exercise.asp?filename=exercise_add3)
 

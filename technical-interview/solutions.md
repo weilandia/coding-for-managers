@@ -1,4 +1,4 @@
-#Solutions
+# Solutions
 
 1. A [join table](https://en.wikipedia.org/wiki/Associative_entity) and model for favorites
 

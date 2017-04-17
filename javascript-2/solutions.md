@@ -1,6 +1,6 @@
 # Solutions
 
-## Add Yes to a <p> element
+## Add Yes to a `<p>` element
 ```html
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@ $(document).ready(function(){
 </html>
 ```
 
-## Insert a third <li> element
+## Insert a third `<li>` element
 ```html
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,7 @@ $(document).ready(function(){
 </body>
 </html>
 ```
-## Insert Hello at the beginning of a <p> element
+## Insert Hello at the beginning of a `<p> element
 
 ```html
 <!DOCTYPE html>

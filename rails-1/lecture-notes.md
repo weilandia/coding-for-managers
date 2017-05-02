@@ -55,6 +55,7 @@ In the case of our blog post, we want to have:
 ```
 
 ### Adding new models and migrating them into your database
+Let's go ahead and create a new workspace in Cloud 9, using a Ruby On Rails workspace.  Name it whatever you'd like
 
 • Creating a new model:
 `$ rails generate model Post title:string body:text`
@@ -108,7 +109,7 @@ ActiveRecord is an API (aka: ‘system’) that allows you to interact between y
   my_first_post.body = "lots of blog content"
   my_first_post.save!
 ```
-**In-Class Exercise: Create and save three blog posts using your rails console.**
+**In-Class Exercise: Using your rails console, create and save three blog posts.**
 
 
 <details><summary>Solution:</summary>
@@ -149,11 +150,11 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 
 - Update: 2 common ways of updating an object include the following:
 
-  `my_first_post = Post.where(title: "My first post").first`
+  `my_first_post = Post.find(id)`
 
 - How to update (and save) one or multiple attribute using a single method:
 
-  `my_first_post.update(body: “revamped body...”)`
+  `my_first_post.update(body: "revamped body...")`
 
 You can use `.update` or `.update_attributes` to update ONE or MULTIPLE attributes.
 

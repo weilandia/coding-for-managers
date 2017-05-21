@@ -16,9 +16,11 @@
 
 `rake db:create`
 
-Now let's remove our old practice migration files.
+Now let's remove our old practice migration files (as in, right click - delete them, or through the command line).
 
 Next, let's create a scaffold. Open a new scratch document in c9 and let's write our the specifications for our Post scaffold.
+
+`rails generate scaffold post title:string body:text`
 
 ## Routes
 
@@ -152,8 +154,10 @@ end
 
 **Iterators**:
 ```html
-<% Posts.each do |post| %> <%= post.title %>
-<%= post.body %> <% end %>
+<% Posts.each do |post| %> 
+  <%= post.title %>
+  <%= post.body %> 
+<% end %>
 ```
 
 **Conditionals**:

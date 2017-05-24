@@ -51,7 +51,7 @@ class Api::V1::WeatherController < ApplicationController
   skip_before_action :authenticate_user!, only: [:get_weather]
 
   def get_weather
-    render :json => Weather.get_weather_at_coordinates(params[:coordinates])
+    render :json => Weather.get_weather_at_coordinates(params[:lat], params[:lon])
   end
 end
 ```
@@ -60,11 +60,11 @@ Where's the Weather class coming from? We need to make it. Let's create a new `W
 
 ```ruby
 class Weather
-    def self.get_weather_at_coordinates(coordinates)
-        lat = "37.7767"
-        lon = "-122.4233"
+    def self.get_weather_at_coordinates(lat, lng)
+        lat ||= "37.7767"
+        lng ||= "-122.4233"
 
-        uri = URI.parse("https://api.darksky.net/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{lat},#{lon}")
+        uri = URI.parse("https://api.darksky.net/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{lat},#{lng}")
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
 
@@ -88,16 +88,19 @@ JSON is composed of key-value pairs much like Ruby hashes and JavaScript objects
 How do we get the data off our server an into the browser without going directly to the URL and getting shown a bunch of jumbled text? We have to use JavaScript! JQuery provides us with an easy interface for making requests to our server - AJAX (Asynchronous Javascript and XML). Paste the following code into your index.html.erb file for your home view (landing page):
 
 ```js
+const productSchoolLat = "37.796465";
+const productSchoolLng = "-122.402492";
+
 $.ajax({
     url: 'api/v1/weather',
     type: 'GET',
-    data: { lat: lat, lon: lng} ,
+    data: { lat: productSchoolLat, lng: productSchoolLng } ,
     contentType: 'application/json; charset=utf-8',
     success: function (response) {
         console.log(response);
     },
-    error: function () {
-        console.log(response);
+    error: function (error) {
+        console.log(error);
     }
 });
 ```

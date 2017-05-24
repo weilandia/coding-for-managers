@@ -60,17 +60,17 @@ Where's the Weather class coming from? We need to make it. Let's create a new `W
 
 ```ruby
 class Weather
-    def self.get_weather_at_coordinates(lat, lng)
-        lat ||= "37.7767"
-        lng ||= "-122.4233"
+  def self.get_weather_at_coordinates(lat, lng)
+    lat ||= "37.7767"
+    lng ||= "-122.4233"
 
-        uri = URI.parse("https://api.darksky.net/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{lat},#{lng}")
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = true
+    uri = URI.parse("https://api.darksky.net/forecast/#{ENV["DARK_SKY_API_KEY"]}/#{lat},#{lng}")
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
 
-        data = http.get(uri.request_uri)
-        data.body
-    end
+    data = http.get(uri.request_uri)
+    data.body
+  end
 end
 ```
 
@@ -92,16 +92,16 @@ const productSchoolLat = "37.796465";
 const productSchoolLng = "-122.402492";
 
 $.ajax({
-    url: 'api/v1/weather',
-    type: 'GET',
-    data: { lat: productSchoolLat, lng: productSchoolLng } ,
-    contentType: 'application/json; charset=utf-8',
-    success: function (response) {
-        console.log(response);
-    },
-    error: function (error) {
-        console.log(error);
-    }
+  url: 'api/v1/weather',
+  type: 'GET',
+  data: { lat: productSchoolLat, lng: productSchoolLng } ,
+  contentType: 'application/json; charset=utf-8',
+  success: function (response) {
+    console.log(response);
+  },
+  error: function (error) {
+    console.log(error);
+  }
 });
 ```
 

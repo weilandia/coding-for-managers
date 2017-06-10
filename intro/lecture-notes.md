@@ -40,7 +40,7 @@ You will need two tools to get set up for the class. Make sure to create an acco
 * [Github](https://github.com)
 
 ### IDE/CLI
-An Integrated Development Environment (IDE) is a software that combines several tools a software developer needs into one place. An IDE usually acts as a text editor, a debugger and a compiler. One IDE that we are going to use is Cloud 9. With this tool you will be able to write some code and directly compile it through Cloud 9.
+An Integrated Development Environment (IDE) is program that combines several tools a software developer needs into one place. An IDE usually acts as a text editor, a debugger and a compiler. The IDE we are going to use in this class is called Cloud 9. With this tool you will be able to write code and directly execute it online without ever putting anything on your own computer.
 
 * Create our first workspace in Cloud9
     * HTML5
@@ -48,7 +48,7 @@ An Integrated Development Environment (IDE) is a software that combines several 
     * IDE
     * CLI
 
-At the bottom of your workspace in Cloud 9, you will see something called the command line (CLI) or console or Shell. If you have ever watched Matrix, the big black screen with green text in it is the command line. Typically, this application will let you access, create, delete files and folders without using the usual graphical interface of your computer. It is very useful once you start creating complex applications because you will need to have all your work in local files and still be able to share it with your team.
+At the bottom of your workspace in Cloud 9, you will see something called the command line interface (CLI) or console or shell. Typically, this application will let you access, create, delete files and folders without using the usual graphical interface of your computer. It is very useful once you start creating complex applications because you will need to have all your work in local files and still be able to share it with your team.
 [Here](http://www.galvanize.com/learn/learn-to-code/programming-101-how-to-use-the-terminal-command-line/) is a video that explains more in depth the use of the command line.
 
 * Shell Commands ([POSIX](http://pubs.opengroup.org/onlinepubs/9699919799/)/[UNIX](https://upload.wikimedia.org/wikipedia/commons/c/cd/Unix_timeline.en.svg))
@@ -71,7 +71,7 @@ Hyper-text Markup Language represents the frame or skeleton of any web page that
 
 Let's create an index HTML file: `$ touch index.html`
 
-Tags are the foundation of HTML. They usually start with `<name of the tag>` and end with `</name of the tag>`. You will be able to put text within the opening and closing tag. This is how you will structure your webpage with HTML. Here is an example of tags:
+Tags are the foundation of HTML. They usually start with `<name of the tag>` and end with `</name of the tag>`. You will be able to put text within the opening and closing tag. This is how you will structure your webpage with HTML. Here is an example of some basic tags:
 ```html
 <!DOCTYPE html>
 <html>
@@ -88,7 +88,7 @@ Tags are the foundation of HTML. They usually start with `<name of the tag>` and
 Commonly Used Tags:
 
 - Headings: `<h1> - <h6> <h1>Hello World</h1>`
-- Span: `<span>Copy text </span>`
+- Span: `<span>Copy text</span>`
 - **Div**: `<div> [content to be placed inside] </div>`
   - inspect FB page with Chrome Dev Tools (cmd + alt + i)
 

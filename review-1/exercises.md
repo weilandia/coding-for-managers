@@ -8,22 +8,21 @@ If at one point, you feel stuck, you can check the [solution](solutions) to get 
 First, let's create a new Cloud 9 project, that we will call `landing-page`. Once everything is loaded, you can remove all the different folders and files that are preloaded so that you can start from scratch.
 
 ### Create a `landing-page` folder
-Once everything is removed, go on your console and create a `landing-page`folder. This is where we will build our landing page project.
+Once everything is removed, go on your console and create a `landing-page` directory. This is where we will build our landing page project.
 
-**Hint:** Use command lines
+**Hint:** Use command the command line
 
 **Reminder:**
-Create a folder: `$ mkdir nameoffolder`
+Create a folder: `$ mkdir name_of_directory`
 
 
 ### Create an `img` folder
 Within your `landing-page` folder, we need now to have an `img` folder to store the image we are going to use as background.
 
-**Hint:** You need first to inside `landing-page` before creating `img`
+**Hint:** You need first to go inside your `landing-page` directory before creating the `img` directory
 
 **Reminder:**
-Create a folder: `$ mkdir nameoffolder`
-Move inside a folder: `$ cd nameoffolder`
+Move inside a folder: `$ cd name_of_directory`
 Move outside a folder: `$ cd ..`
 
 
@@ -33,32 +32,27 @@ Now we need to create our HTML file where we will write our code. Create a file 
 **Hint:** Careful, this is a file and not a folder
 
 **Reminder:**
-Create a file: `$ touch nameoffile`
-Remove file: `$ rm nameoffile`
-Move a file to another place: `mv nameoffile pathWhereYouWantToMoveYouFile/nameoffile`
+Create a file: `$ touch name_of_file.extension`
+Remove file: `$ rm name_of_file.extension`
+Move a file to another place: `mv name_of_file path_of_another_directory/name_of_file.extension`
 
 ### Create a `style.css` file
 Now we need to create our style sheet, to be able to have a nice looking landing page! Create a `style.css`file.
 
-**Reminder:**
-Create a file: `$ touch nameoffile`
-Remove file: `$ rm nameoffile`
-Move a file to another place: `mv nameoffile pathWhereYouWantToMoveYouFile/nameoffile`
-
 ##  Writing HTML
 Congrats! Everything is set up now. You can actually start coding. First, we need to build the skeleton of our webpage. For our landing page, we will need:
-- A Header where we'll have a background image and a big title
+- A header/title section where we'll have a background image and a title
 - An About Me section so that people will know a little more about you.
 - A Contact section so that people can reach out to you
-- A Footer to put copyrights
+- A Footer to put copyrights / social media links / etc.
 
-But first, let's set up our page with classic tags
+First, let's set up our page with the basic HTML tags
 
-### Classic tags
+### Basic tags
 #### DOCTYPE HTML
-First you need to tell your browser that your file is of type HTML.
+First you need to tell the browser that your file is of type HTML.
 
-**Hint:** Check the very first self closing of every html page (you can go on any website and open the web console)
+**Hint:** Check the very first self closing tag of every html page (you can go on any website and open the web console)
 
 #### html tags
 Now that we have our document specified as HTML, we need to put our html tags. Put an opening and closing html tags. We'll put the our code inside those tags.
@@ -66,30 +60,30 @@ Now that we have our document specified as HTML, we need to put our html tags. P
 **Hint:** HTML tags look like this `<html></html>`
 
 #### Head tags
-We need to set up our **head tags**. Inside those head tags we want our landing to have a **title** and we need to specify **characters** that we will use.
+We need to set up our **head tags**. Inside those head tags we want our landing to have a **title**.
 
 **Reminders:**
 ```html
 <html>
   <head>
     <title>Title of your webpage</title>
-    <meta charset="iso-8859-7">
   </head>
 </html>
 ```
 #### Body tags
-Now that our webpage has a title and browser recognize all the characters we are going to use. We need to specify the body of our webpage. Put body tags after your closing `</head>`
+Now that our webpage has a title, we need to define the body of our webpage. Put body tags after your closing `</head>` tag.
 
-### Header
-Let's write a nice header for our landing page.
+### Title/Header section
+Let's create a nice header/title for our landing page.
 
-#### Navigation bar
+### Background image
 After our opening `<body>` tag, let's add a `<div></div>` tags with a class of `background-image`. Everything that we'll need for our header will be written inside those tags.
 
 **Reminder:**
-To add a class: `<div class="name_of_your_class"></div>`
+To add a class: `<div class="name-of-your-class"></div>`
 
-We want a navigation bar so that users can click and be redirected to the corresponding section. Let's build a Nav Bar. Give it a class of `navigation-bar`
+#### Navigation bar
+We want a navigation bar so that users can click and be redirected to the corresponding sections. Let's build a Nav Bar. Give it a class of `navigation-bar`
 
 **Hint:**
 Nav tags: `<nav></nav>`
@@ -105,14 +99,15 @@ List items: `<li></li>`
 (Careful: List items need to always be inside an ordered or unordered list)
 Add an id: `<div id="name_of_id"></div>`
 
-Those **list items** must redirect to the corresponding section of the page. To do this, we need to put those list items in between **anchor** elements.
+Those **list items** should scroll the user to the corresponding section of the page. To do this, we need to add **anchor** tags to our menu items.
 
 **Hint:**
 Anchor tags: `<a href="link_to_redirect"></a>`
-(To redirect to a section of your html page, you just need to put "#name_of_the_id_element_you_want_your_link_to_redirect" inside your href attribute)
+(To scroll the user to a section of your html page, you just need to use the hash/pound character "#name_of_the_id_element_you_want_your_link_to_redirect" inside your href attribute)
+You can use href="#top" or the empty fragment href="#" to link to the top of the current page.
 
 #### Welcome Title
-Create another `<div></div>`. We are going to put our welcome title inside those divs. Give it a class of `first_section`
+Create another `<div></div>`. We are going to put our welcome title inside those divs. Give it a class of `first-section`.
 
 Write a title saying : "Hi, I'm {{Your Name}}" with a class of `title-1`
 Write a subtitle saying: "Welcome to my website" with a class of `title-2`
@@ -126,7 +121,7 @@ h5 tags : `<h5></h5>`
 
 
 ### About Me
-Good Job! You have a written a nice header! Now let's make an About me section. Let's create 2 other `<div></div>` where we'll put all our About Me code in. The first one will have a class of `container`, the second one will have a class of `second_section`
+Good Job! You have a written a nice header! Now let's make an About me section. Let's create 2 other `<div></div>` where we'll put all our About Me content. The first one will have a class of `container`, the second one will have a class of `second-section`
 
 #### Title
 Create a `<div></div>` and give it the same id that you put in your **about Anchor tag**.
@@ -135,18 +130,18 @@ Create a title called: "About Me" with a class of `about-title`
 **Hint:**
 h2 tags : `<h2></h2>`
 id attribute: `<h2 id="your_id"></h2>`
-IF you want your `<a>` to redirect to your `<h2>` section, href attribute must target the `<h2>` id.
+If you want your `<a>` to redirect to your `<h2>` section, href attribute must target the `<h2>` id.
 Ex:
 ```html
-`<h2 id="your_id">HELLO WORLD</h2>`
-  <a href="#your_id">This link will redirect to HELLO WORLD</a>
+  <a href="#your_id">This link will scroll to HELLO WORLD</a>
+  <h2 id="your_id">HELLO WORLD</h2>
 ```
 
 #### Skills section
-Let's make 2 other `<div></div>`. The first will wrap both Skills and Passion section and the second one  will only wrap our Skills section. Give the first div a class of `skills_passions_container` and the second one a class of `skills`
+Let's make 2 other `<div></div>`. The first will wrap both Skills and Passion section and the second one  will only wrap our Skills section. Give the first div a class of `skills-interests-container` and the second one a class of `skills`
 
 Inside that:
-- create a title saying: "My Skills" with a class of `skills_title`
+- create a title: "My Skills" with a class of `skills_title`
 - create a list of your skills with a class of `skills_list`
 
 **Hints:**
@@ -154,8 +149,8 @@ Use `<h3></h3>` for your title
 Use `<ul></ul>` for your list
 Don't forget `<li></li>` inside your unordered list.
 
-#### Passions section
-We want to also show our passions in our website. Let's do the exact same as we did for our skills but replace by our Passions. Replace `skills`, `skills_title` & `skills_list` by `passions`, `passions_title` and `passions-list`
+#### interests section
+We want to also show our interests in our website. Let's do the exact same as we did for our skills but replace by our interests. Replace `skills`, `skills_title` & `skills_list` by `interests`, `interests_title` and `interests-list`
 
 
 ### Contact Form
@@ -208,22 +203,22 @@ Inside your `<head></head>` link your `style.css` file.
 **Reminder:***
 
 ```html
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 ```
 
 We also need to set up basic styling as follow:
 - Default margin for every element must be 0
 - Default link shouldn't have text-decoration and be white.
 
-**Reminder:**
-Select all elements: `* {property-1: value;}`
-Select anchor elements: `a {propert-1: value;}`
+**Hint:**
+Select all elements: `* { property-1: value; }`
+Select anchor elements: `a { propert-1: value; }`
 
 ### Style background image
 Let's first put a background image for our header. Download the [image](img) and put in your `img` folder in your C9 project.
 
 target the `background-image` class and give it the following properties:
--   background-image: url("img/generic_background.jpg");
+- background-image: url("img/generic_background.jpg");
 - background-repeat: no-repeat;
 - background-position: center;
 - background-size: cover;
@@ -286,28 +281,28 @@ Our "About Me" title needs to be taken care of. Target `about` id and give it th
 - padding-bottom: 40px;
 - font-size:25px;
 
-Let's now focus on our skills and passions.
+Let's now focus on our skills and interests.
 
 Target the `h3` elements and give them the following properties:
 - display:flex;
 - justify-content: center;
 - margin:10px;
 
-We want to put both our skills and passions div at the same level.
+We want to put both our skills and interests div at the same level.
 
-Target `skills_passions_container` class and give it the following properties:
+Target `skills_interests_container` class and give it the following properties:
 - display: flex;
 - flex-direction: row;
 - justify-content: center;
 
-Let's style our divs. Target `skills` and `passions` classes and give them the following properties:
+Let's style our divs. Target `skills` and `interests` classes and give them the following properties:
 - border: 2px solid black;
 - border-radius: 5px;
 - font-size:20px;
 
 Our divs are stuck to each other, let's fix this but giving `skills` a 100px right margin.
 
-Finally our divs a little too small. Target `skills-list` and `passions-list` classes and give them the following padding:
+Finally our divs a little too small. Target `skills-list` and `interests-list` classes and give them the following padding:
 - padding: 20px 70px 30px 70px;
 
 

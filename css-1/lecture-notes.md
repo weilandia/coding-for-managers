@@ -20,7 +20,7 @@ Depending on your needs and your webpage complexity, you will go for one of thos
 ## In-line Styling
 Within an element, you can write some styling. This method is called in-line styling. It is pretty useful if you have small style changes you want to make. Here is an example:
 
-`<tag style=”attribute: value;”>content</tag>`
+`<tag style="attribute: value;">content</tag>`
 
 *Exercise: add a `color` and `font-family` to the heading on your home page*
 
@@ -28,11 +28,13 @@ Within an element, you can write some styling. This method is called in-line sty
 First, you need to select an element to apply some style on it. You can either directly select an element or select a class or an id.
 
 #### Select an element
-* elements/tags `html` `body` `a`
+* elements/tags: `html`, `body`, `a`, `p`, `div`, etc.
+
 You can directly apply style to an element. this will apply to all same elements. For example, if you select the anchor element `a`, the styling will apply to ALL `a` elements.
 
 #### Select a Class
 * classes (for items with shared characteristics)
+
 You can give an element a class name. ONE class can be given to several elements. If select this class name then styling will apply to all elements that have that class name. Here is a example:
   * declare: `<tag class="photo menu-item event">content</tag>`
   * select: `.photo` `.menu-item` `.event`
@@ -64,7 +66,7 @@ When your webpage needs a lot of styling, you might prefer to link a separate st
 
 ```html
 <head>
-  <link rel=”stylesheet” href=”styles/main.css”>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 ```
 

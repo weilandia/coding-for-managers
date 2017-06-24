@@ -39,6 +39,12 @@ Try the following:
 
 `> Math.sqrt(9)`
 
+**What is a method/function?**
+
+A method or function is a series of operations that is bundled into a container. Usually, a method has inputs and outputs (some data goes in, gets manipulated, and is returned), but sometime it has neither. In that case, the function/method may have what are known as side effects. A side effect may be a change in another part of your system or maybe just a text output to the command-line or console.
+
+`>def method_name(argument_name)`
+
 **What is an object and what is OOP?**
 Have you tried `Math.sqrt(9)`. Math is what is called an Object and `.sqrt()` a Method. An object is a data structure that contains **properties** and **methods**.
 A method is a function. Some methods are already built in ruby (like sqrt()) but you can also build some yourself!

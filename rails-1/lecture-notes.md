@@ -63,7 +63,7 @@ Let's go ahead and create a new workspace in Cloud 9, using a Ruby On Rails work
 • Migrating your changes into the database: When you create a new model or make additions, you’ll see that a new ‘migration’ file is added to the bottom of your db/migrate folder. They represent a blueprint for the change you’d like to make, but haven’t yet been persisted into your database. In order to make those changes in your database, you’ll have to run the command: `$ rake db:migrate`
 
 • Destroying a new model:
-`$ rails destroy model Post title:string body:text`
+`$ rails destroy model Post`
 
 **In-Class Exercise: Create the table for your blog posts in your database. It should have the following attributes: a `title`, a `body`, a `user_id` and a `category_id`**
 

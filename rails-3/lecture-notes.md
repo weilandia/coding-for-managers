@@ -98,26 +98,25 @@ Finally, force the user to redirect to the login page if the user was not logged
 ```
 after `protect_from_forgery with: :exception.`
 
+## Add a foreign key to your posts model
+
+`rails g migration AddUserIdToPosts user_id:integer`
+
+`rake db:migrate`
+
 ## Connect User and Posts
 
-1.  Add the line `has_many :posts` in your `user.rb` file.
-2.  Add the line `belongs_to :user` in your `post.rb` file. Adding these two lines will associate your models for later use.
+Active Record associations provide convenience methods to your models.
+1.  Add the line `has_many :posts` in your `user.rb` file. This will provide you with the convenience method `posts` on any `user`. For instance: `User.find(5).posts` will give you all the posts that are associated with that user.
 
-3. In the `posts_controller.rb` for your CRUD actions you will need to set the instance of a user to the current user like so:
-```rb
- # GET /posts/new
-  def new
-    @user = current_user
-    @post = Post.new(user_id: current_user.id)
-  end
-```
-This will ensure that the user that creates or edits posts is the user and helps to check the authorization.
+2.  Add the line `belongs_to :user` in your `post.rb` file. Adding these two lines will associate your models for later use. This will provide you with the convenience method `user` on any `post`. For instance: `Post.find(12).user` will give you the user that is associated with that post.
 
-4. In the `posts_controller.rb` modify the instance of a post in your create method to look like this:
+3. In the `posts_controller.rb` modify the instance of a post in your create method to look like this:
 ```rb
   def create
     @user = current_user
-    @post = @user.posts.build(post_params)
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     if @post.save
       redirect_to @post
@@ -126,6 +125,7 @@ This will ensure that the user that creates or edits posts is the user and helps
     end
   end
 ```
-This will finally ensure that the post is associated with the user creating it.
+
+This will ensure that each post is associated with the user that created it. There are other ways of creating a post with the user_id attached, but the above method is the most straight forward.
 
 Homework: [Add permissiong/authorization to your app using cancancan](../authorization)

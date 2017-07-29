@@ -98,7 +98,7 @@ Finally, force the user to redirect to the login page if the user was not logged
 ```
 after `protect_from_forgery with: :exception.`
 
-## Add a foreign key to your posts model
+## Add `user_id` as a foreign key to your posts model
 
 `rails g migration AddUserIdToPosts user_id:integer`
 
@@ -114,7 +114,6 @@ Active Record associations provide convenience methods to your models.
 3. In the `posts_controller.rb` modify the instance of a post in your create method to look like this:
 ```rb
   def create
-    @user = current_user
     @post = Post.new(post_params)
     @post.user_id = current_user.id
 

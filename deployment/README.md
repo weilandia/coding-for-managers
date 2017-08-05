@@ -99,8 +99,8 @@ production:
 
   4. In the Heroku app web console, go to you app and click on the settings tab. There you will find a button that says `Reveal Config Vars`. Click on that and enter `DARK_SKY_API_KEY` as a key and your API key as the value.
 
-## Prepare Your App for Deploy IV: Personalize Generic Items
-  1. This website will be live for the public to view (if they have a link). All places with {your name here} or something similar should have real content instead of placeholder material. One generic item might be the title of your site that gets shown in the browser tab. Replace that with something more meaningful.
+## Prepare Your App for Deploy IV: Personalize!
+  1. This website will be live for the public to view (if they have a link). Delete your experimental blog posts and maybe make a couple with some decent content. Replace generic titles / etc. with more personalized ones - an example of a generic item might be the title of your site that gets shown in the browser tab. Replace that with something more meaningful. This is also the perfect opportunity to play around with CSS and style your site in your own way.
 
 ## Prepare Your App for Deploy V: Put your code on Github
 

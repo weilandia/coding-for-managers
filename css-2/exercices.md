@@ -61,6 +61,7 @@
   </body>
 </html>
 ```
+6. BONUS: Make it look good on mobile!
 ## Astronaut
 
 

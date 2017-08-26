@@ -167,6 +167,8 @@ def milk_is_expired?(days_old)
   return result
 end
 ```
+**Exercise- Try Ruby
+http://tryruby.org/levels/1/challenges/0
 
 # Advanced Data Types
 

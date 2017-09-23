@@ -20,7 +20,7 @@ Exercise 4:
 
 **Let's add an HTML with some CSS and an image for our home page. Where do these files go?**
 
-You will need to add 'Rails.application.config.assets.precompile += %w( home.css )' to our app/config/initializers/assets.rb file so that we can use the home.scss file for our styles on the homepage. 
+You will need to add `Rails.application.config.assets.precompile += %w( home.css )` to our app/config/initializers/assets.rb file so that we can use the home.scss file for our styles on the homepage. 
 
 Exercise 5:
 

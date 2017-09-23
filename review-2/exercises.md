@@ -20,6 +20,8 @@ Exercise 4:
 
 **Let's add an HTML with some CSS and an image for our home page. Where do these files go?**
 
+You will need to add 'Rails.application.config.assets.precompile += %w( home.css )' to our app/config/initializers/assets.rb file so that we can use the home.scss file for our styles on the homepage. 
+
 Exercise 5:
 
 **Let's add a way for users to get back to our homepage. We can add a Bootstrap-styled button just outside of our sign up logic inside of our main nav element in our `application.html.erb` file that will show regardless of whether a user is signed in or not.** *Hint: follow the formatting for the other `link_to` links and use `root_path` as the path.*

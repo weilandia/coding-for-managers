@@ -23,7 +23,7 @@ jQuery is a **powerful, easy-to-use JavaScript library**. It was invented in 200
 
 With jQuery, you'll be using the `$` function to select and manipulate DOM items. To select an item, simply pass a string identifier (using familiar CSS selectors like element name (`div`), class name (`.content`), or id name (`#main_title`)) into the function.
 
-The element or elements you get returned from that function call are not WRAPPED elements. They are WRAPPED with jQuery functionality -- they now have powerful methods and properties bestowed upon them by the library. How do we access those methods and properties? Use `dot notation` to call methods and access properties, just like we did in Ruby and vanilla JS:
+The element or elements you get returned from that function call are WRAPPED elements. They are WRAPPED with jQuery functionality -- they now have powerful methods and properties bestowed upon them by the library. How do we access those methods and properties? Use `dot notation` to call methods and access properties, just like we did in Ruby and vanilla JS:
 
 ```js
 element = $(".some-class-name");

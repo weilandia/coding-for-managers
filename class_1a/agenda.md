@@ -17,7 +17,7 @@
 4. [Course Tips](resources/course_tips.md) (9:50 - 9:55)
 5. [GitHub and Cloud9 Setup](resources/github_and_c9_setup.md) (9:55 - 10:20)
 6. [CLI Basics](resources/cli_basics.md) (10:20 - 10:30)
-7. Break 1 (10:30 - 10:40)
+7. [Break](resources/break_challenge_1) (10:30 - 10:40)
 8. [HTML Basics](resources/html_basics.md) (10:40 - 11:00)
 9. [Links and Images](resources/links_and_images) (11:00 - 11:20)
 10. [Semantic HTML](resources/semantic_html.md) (11:20 - 11:40)

@@ -1,4 +1,4 @@
-# Break Challenge 1: Hey Name
+# Break Challenge 1: print_salutation
 
 The following code snippet is a Ruby method that prints "Hey #{name}!" for the given name. For example, ```hey('Robot')``` would print "Hey Robot!" to the screen. Further, the default name is "John", so simply calling ```hey``` would print "Hey John!".
 

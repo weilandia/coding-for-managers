@@ -60,6 +60,7 @@ At the bottom of your workspace in Cloud 9, you will see something called the co
     * `touch`
     * `mv`
     * `rm`
+    * `rm -f`
 
 *> Exercise: follow along with me to learn some command line basics*
 

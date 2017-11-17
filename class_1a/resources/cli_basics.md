@@ -15,7 +15,7 @@
   * [Difference between UNIX, Linux, Bash, etc.](https://www.quora.com/What-is-the-difference-between-UNIX-Linux-Bash-Zsh-shell-programming-and-shell-scripting-What-is-meant-by-the-word-shell)
 
 * Shell/Bash Commands
-  * `ls` (`-t`, `-a`)
+  * `ls` (look an tags)
   * `pwd`
   * `man`
   * `mkdir`
@@ -23,4 +23,6 @@
   * `touch`
   * `mv`
   * `rm`
-  * `rm -f`
+  * `rm -R`
+  * `cat`
+  * `ls -a`

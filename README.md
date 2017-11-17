@@ -2,7 +2,7 @@
 
 # Coding for Managers
 
-Schedule:
+### Syllabus
 
 | Class | Topic |
 |-----|------|
@@ -22,3 +22,8 @@ Schedule:
 | Week 7B | [Public APIs](class_7b/agenda.md)
 | Week 8A | [Deployment](class_8a/agenda.md)
 | Week 8B | [Technical Interviews](class_8b/agenda.md)
+
+
+### Additional Course Info
+
+- [Product School Talent LMS](https://productschool.talentlms.com/dashboard)

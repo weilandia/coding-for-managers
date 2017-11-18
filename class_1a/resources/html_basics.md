@@ -1,7 +1,7 @@
 # HTML Basics
 
 * Hypertext Markup Language defines the structure and content of webpages by taking raw content and marking it up with HTML tags
-* Today we are going to talk about HTML and CSS. These two concepts, along with Javascript, are teh language of the web. We can think of HTML as STRUCTURE, CSS as APPEARANCE, and JS as INTERACTIVITY (though modern JS sort of does all three...)
+* Today we are going to talk about HTML and CSS. These two concepts, along with Javascript, are the language of the web. We can think of HTML as STRUCTURE, CSS as APPEARANCE, and JS as INTERACTIVITY (though modern JS sort of does all three...)
 
 * Let's start by creating a file called index.html, which will represent our webpage
 * Add the following boilerplate HTML for our webpage:
@@ -41,13 +41,14 @@
     * Only list elements are permitted with ul elements
     * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
   * Ordered Lists
+    * What elements are allowed in ordered lists?
   * Block level elements vs. inline elements
 
   ![Inline vs. Block](../assets/inline-vs-block-element.png)
 
-  * <em>, <strong>, <small>
+  * em, strong
     * Structure, not appearance
-  * <span>
+  * span
     * Inline text
 
   * Empty elements

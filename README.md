@@ -6,12 +6,12 @@
 
 | Class | Topic |
 |-----|------|
-| Week 1A | [Intro and HTML](class_1a/agenda.md)
-| Week 1B | [CSS I](class_1b/agenda.md)
-| Week 2A | [CSS II](class_2a/agenda.md)
+| Week 1A | [HTML & CSS 1](class_1a/agenda.md)
+| Week 1B | [HTML & CSS 2](class_1b/agenda.md)
+| Week 2A | [CSS 3 & Ruby 1](class_2a/agenda.md)
 | Week 2B | [Git](class_2b/agenda.md)
 | Week 3A | [Review I](class_3a/agenda.md)
-| Week 3B | [Ruby](class_3b/agenda.md)
+| Week 3B | [Ruby 2](class_3b/agenda.md)
 | Week 4A | [Rails I](class_4a/agenda.md)
 | Week 4B | [Rails II](class_4b/agenda.md)
 | Week 5A | [Rails III](class_5a/agenda.md)

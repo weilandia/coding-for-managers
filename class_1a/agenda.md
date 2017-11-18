@@ -20,7 +20,5 @@
 7. [Break Challenge](resources/break_challenge_1.md) (10:30 - 10:40)
 8. [HTML Basics](resources/html_basics.md) (10:40 - 11:00)
 9. [Links and Images](resources/links_and_images.md) (11:00 - 11:20)
-10. [Semantic HTML](resources/semantic_html.md) (11:20 - 11:40)
-11. [Forms](resources/forms.md) (11:40 - 12:00)
-12. [Dev Tools](resources/dev_tools,md) (12:00 - 12:20)
+10. [CSS Basics](resources/css_basics.md) (11:20 - 11:40)
 13. Review (12:20 - 12:30)

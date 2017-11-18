@@ -16,3 +16,10 @@
 3. [CSS Box Model](resources/css_box_model.md)
 4. [Semantic HTML](resources/semantic_html.md)
 5. [Forms](resources/forms.md)
+
+
+### Homework
+1. Signup with Code Academy with your GitHub Account
+2. Complete the 'Learn the Command Line' course
+3. Complete the 'Make a Website' course
+4. (Extenstion/Optional) Complete the Webslides project

@@ -21,3 +21,10 @@
 8. [HTML Basics](resources/html_basics.md)
 9. [Links and Images](resources/links_and_images.md)
 10. [CSS Basics](resources/css_basics.md)
+
+
+### Homework
+1. Signup with Code Academy with your GitHub Account
+2. Complete the 'Learn the Command Line' course
+3. Complete the 'Make a Website' course
+4. (Extenstion/Optional) Complete the [Webslides project](https://github.com/weilandia/ps-webslides-project)

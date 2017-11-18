@@ -26,3 +26,13 @@
   * `rm -R`
   * `cat`
   * `ls -a`
+  
+  *Exercise: CLI Basics (in pairs)*
+  In the scavenger_hunt dir...
+  * Create a file name file.rb
+  * Create a directory called ruby_dir
+  * Copy file.rb into ruby_dir
+  * Remove file.rb
+  * Without using the GUI, find a file that includes the name 'unicorn'
+  * Preview that file in browser
+  * Practive mv, rm, and rm -R

@@ -11,14 +11,13 @@
 
 ### Agenda :rocket:
 
-1. Introductions (9:30 - 9:40)
-2. Course Objectives (9:40 - 9:45)
-3. Today's Objectives (9:45 - 9:50)
-4. [Course Tips](resources/course_tips.md) (9:50 - 9:55)
-5. [GitHub and Cloud9 Setup](resources/github_and_c9_setup.md) (9:55 - 10:20)
-6. [CLI Basics](resources/cli_basics.md) (10:20 - 10:30)
-7. [Break Challenge](resources/break_challenge_1.md) (10:30 - 10:40)
-8. [HTML Basics](resources/html_basics.md) (10:40 - 11:00)
-9. [Links and Images](resources/links_and_images.md) (11:00 - 11:20)
-10. [CSS Basics](resources/css_basics.md) (11:20 - 11:40)
-13. Review (12:20 - 12:30)
+1. Introductions
+2. Course Objectives
+3. Today's Objectives
+4. [Course Tips](resources/course_tips.md)
+5. [GitHub and Cloud9 Setup](resources/github_and_c9_setup.md)
+6. [CLI Basics](resources/cli_basics.md)
+7. [Break Challenge](resources/break_challenge_1.md)
+8. [HTML Basics](resources/html_basics.md)
+9. [Links and Images](resources/links_and_images.md)
+10. [CSS Basics](resources/css_basics.md)

@@ -4,9 +4,10 @@
 
 ### Objectives
 
+- Comfort with browser dev tools
+- Understand CSS Specificity, selectors and Box Model
 - Understand HTML forms
 - Understand Semantic HTML
-- Comfort with browser dev tools
 
 ### Agenda :rocket:
 

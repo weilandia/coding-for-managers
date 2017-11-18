@@ -118,4 +118,5 @@ div {
 ```
 
 ### Let's explore selectors with Bootstrap
-* pseudo elements
+* .btn pseudo elements
+*Exercise: add three Bootstrap components from [HERE](https://getbootstrap.com/docs/4.0/components/alerts/) to `bootstrap_example/index.html` and in <p> tags, describe why they work by looking at the css.* 

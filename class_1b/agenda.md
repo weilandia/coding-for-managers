@@ -22,4 +22,4 @@
 1. Signup with Code Academy with your GitHub Account
 2. Complete the 'Learn the Command Line' course
 3. Complete the 'Make a Website' course
-4. (Extenstion/Optional) Complete the Webslides project
+4. (Extenstion/Optional) Complete the [Webslides project](https://github.com/weilandia/ps-webslides-project)

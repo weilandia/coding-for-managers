@@ -18,7 +18,6 @@ The basic functionality of Git allows developers to track specific versions of t
 
 - Go to beginning of line: `control + a`
 - Go to end of line: `control + e`
-- Erase line: `control + k`
 
 ## Getting started with Git
 

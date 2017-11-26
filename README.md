@@ -6,9 +6,8 @@
 
 | Class | Topic |
 |-----|------|
-| Week 1A | [HTML & CSS 1](class_1a/agenda.md)
-| Week 1B | [HTML & CSS 2](class_1b/agenda.md)
-| Week 2A | [CSS 3 & Ruby 1](class_2a/agenda.md)
+| Week 1  | [Command Line & HTML](class_1/agenda.md)
+| Week 2A | [HTML/CSS](class_2a/agenda.md)
 | Week 2B | [Git](class_2b/agenda.md)
 | Week 3A | [Review I](class_3a/agenda.md)
 | Week 3B | [Ruby 2](class_3b/agenda.md)

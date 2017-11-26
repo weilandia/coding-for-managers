@@ -1,58 +1,5 @@
 # Solutions
 
-## Astronaut
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Exercise: Lost Astronaut</title>
-    <style>
-        #greeting {
-          background: slategray;
-          border: 2px solid black;
-          padding: 5px;
-          width: 262px;
-        }
-        #astronaut {
-            width:45px;
-            position:absolute;
-            left:129px;
-            top:50px;
-            z-index:0;
-        }
-        #spaceship {
-            z-index:1;
-            position: absolute;    
-        }
-        #landing_pad {
-          z-index:-1;
-          position: absolute;
-          width: 500px;
-          bottom: 0px;
-          right: 0px;
-        }
-
-        #ship{
-            position:absolute;
-            left:850px;
-            bottom:300px;
-        }
-      </style>
-  </head>
-  <body>
-    <div id="greeting">
-      <p>Hey CSS cadet! Rescue the astronaut!</p>
-    </div>
-    <img id="spaceship" src="../assets/spaceship.png" width="300">
-    <img id="astronaut" src="https://d13yacurqjgara.cloudfront.net/users/182160/screenshots/725814/ss-astronaut.png">
-    <img id="landing_pad" src="http://www.collectspace.com/review/spacex_spaceportdrone04-lg.jpg" alt="">
-  </body>
-</html>
-
-```
-
 ## Flexbox Froggy
 
 ### Level 1

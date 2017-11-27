@@ -1,11 +1,25 @@
 # <img src="https://cloud.githubusercontent.com/assets/8397980/19818474/bd21af4c-9d04-11e6-8df6-1ed154718dce.png" height="60">
 
-# TBD
+# Git and GitHub
 
 ### Objectives
 
-- TBD
+- Understand why we use git
+- Know basic git operations
+- Understand a basic git/GutHub dev workflow
 
 ### Agenda :rocket:
 
-1. TBD
+1. [Getting started with Git](resources/git.md)
+2. [Using Git with GitHub](resources/github.md)
+3. [A Dev Workflow](resources/dev_workflow.md)
+
+### Review Questions
+
+1. What is Git used for?
+2. What is the purpose of a pull request?
+3. What are some GitHub alternatives?
+
+### Homework
+
+- [Codecademy Learn Git](https://www.codecademy.com/learn/learn-git)

@@ -15,6 +15,7 @@
 1. [Building our sign-up page](resources/sign_up_page.md)
 2. [Building our navbar](resources/navbar.md)
 3. [Responsive Design](resources/responsive_design.md)
+4. [Inline, embedded, and external styles](resources/stylesheets.md)
 
 ### Review Questions
 
@@ -25,9 +26,6 @@
 
 ### Homework
 
-CSS has a lot more to offer and it up to you how deep you want to go.  Especially with newer technologies (like Flexbox), it's very possible that a day of studying can make you more knowledgable than some expert web developers. Here's some suggested homework aligned to topics of interest:
-
-- Responsive Design
+- [Responsive Design](https://www.codecademy.com/learn/learn-responsive-design)
 - Flexbox
-- CSS Animations
-- General Review
+ - Beat the game: [Flexbox Froggy](http://flexboxfroggy.com/)

@@ -10,9 +10,10 @@
 
 ### Agenda :rocket:
 
-1. [Getting started with Git](resources/git.md)
-2. [Using Git with GitHub](resources/github.md)
-3. [A Dev Workflow](resources/dev_workflow.md)
+1. [Using Git with GitHub](resources/git/lecture-notes.md)
+2. [A Dev Workflow](resources/dev_workflow.md)
+3. (Extenstion) [Intro to Ruby Strings and Intergers](resources/intro_to_strings_and_integers.md)
+3. (Extenstion) [Intro to Ruby Arrays](resources/intro_to_arrays.md)
 
 ### Review Questions
 

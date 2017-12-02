@@ -117,12 +117,15 @@ When you are working in a team and you want people to review your code before pu
 - Push your branch and new commit to github: `$ git push origin [your-branch-name]`
 - Visit your github repo. You should see that your Github registered your pushing a new branch. Go ahead and click ‘Compare & pull request’ to submit a request to merge your code changes into your master code base. Don’t forget to include a message so that others know why they should include your changes.
 - Once your pull request is open, go ahead and merge your code to the master code base.
-- Problem, when we visit gh-pages, we still see the old version of your code. To update gh-pages, in the terminal, lets return to our master branch (`$ git checkout master`), pull the latest master version from github to our local repository (`$ git pull`), checkout out gh-pages branch (`$ git checkout gh-pages`), merge the updated master code-base into our gh-pages branch (`$ git merge master`), and, finally, push that updated gh-pages branch commit to github (`$ git push`)
-- Visit your github gh-pages vanity url and you should see those newly made changes
+
+## Lets add our landing-page to our codebase
+- In a new branch, add the code we used for our landing pages
+- Push changes and create a PR
+- Merge the changes
+- Setup GitHub pages
 
 ## Extra Practice
 
-- https://www.codecademy.com/learn/learn-git
 - https://www.codeschool.com/courses/git-real
 - http://rogerdudler.github.io/git-guide/
 - https://guides.github.com/

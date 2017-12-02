@@ -15,7 +15,7 @@
 1. [Building our sign-up page](resources/sign_up_page.md)
 2. [Building our navbar](resources/navbar.md)
 3. [Responsive Design](resources/responsive_design.md)
-4. [Inline, embedded, and external styles](resources/stylesheets.md)
+4. [Profile Page](resources/profile_page.md)
 
 ### Review Questions
 

@@ -34,3 +34,17 @@ Add this to the head of your file to let your mobile browser know your site is o
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
+
+### Cross-Browser Compatibility
+Making sure a site displays properly across different platforms can be a major headache for developers. To mitigate this, we test on multiple devices/browsers and use CSS browser prefixes to add support for CSS features before they are natively supported by the browser.
+
+Prefixes:  
+Android: `-webkit-`  
+Chrome: `-webkit-`  
+Firefox: `-moz-`  
+Internet Explorer: `-ms-`  
+iOS: `-webkit-`
+
+[This css auto-prefixer tool can make your life easier.](http://pleeease.io/play/)
+
+*Exercise: run your css through the auto-prefixer*

@@ -8,6 +8,9 @@ Introduced by CSS3, Flexible Box, or flexbox, is a layout mode providing for the
 What you will read about flexbox is from [this guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). If you want to have a really deep understanding of flexbox, you can directly read it.
 
 ### Properties for the Parent element
+
+*Fork this repl https://repl.it/@weilandia/ps-flexbox*
+
 #### Start with display Flex
 To be able to use flexbox, you have to start by writing `display:flex` within the CSS parent element.
 
@@ -68,10 +71,5 @@ If you want to align one item in a specific way, align self is the property you 
 
 ### Let's build our navbar 🚀
 
-### More practice (if needed)
-
-On exercises.md, we are going to do:
-
-1) Box Positioning
-
-2) Computer Gallery
+### Exercise
+* Add your sign-up component to our page with the navbar

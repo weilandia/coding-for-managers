@@ -28,16 +28,10 @@ tags: fundamentals, computer science
 * infinite loop
 
 ## Structure  
-5 min  - WarmUp   
 20min - Intro to Branching & Loops   
 5 min  - Break  
 20min - Paired Exercises   
 5 min  - WrapUp  
-
-## WarmUp  
-In your journal, with a partner, and using the internet as a tool, answer the following:  
-*  What tools have you seen or used to determine what happens next in your code base?  
-*  What are some use cases for each of these?  
 
 ### Note
 
@@ -108,7 +102,7 @@ end
 end
 ```  
 
-If your program gets stuck, you are likely in an infite loop. You can exit using `ctl-c`.  If you want your loop to exit once something is done, you can use `break`.
+If your program gets stuck, you are likely in an infinite loop. You can exit using `ctl-c`.  If you want your loop to exit once something is done, you can use `break`.
 
 ```
 count = 0
@@ -271,13 +265,11 @@ You win!
 
 The secret number and the guesses are both random numbers 0 through 10.
 
+[HINT](https://stackoverflow.com/questions/198460/how-to-get-a-random-number-in-ruby)
+
 ## Turn & Talk  
 Turning the other direction, use English to explain the flow of your code with your partner.
 
 ## WrapUp
 * What are two ways to control the flow of execution in a code base?  
 * Describe a use cases for each type of flow control covered today.(should be about 6)   
-
-## Extensions
-
-If you have time or would like more practice, try [this challenge](flow_control_alt_exercise.markdown).

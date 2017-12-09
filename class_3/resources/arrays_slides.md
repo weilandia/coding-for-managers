@@ -175,4 +175,13 @@ first_initial
 
 # Summary
 
-See lesson
+Here are the important concepts you've seen:
+
+*   You can directly assign a value to a location in an array using `[]`
+*   You can access the value stored at a position by using `[]`
+*   You can add an element to the end of an array with `<<` or `.push`
+*   You can remove an element from the end of an array with `.pop`
+*   You can add an element to the front of an array with `.unshift`.
+*   The `insert` method takes two arguments: first is the position where you want to insert the names, the second is the names to be inserted
+*   `shuffle` returns a copy of your array with the elements randomly jumbled up
+*   `each` is an *enumerable* method which takes a block parameter and runs that block once for *each* element in the collection.

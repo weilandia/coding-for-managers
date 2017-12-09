@@ -35,11 +35,3 @@ Here's some more you can do if you'd like to get deeper into the exercise.
 ### Do it differently
 
 Come up with another way to get the same output. Can you come up with another way to determine the string for a given number? What happens if you don't worry about a clear algorithm.
-
-### Converting individual numbers
-
-Write a method that returns the output for a single number. Then incorporate that into your script that outputs results for 0 through 1000.
-
-### Testing
-
-Write tests for each of the situations listed in the description.

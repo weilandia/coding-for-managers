@@ -17,6 +17,11 @@
 
 We'll talk about Ruby's enumerable modules, working with Objects, and algorithms.
 
+### Homework
+Finish Ruby Core Types Test for Strings and Ints.
+
+
 ### Optional Homework
 
 [CodeAcademy Ruby](https://www.codecademy.com/learn/learn-ruby)
+

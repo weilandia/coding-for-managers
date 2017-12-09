@@ -115,6 +115,19 @@ student = 'Carl'
 
 ---
 
+# Variables
+* Statically typed versus dynamically Typed
+```Java
+Java
+String str = "Hello";  //variable str statically typed as string
+str = 5;               //would throw an error since str is supposed to be a string only
+```
+
+```Ruby
+str = "Hello"
+str = 5
+```
+
 # Variable Assignment
 
 ```ruby

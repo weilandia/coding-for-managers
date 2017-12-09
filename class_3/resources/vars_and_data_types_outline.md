@@ -345,7 +345,7 @@ Today, you accomplished the following:
 * Name a Float method
 * How do you get to the Ruby Docs?
 
-## Homework  
+## Classwork  
 *  Work through Core-Types for String and Ints_and_Floats  
 
 ```bash  

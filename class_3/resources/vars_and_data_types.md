@@ -107,7 +107,6 @@ A few examples of Ruby variable names with poor convention include:
 * 123
 * ”@*#%&”
 * hello, world!
-* ‘welcome to Turing’
 * ‘987654321.”
 * “hot chocolate is the best”
 

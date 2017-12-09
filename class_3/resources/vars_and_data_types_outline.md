@@ -39,75 +39,6 @@ Create a T-Chart on the white board for string, integer & float
 
 There are several different data types in Ruby. Today, we'll focus on Strings and Integers. We'll also talk about variables (structures used to store references to data, not data types themselves).  
 
-## Variables  
-
-Programming is all about creating abstractions; in order to create an abstraction, we must be able to assign names to things. Variables are a way of creating a name for a piece of data.
-
-Some languages are Statically Typed, meaning you need to specify what type of data (like a number, word, etc) can go in a certain variable. Ruby is Dynamically Typed, meaning you do not need to declare the data type of a variable, any variable can hold any type of data and any variable *can* be reassigned to a different data type (constant variables shouldn't be changed). Some languages also require you to "declare" a variable before you assign a value to it, however, Ruby variables are automatically created when you assign a value to them. Let’s try an example:
-
-```ruby
-number = 10
-number
-```
-
-The line `num = 10` creates the variable named `number` and stores the value 10 into it.
-
-In English we read left-to-right, so it’s natural to read code left to right. But when evaluating an assignment using the single equals sign (=), Ruby actually evaluates the right side first. Take the following example:
-
-```ruby
-sum = 10 + 5
-```
-
-The 10 + 5 is evaluated first, and the result is given the name sum.
-
-*Try it*: What is c at the end of this? Why?
-
-```ruby
-$ irb
-$ c = 15
-$ c = "hello"
-$ c
-```
-
-### Naming Variables
-
-Ruby variables have a few **requirements**. Local variables ...
-
-* have no spaces
-* do not contain most special characters like $, @, and &
-* can contain underscores & numbers, but CANNOT start with a number
-
-A few examples of invalid Ruby variable names include:
-
-* `student names` - variables cannot include a space
-* `account_$` - variables cannot include most special characters
-* `1st_lesson` – variables can’t start with a number, should just be first_lesson
-
-In addition to those requirements, Rubyists have a few common style **conventions** for variable names:
-
-* always start with a lowercase letter (underscore is permitted, though uncommon)
-* use snake case where each word in the name is lowercase and connected by underscores ( _ )
-* are named after the meaning of their contents, not the type of their contents
-* are NEVER abbreviated, especially **NO SINGLE LETTER VARIABLES**
-
-Good variable names might be count, students_in_class, or first_lesson.
-
-A few examples of Ruby variable names with poor convention include:
-
-* `studentsInClass` – uses camel-case rather than snake-case, should be students_in_class
-* `student_name_string` – includes the type of the data in the name, should just be students
-* `msg` or `v` – abbreviates rather than just using message  
-
-
-*Try it:* Use IRB to store values with each of the following variable names. Which names are good, which are actually invalid Ruby, and which are valid but go against Ruby style?
-
-* `time_machine`
-* `student_count_integer`
-* `homeworkAssignment`
-* `Team`
-* `3_sections`
-* `top_ppl`  
-
 ## Strings
 
 In Ruby, strings are objects.
@@ -261,6 +192,75 @@ $ "Welcome to class, #{student}."
 If you compare the output you’ll see that they give the exact same results. The interpolation style tends to be fewer characters to type and fewer open/close quotes and plus signs to forget. String interpolation is preferred and more common. You should take note of the fact that string interpolation **will only work inside of double-quoted strings**. This would not work: `'Welcome to class, #{student}.'`
 
 *Try it*: Create two more examples of your own using string interpolation and a variable.
+
+## Variables  
+
+Programming is all about creating abstractions; in order to create an abstraction, we must be able to assign names to things. Variables are a way of creating a name for a piece of data.
+
+Some languages are Statically Typed, meaning you need to specify what type of data (like a number, word, etc) can go in a certain variable. Ruby is Dynamically Typed, meaning you do not need to declare the data type of a variable, any variable can hold any type of data and any variable *can* be reassigned to a different data type (constant variables shouldn't be changed). Some languages also require you to "declare" a variable before you assign a value to it, however, Ruby variables are automatically created when you assign a value to them. Let’s try an example:
+
+```ruby
+number = 10
+number
+```
+
+The line `num = 10` creates the variable named `number` and stores the value 10 into it.
+
+In English we read left-to-right, so it’s natural to read code left to right. But when evaluating an assignment using the single equals sign (=), Ruby actually evaluates the right side first. Take the following example:
+
+```ruby
+sum = 10 + 5
+```
+
+The 10 + 5 is evaluated first, and the result is given the name sum.
+
+*Try it*: What is c at the end of this? Why?
+
+```ruby
+$ irb
+$ c = 15
+$ c = "hello"
+$ c
+```
+
+### Naming Variables
+
+Ruby variables have a few **requirements**. Local variables ...
+
+* have no spaces
+* do not contain most special characters like $, @, and &
+* can contain underscores & numbers, but CANNOT start with a number
+
+A few examples of invalid Ruby variable names include:
+
+* `student names` - variables cannot include a space
+* `account_$` - variables cannot include most special characters
+* `1st_lesson` – variables can’t start with a number, should just be first_lesson
+
+In addition to those requirements, Rubyists have a few common style **conventions** for variable names:
+
+* always start with a lowercase letter (underscore is permitted, though uncommon)
+* use snake case where each word in the name is lowercase and connected by underscores ( _ )
+* are named after the meaning of their contents, not the type of their contents
+* are NEVER abbreviated, especially **NO SINGLE LETTER VARIABLES**
+
+Good variable names might be count, students_in_class, or first_lesson.
+
+A few examples of Ruby variable names with poor convention include:
+
+* `studentsInClass` – uses camel-case rather than snake-case, should be students_in_class
+* `student_name_string` – includes the type of the data in the name, should just be students
+* `msg` or `v` – abbreviates rather than just using message  
+
+
+*Try it:* Use IRB to store values with each of the following variable names. Which names are good, which are actually invalid Ruby, and which are valid but go against Ruby style?
+
+* `time_machine`
+* `student_count_integer`
+* `homeworkAssignment`
+* `Team`
+* `3_sections`
+* `top_ppl`  
 
 ## Integers
 

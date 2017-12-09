@@ -207,6 +207,8 @@ Turning the other direction, use English to explain the flow of your code with y
 
 ### Looping
 
+`touch loop.rb`
+
 Back with your original partner:
 
 #### 1. Easy Looping

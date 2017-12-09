@@ -281,8 +281,7 @@ Today, you accomplished the following:
 *  Work through Core-Types for String and Ints_and_Floats  
 
 ```bash  
-$ cd 1module  
-$ git clone https://github.com/turingschool/ruby-exercises.git  
+$ git clone https://github.com/weilandia/intro-ruby-exercises.git  
 $ cd ruby-exercises/core-types  
 $ gem install bundler  
 $ bundle  
@@ -291,4 +290,4 @@ $ ruby string_test.rb
    Make the tests pass, exploring a variety of ways to interact with strings and fixnums. Jot down your own definition of what each method does.  
 
 
-*  Complete the [Working with Strings and Integers](https://github.com/turingschool/challenges/blob/master/working_with_strings_and_integers.markdown) challenge.
+*  Complete the [Working with Strings and Integers](./exercises/strings_and_integers.md) challenge.

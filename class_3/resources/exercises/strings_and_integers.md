@@ -2,6 +2,8 @@
 
 Complete the following exercises to solidify your understandings of strings and integers.
 
+`touch` a file called `strings_and_ints.rb` and put your sollutions there.
+
 ## Just Strings
 
 ### 1. First & Last

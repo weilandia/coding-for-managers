@@ -8,4 +8,8 @@
 
 ### Agenda :rocket:
 
-1. TBD
+1. [Introducing Arrays](resources/arrays_slides.md)
+2. [Exploring Each](resources/exploring_each.md)
+3. [Hashes](resources/hashes.md)
+4. [Objects, Classes, Instances](resources/hashes.md)
+5. [Mythical Creatures and/or Ruby Core Types (hashes/arrays)](https://github.com/weilandia/intro-ruby-exercises)

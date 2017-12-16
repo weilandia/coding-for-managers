@@ -23,6 +23,7 @@
 3. [Hashes](resources/hashes.md)
 4. [Objects, Classes, Instances](resources/object_classes_instances.md)
 5. [Mythical Creatures and/or Ruby Core Types (hashes/arrays)](https://github.com/weilandia/intro-ruby-exercises)
+6. [OPTIONAL More Enumerables](resources/enumerable_outline.md)
 
 ### Next Class
 

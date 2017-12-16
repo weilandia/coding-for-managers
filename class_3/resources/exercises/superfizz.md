@@ -19,6 +19,14 @@ Iterate through the numbers 0 through 1000 and for each one print out exactly on
 
     `ruby super_fizz.rb`
 
+*   Within the file, create your starting point:
+    ``` ruby
+      i = 0
+      until i > 1000
+        # code goes here
+        i += 1
+      end
+    ```
 *   Within the file, write an algorithm that:
 *   If it's evenly divisible by 3, 5, and 7 print `SuperFizzBuzz`
 *   If it's evenly divisible by 3 and 7 print `SuperFizz`

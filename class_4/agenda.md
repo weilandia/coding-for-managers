@@ -40,5 +40,7 @@ In the [Intro Ruby Repo](https://github.com/weilandia/intro-ruby-exercises)
 In the [Intro Ruby Repo](https://github.com/weilandia/intro-ruby-exercises)
 * Finish the exercises in the objects-and-methods dir
 
+* Review this lecture on your own and complete the exercises: [More Enumerables](resources/enumerable_outline.md)
+
 
 * [CodeAcademy Ruby](https://www.codecademy.com/learn/learn-ruby)

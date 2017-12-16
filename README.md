@@ -9,16 +9,13 @@
 | Week 1  | [Command Line & HTML](class_1/agenda.md)
 | Week 2A | [HTML/CSS](class_2a/agenda.md)
 | Week 2B | [Git](class_2b/agenda.md)
-| Week 3  | [Ruby](class_3/agenda.md)
+| Week 3  | [Ruby 1](class_3/agenda.md)
 | Week 4  | [Ruby 2](class_4/agenda.md)
 | Week 5  | [Rails 1](class_5/agenda.md)
-| Week 5B | [Bootstrap](class_5b/agenda.md)
-| Week 6A | [Review II](class_6a/agenda.md)
-| Week 6B | [Javascript I](class_6b/agenda.md)
-| Week 7A | [Javascript II](class_7a/agenda.md)
-| Week 7B | [Public APIs](class_7b/agenda.md)
-| Week 8A | [Deployment](class_8a/agenda.md)
-| Week 8B | [Technical Interviews](class_8b/agenda.md)
+| Week 6  | [Rails 2](class_6/agenda.md)
+| Week 7  | [Javascript 1](class_7a/agenda.md)
+| Week 8A | [Javascript 2](class_8a/agenda.md)
+| Week 8B | [Public APIs](class_8b/agenda.md)
 
 
 ### Additional Course Info

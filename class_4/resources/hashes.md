@@ -33,8 +33,6 @@
 new_hash = {}
 # Different syntax
 new_hash = Hash.new
-# Different syntax with default value
-new_hash = Hash.new(0)
 ```
 
 ---

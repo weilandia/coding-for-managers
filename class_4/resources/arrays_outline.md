@@ -48,7 +48,7 @@ We'll step through using some of the fundamental Array methods, including:
 
 As we go, we'll work with an IRB session.
 
--   Create a new file in your module 1 folder called `intro_to_arrays.rb`. In this file, you can take notes and recreate what we have used in our pry session to refer to.
+-   Create a new file in c9 called `intro_to_arrays.rb`. In this file, you can take notes and recreate what we have used in our pry session to refer to.
 -   In our irb session let's create some names:
 
     ```ruby
@@ -90,6 +90,13 @@ As we go, we'll work with an IRB session.
 
     *Try it:* Let's shovel all our names into our names array.
 
+-   What if we want to add an item to the **beginning** of the array?
+
+    ```ruby
+      name_4 = "Louisa"
+      names.unshift(name_4)
+    ```
+
 -   Just like a string, we can access each item by index/position.
 
     ```ruby
@@ -109,13 +116,6 @@ As we go, we'll work with an IRB session.
     ```ruby
       names.first
       names.last
-    ```
-
--   What if we want to add an item to the **beginning** of the array?
-
-    ```ruby
-      name_4 = "Louisa"
-      names.unshift(name_4)
     ```
 
 -   We can also pick a specific position to insert the item into:

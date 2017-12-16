@@ -106,9 +106,7 @@ require 'pry'; binding.pry
 puts "-------"
 ```
 
-**TRY IT**: With your pair, define two of the classes that you brainstormed and create instances of those classes. Paste your code in your Slack channel.
-
-### Attributes IRL
+### Attributes
 
 The instances of the classes we've defined so far are basically useless. Aside from their `object_id`, there is nothing unique about these instances.
 
@@ -121,8 +119,6 @@ What are the attributes (states) that may vary among refrigerators?
 * Temperature
 * Plugged In?
 * Contents
-
-**TRY IT**: With your pair, brainstorm the things that make a `Person` unique.
 
 ### Attributes in Code
 
@@ -154,7 +150,7 @@ puts "-------"
 
 Let's run the file `ruby classes_and_instances_playground.rb` and see what happens.
 
-**TRY IT**: With your pair, create a class `Person` that has the attributes `name`, `birth_year`, `language`, and `alive` (which will be a true/false value). Make three instances of the `Person` class. Paste your code in Slack.
+**TRY IT**: Create a class `Person` that has the attributes `name`, `birth_year`, `language`, and `alive` (which will be a true/false value). Make three instances of the `Person` class. Paste your code in Slack.
 
 ### Accessing Attribute Values
 
@@ -259,7 +255,7 @@ puts "-------"
 
 Now let's try calling `refrigerator_1.brand`. It works! This is called a `getter` method because we are able to read the value of an attribute.
 
-**TRY IT**: With your pair, create getter methods for the `color`, `contents`, `temperature`, and `contents`. Next, create getter methods for `name`, `birth_year`, and `language`. Paste your code **only for Person** in Slack.
+**TRY IT**: Create getter methods for the `color`, `contents`, `temperature`, and `contents`. Next, create getter methods for your `Person` class -- `name`, `birth_year`, and `language`. Paste your code **only for Person** in Slack.
 
 ### Simplifying Getter Methods
 
@@ -296,7 +292,7 @@ puts "-------"
 
 Try running the program and testing out the getter methods. You should get the same behavior.
 
-**TRY IT**: With your pair, replace your getter methods for `name`, `birth_year`, and `language` with `attr_reader`s. Paste your code **only for Person** in Slack.
+**TRY IT**: Replace your getter methods for `name`, `birth_year`, and `language` with `attr_reader`s. Paste your code **only for Person** in Slack.
 
 ### Defining Custom Methods
 
@@ -341,7 +337,7 @@ puts "-------"
 
 Let's try out the method: `refrigerator_2.temperature_in_celsius`.
 
-**TRY IT**: With your pair, define a `age` method for `Person`.
+**TRY IT**: define a `age` method for `Person`.
 
 ### Defining Custom Methods with Arguments
 
@@ -398,7 +394,7 @@ require 'pry'; binding.pry
 puts "-------"
 ```
 
-**TRY IT**: With your pair, define a `greet(name)` method that accepts a person's name and then greets that person by returning a string like "Hi, Joanne! Nice to meet you."
+**TRY IT**: define a `greet(name)` method that accepts a person's name and then greets that person by returning a string like "Hi, Joanne! Nice to meet you."
 
 ### Redefining Attribute Values
 
@@ -559,17 +555,10 @@ Let's think about modeling cars in code. Work through these steps:
 1. At the bottom of the file, write a line that creates a second instance of the class Car called, `my_second_car`, and sets the `wheel_count` to `2`. Then write a line that prints "This sweet ride is sitting on 2 wheels". Observer how the two instances have their own instance variables (one car has 18 wheels, the other has 2 wheels, the code is shared through the class, but the variables are stored on the object).
 1. This one is tricky. Add a method named `start`. If the car has not yet been started, when the method is called it should return `"Starting up!"`. But if the car has previously been started, it should return `"BZZT! Nice try, though."`. You'll need to create an instance variable, a method, use an if statement, and return a value.
 
-## Be a badass:
+## Exercises
 
-If you get done with the above exercise, then follow along with [this](https://vimeo.com/137837005) video.
-It will go through [this](https://github.com/JoshCheek/1508/blob/0facae943f7785e5133ea506595534c1b00b3025/katas/blowing_bubbles_part2.rb) coding exercise.
-It builds on bubble sort, but you don't have to understand the algorithm to follow along with it
-It only plays with swapping representations, not changing behaviour.
-We'll take a piece of toplevel procedural code and turn it into a beautilful namespaced object,
-and then back again.
+* `objects-and-methods` exercises
 
 ## Homework
 
-* Complete Bob
-* Over the weekend, complete `command-query` exercises and `mythical-creatures` exercises
-* Optional: `objects-and-methods` exercises
+* Over the weekend, complete `mythical-creatures` exercises

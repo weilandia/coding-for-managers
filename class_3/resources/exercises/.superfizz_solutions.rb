@@ -23,22 +23,43 @@ end
 [*0..1000].each do |n|
 end
 
-0.upto(1000) do |n|
-  if n % 3 == 0 && n % 5 == 0 && n % 7 == 0
-    puts "SuperFizzBuzz"
-  elsif n % 3 == 0 && n % 7 == 0
-    puts "SuperFizz"
-  elsif n % 5 == 0 && n % 7 == 0
-    puts "SuperBuzz"
-  elsif n % 3 == 0 && n % 5 == 0
-    puts "FizzBuzz"
-  elsif n % 3 == 0
-    puts "Fizz"
-  elsif n % 5 == 0
-    puts "Buzz"
-  elsif n % 7 == 0
-    puts "Super"
-  else
-    puts n
+def run_super_fizz_1
+  0.upto(1000) do |n|
+    if n % 3 == 0 && n % 5 == 0 && n % 7 == 0
+      puts "SuperFizzBuzz"
+    elsif n % 3 == 0 && n % 7 == 0
+      puts "SuperFizz"
+    elsif n % 5 == 0 && n % 7 == 0
+      puts "SuperBuzz"
+    elsif n % 3 == 0 && n % 5 == 0
+      puts "FizzBuzz"
+    elsif n % 3 == 0
+      puts "Fizz"
+    elsif n % 5 == 0
+      puts "Buzz"
+    elsif n % 7 == 0
+      puts "Super"
+    else
+      puts n
+    end
   end
 end
+
+def run_super_fizz_2
+  n = 0
+  while n <= 1000
+    output = ""
+    output << "Super" if n % 7 == 0
+    output << "Fizz" if n % 3 == 0
+    output << "Buzz" if n % 5 == 0
+
+    if output.length == 0
+      output = n
+    end
+
+    puts output
+    n += 1
+  end
+end
+
+# run_super_fizz

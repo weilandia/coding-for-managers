@@ -4,7 +4,17 @@
 
 ### Objectives
 
-- TBD
+*   Understand the basic idea of a collection type
+*   Develop a mental model to understand arrays
+*   Gain some familiarity with common array methods
+*   Learn how to use a debugger to pause and interact with running code
+*   Understand how to use single-line and multi-line each
+*   Understand how to access hashes
+*   explain the difference between classes and instances
+*   define a class and creating instances of that class
+*   identify and explain the role of attributes in an instance
+*   explain and use return values
+*   write and identify instance methods
 
 ### Agenda :rocket:
 
@@ -13,3 +23,21 @@
 3. [Hashes](resources/hashes.md)
 4. [Objects, Classes, Instances](resources/hashes.md)
 5. [Mythical Creatures and/or Ruby Core Types (hashes/arrays)](https://github.com/weilandia/intro-ruby-exercises)
+
+### Next Class
+
+We'll talk about how the web works and start learning about Rails.
+
+### Homework
+In the [Intro Ruby Repo](https://github.com/weilandia/intro-ruby-exercises)
+* Finish Ruby Core Types Test for Arrays
+* Finish Ruby Core Types Test for Hashes
+* Finish Mythical Creatures
+
+### Optional Homework
+
+In the [Intro Ruby Repo](https://github.com/weilandia/intro-ruby-exercises)
+* Finish the exercises in the objects-and-methods dir
+
+
+* [CodeAcademy Ruby](https://www.codecademy.com/learn/learn-ruby)

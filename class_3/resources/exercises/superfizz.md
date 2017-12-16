@@ -11,10 +11,15 @@ really shocking part is that some people fail it! This is an extension of the *F
 
 Iterate through the numbers 0 through 1000 and for each one print out exactly one thing. These rules are in descending priority:
 
+*   Create a file called `super_fizz.rb`:
+    
+    `touch super_fizz.rb`
+    
 *   Run the file, using the command:
 
     `ruby super_fizz.rb`
 
+*   Within the file, write an algorithm that:
 *   If it's evenly divisible by 3, 5, and 7 print `SuperFizzBuzz`
 *   If it's evenly divisible by 3 and 7 print `SuperFizz`
 *   If it's evenly divisible by 5 and 7 print `SuperBuzz`

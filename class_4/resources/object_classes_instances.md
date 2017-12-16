@@ -18,13 +18,11 @@ tags: ruby, object-oriented programming
 
 ### Classes and Objects in Real Life
 
-**TRY IT**: With your pair, brainstorm five **types** of objects and **specific** instances of that object that are at Turing. For example:
-
 #### Type of object: Cubby
 
 Specific instances:
 
-* Horace's cubby
+* Nick's cubby
 * Steve's cubby
 * Mike's cubby
 

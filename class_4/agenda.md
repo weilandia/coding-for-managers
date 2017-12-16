@@ -29,18 +29,16 @@
 
 We'll talk about how the web works and start learning about Rails.
 
-### Homework
+### Recommended Homework
 In the [Intro Ruby Repo](https://github.com/weilandia/intro-ruby-exercises)
 * Finish Ruby Core Types Test for Arrays
 * Finish Ruby Core Types Test for Hashes
-* Finish Mythical Creatures
+* [CodeAcademy Ruby](https://www.codecademy.com/learn/learn-ruby)
 
 ### Optional Homework
 
 In the [Intro Ruby Repo](https://github.com/weilandia/intro-ruby-exercises)
 * Finish the exercises in the objects-and-methods dir
+* Finish Mythical Creatures (ping me for setup instructions if lost)
 
 * Review this lecture on your own and complete the exercises: [More Enumerables](resources/enumerable_outline.md)
-
-
-* [CodeAcademy Ruby](https://www.codecademy.com/learn/learn-ruby)

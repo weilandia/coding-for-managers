@@ -19,3 +19,7 @@
 
 **If we have time...**
 4. [Authentication](resources/authentication.md)
+
+### Homework
+
+1. Learn About Models • Watch Rails Zombie Video and do its Exercise on Models: http://railsforzombies.org/levels/2

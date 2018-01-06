@@ -1,17 +1,6 @@
-# Intro to Rails
+# Intro to Web and Rails
 
-## What is Rails?
-Rails is an open-source Model View Controller (MVC) framework that is built in Ruby. It does the hard work of designing the configurations and file structure you need to build your app. Rails includes a vast source of helper methods and functionally that speed up your web development process. On top of that, Rails integrates with ‘gems’ (similar to JavaScript libraries), which allow you to integrate additional functionality into your app, without building it yourself. Given the size of the Rails community, there is a high-quality, well-maintaned gem for almost any functionality you’d like to build.
-
-
-## What you will learn in this course
-* Learn what Rails is
-* Become familiar with the docs
-* Start a New Rails Project
-* Manipulate the Models through Active Record
-
-
-## Rails MVC Structure
+## MVC Structure
 
 From the inside out...
 
@@ -24,35 +13,14 @@ From the inside out...
 
 **View:** Represent the page that a visitor sees.
 
+## What is Rails?
+Rails is an open-source Model View Controller (MVC) framework that is built in Ruby. It does the hard work of designing the configurations and file structure you need to build your app. Rails includes a vast source of helper methods and functionally that speed up your web development process. On top of that, Rails integrates with ‘gems’ (similar to JavaScript libraries), which allow you to integrate additional functionality into your app, without building it yourself. Given the size of the Rails community, there is a high-quality, well-maintaned gem for almost any functionality you’d like to build.
 
 ## 4.1 Schema & Database
 
-Rails 4 Data Types:
-```rb      
-:binary
-:boolean
-:date
-:datetime
-:decimal
-:float
-:integer
-:primary_key
-:references
-:string
-:text
-:time
-:timestamp
-```
-[float vs decimal](http://stackoverflow.com/questions/8514167/float-vs-decimal-in-activerecord)
+Let's design our DB schema for a simple blogging app so we can start to MODEL our data.
 
-In the case of our blog post, we want to have:
-
-```rb
-- title:string
-- body:text
-- user_id:integer
-- category_id:integer
-```
+**In-Class Exercise: Think through the data model for a simple blogging application.  What data do we need to persist and how will it need to be connected?**
 
 ### Adding new models and migrating them into your database
 Let's go ahead and create a new workspace in Cloud 9, using a Ruby On Rails workspace.  Name it whatever you'd like
@@ -92,11 +60,9 @@ Running via Spring preloader in process 2834
 
 ## 4.2 Active Record Interface
 
-ActiveRecord is an API (aka: ‘system’) that allows you to interact between your models and database objects. It makes the process of fetching multiple database objects (eg: all users, or most recent posts) as well as creating, updating, and deleting individual objects simple and straightforward. It also produces detailed error statements that enable you to debug errors in your system.
-
+ActiveRecord is an API (aka: ‘system’) that allows you to interact between your models and database objects. It is simply a wrapper around the underlying database technology and syntax.  Since we are using a SQLite database, ActiveRecord allows us to write Ruby-like sql queries that get parsed into pure sql queries.
 
 **Naming:** models in activerecord are uppercase and singular: eg: Post or User. There active record models refer to lowercase plural database tables. `Post => posts, User =>users`.
-
 
 **CRUD:** (create, read, update, delete) represent the 4 main operations that you’ll run on data.
 
@@ -152,14 +118,9 @@ For a full list of ActiveRecord Queries, visit: http://guides.rubyonrails.org/ac
 
   `my_first_post = Post.find(id)`
 
-- How to update (and save) one or multiple attribute using a single method:
-
-  `my_first_post.update(body: "revamped body...")`
-
-You can use `.update` or `.update_attributes` to update ONE or MULTIPLE attributes.
+- How to update (and save) using a single method:
 
   `my_first_post.update_attributes(body: "revamped body...")`
-  `my_first_post.update(body: "revamped body...", title: "new title...")`
 
 - Delete: Use the `.destroy` method to delete an object from your database. However, we will use this sparingly. We will want most data to persist in our DB for later analysis.
 
@@ -260,3 +221,9 @@ end
 
 ##### Looking Forward:
 In the upcoming lesson we will begin to incorporate controllers and views into our Rails application.
+
+# Exercises
+
+[Active Record](http://railsforzombies.org/levels/1)
+
+[Models](http://railsforzombies.org/levels/2)

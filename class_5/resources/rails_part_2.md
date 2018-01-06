@@ -1,28 +1,11 @@
 # Intro to Rails (Part 2)
 
 ## What you will learn in this course
-* Learn about Scaffolding
-* Learn about Routes and Controllers
-* Learn the different components of Routes and Controllers
-* See how Routes, Controllers, and Models fit together
-* Implement Routes/Controller for Posts
+* Working with the controller
+* Routing
+* Starting the view layer
 
-## Scaffolding
-`rails scaffold` will build all of the model, view and controller (MVC) files for a new model in the application. Before we scaffold, let's make sure we have a clean workspace. Since it is easy to spin up a new template instance on Cloud 9, let's go ahead and create a new Ruby on Rails workspace. Let's name it something like `rails-blog` since this is the workspace that we'll be building on top of until we're done with our project. 
-
-If you prefer to keep your old Rails workspace, you can clean it up by destroying your previous Post model and cleansing your database with the following commands:
-
-`rails destroy model Post`
-
-`rake db:drop`
-
-`rake db:create`
-
-Now let's remove our old practice migration files in the `migrations` directory (as in, right click - delete them, or through the command line).
-
-Next, let's create a new scaffold for your posts. Open a new scratch document in c9 and let's write our the specifications for our Post scaffold.
-
-`rails generate scaffold post title:string body:text`
+## Controller
 
 ## Routes
 
@@ -56,88 +39,31 @@ DELETE    | /posts/:id      |   posts#destroy   | delete a specific post        
 **Controller & View naming conventions**: Once you’ve created a route, if your view is set to the same name as your controller (eg: `posts#show` `show.html.erb`), it will automatically associate the controller and view.
 
 ## Controllers
-```rb
-class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-  # GET /posts
-  # GET /posts.json
-  def index
-    @posts = Post.all
-  end
+Let's build out our PostsController, which will serve as a simple REST API to interact with Posts in our app.
 
-  # GET /posts/1
-  # GET /posts/1.json
-  def show
-  end
+**REST**: REpresentational State Transfer is an API architecture that is meant to simplify web apis. Here is a brief synopsis:
 
-  # GET /posts/new
-  def new
-    @post = Post.new
-  end
+- Give every “thing” an ID
+- Use standard methods
+- Communicate statelessly
 
-  # GET /posts/1/edit
-  def edit
-  end
+Using REST you map HTTP verbs to specific controller actions, which can be expected to behave similarly:
 
-  # POST /posts
-  # POST /posts.json
-  def create
-    @post = Post.new(post_params)
+GET -> NEW
+GET -> SHOW
+GET -> INDEX
+POST -> CREATE
+PATCH -> UPDATE
+DELETE -> DESTROY
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
-  def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /posts/1
-  # DELETE /posts/1.json
-  def destroy
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
-      params.require(:post).permit(:title, :body)
-    end
-end
-```
-
-**before_action**: Behavior that has to happen before a controller action is invoked. In the case of our posts controller, on `show`, `update`, `edit` and `destroy`, we want to load the post that is required by the incoming request.
+**ACTIONS**: provide entry points to our applciations. In a REST architure, the actions should be predicatable and simply return a resource.
 
 **Instance Variables**: begin with an ‘@’ sign (eg: @post). Instance variables allow you to share objects from your controller into your associated view. For example, our posts#show controller action, which sets the @post instance variable enables our show.html.erb page to access the data for our blog post.
 
 **Strong Parameters**: Create a safeguard for the parameters that can be assigned by users to an object. Only white-listed parameters can be manipulated by users.
+
+**before_action**: Behavior that has to happen before a controller action is invoked. In the case of our posts controller, on `show`, `update`, `edit` and `destroy`, we want to load the post that is required by the incoming request.
 
 ## Views
 
@@ -156,9 +82,9 @@ end
 
 **Iterators**:
 ```html
-<% Posts.each do |post| %> 
+<% Posts.each do |post| %>
   <%= post.title %>
-  <%= post.body %> 
+  <%= post.body %>
 <% end %>
 ```
 
@@ -205,9 +131,10 @@ In addition to the basic form above other form field types include:
 - `<%= time_field(:task, :started_at) %>`
 - `<%= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %> <%= range_field(:product, :discount, in: 1..100) %>`
 
-**In-Class Exercise**: Our views have already been constructed by our scaffold, so we can modify them to suite our blog better.
+**In-Class Exercise**: Improve teh Posts#Index page.
 
 1. Locate `index.html.erb`
+2. Create a table to organize our posts.
 2. Add some new table headers
 3. Add a new table header and new table data cell for `post length` (`length` of post's body)
 4. Bonus: do a word count instead of a character count
@@ -218,6 +145,26 @@ In addition to the basic form above other form field types include:
 - Each model is a single file in the ‘models’ folder
 - Each controller is a single file in the ‘controllers’ folder
 - All views associated with actions for a single controller are put into a folder that corresponds to the name of the controller (eg: PostsController!‘posts’) and each view file name should match up with the controller action (eg: posts#show!show.html.erb)
+
+## Add our navbar
+
+```HTML
+<header class="ps-navbar">
+    <a href="#" class="ps-nav-brand">PS Blog</a>
+
+    <nav class="ps-navbar-nav">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#">Sign Up</a>
+        </li>
+        <li>
+          <a href="#">Sign In</a>
+        </li>
+    </nav>
+</header>
+```
 
 ## Gems
 

@@ -47,7 +47,7 @@ end
 
 def run_super_fizz_2
   n = 0
-  while n <= 1000
+  while n <= 100
     output = ""
     output << "Super" if n % 7 == 0
     output << "Fizz" if n % 3 == 0
@@ -62,4 +62,4 @@ def run_super_fizz_2
   end
 end
 
-# run_super_fizz
+run_super_fizz_2

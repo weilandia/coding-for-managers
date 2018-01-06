@@ -23,3 +23,5 @@
 ### Homework
 
 1. Learn About Models • Watch Rails Zombie Video and do its Exercise on Models: http://railsforzombies.org/levels/2
+
+2. (Optional) https://www.codecademy.com/learn/learn-rails

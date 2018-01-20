@@ -10,9 +10,12 @@
 - Understand the use of external libraries (gems)
 - Use Bottstrap to style our app
 
+### What we are building
+[p-school-blog](http://p-school-blog.herokuapp.com/)
+
 ### Agenda :rocket:
 
-1. [Rails Part 2](../class_5/resources/rails_part_2.md)
+1. [Rails Part 2](resources/rails_part_2_5.md)
 2. [Rails Gems and Authentication](resources/rails-3/lecture-notes.md)
 3. [Bootstrap](resources/bootstrap/lecture-notes.md)
 

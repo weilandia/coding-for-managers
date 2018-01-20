@@ -22,6 +22,9 @@
 ### Homework
 
 1. Homework: Finish styling your app using HTML/CSS and Bootstrap
+* User the [Bootstrap Docs](https://getbootstrap.com/docs/3.3/css/) to help you style your blogging application
+* You can also use your own custom CSS in app/assets/stylesheets/application.scss
+
 2. (Optional) [Add permissiong/authorization to your app using cancancan](resources/homework/authorization)
 
 ### Next Class

@@ -5,7 +5,7 @@
 * Describe what Bootstrap is and explain how the grid system works
 * Place different Bootstrap components onto a static page
 * Manipulate different Bootstrap elements with custom CSS
-* Design and create webpages using Bootstrap elements and styling 
+* Design and create webpages using Bootstrap elements and styling
 
 ### Why you might want to use Bootstrap
 
@@ -170,4 +170,4 @@ https://github.com/maxim/bootswatch-rails
 
 ## Where we are going from here:
 
-Up to this point you have now created your application, added the associated models, routes, and views.  You have also integrated authentication and authorization for the users of your application.  Now your application has the elements of style that you can edit to give it a more personal and professional touch. In our review class, we'll be adding a landing page as well as improving some functionality on the rails side.
+Up to this point you have now created your application, added the associated models, routes, and views.  You have also integrated authentication for the users of your application.  Now your application has the elements of style that you can edit to give it a more personal and professional touch.

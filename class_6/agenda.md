@@ -24,6 +24,8 @@
 1. Homework: Finish styling your app using HTML/CSS and Bootstrap
 * User the [Bootstrap Docs](https://getbootstrap.com/docs/3.3/css/) to help you style your blogging application
 * You can also use your own custom CSS in app/assets/stylesheets/application.scss
+* If you want to change your Bootswatch theme, you will need to reference the [Bootswatch docs](https://github.com/maxim/bootswatch-rails) and use the [Bootswatch website](https://bootswatch.com/) to find a theme.
+* You can also remove Bootswatch altogether by removing the lines related to Bootswatch from application.scss
 
 2. (Optional) [Add permissiong/authorization to your app using cancancan](resources/homework/authorization)
 

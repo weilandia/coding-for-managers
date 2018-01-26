@@ -12,8 +12,8 @@
 | Week 4  | [Ruby 2](class_4/agenda.md)
 | Week 5  | [Rails 1](class_5/agenda.md)
 | Week 6  | [Rails 2 and Bootstrap](class_6/agenda.md)
-| Week 7  | [Deployment and Javascript 1](class_7/agenda.md)
-| Week 8 | [Javascript 2 and Public APIs](class_8/agenda.md)
+| Week 7  | [Javascript](class_7/agenda.md)
+| Week 8 | [Deployment and Public APIs](class_8/agenda.md)
 
 ### Additional Course Info
 

@@ -41,3 +41,35 @@ If you'd like to get into the details, [here's a good article](https://www.codem
 ```
 
 ### Using AJAX requests to improve our blog app
+
+* First let's plan out the UI for liking a blog post
+- We'll need some icons, so let's use `gem "font-awesome-rails"`
+- By looking at the docs, we can see how to get started
+
+*Adding the icon to our app*
+```html
+<h3>
+  <%= link_to "#heart", class: "js-heart-post" do %>
+    <%= fa_icon "heart-o" %>
+  <% end %>
+  <span class="js-heart-count"> 20</span>
+</h3>
+```
+
+* User story:
+As a user, I want to be able to 'heart' a blog a blog post.
+As a user, I want to be able to 'unheart' a blog post.
+As a user, I want to be able to see how many 'hearts' a blog post has.
+
+When a blog post is deleted, any data related to the blog post should also be deleted.
+
+
+- Let's get started with this:
+```js
+$(document).on('turbolinks:load', function() {
+  $(".js-heart-post").click(function(e) {
+    e.preventDefault();
+    console.log("Write the feature 🎉");
+  });
+});
+```

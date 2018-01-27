@@ -73,3 +73,21 @@ $(document).on('turbolinks:load', function() {
   });
 });
 ```
+
+- Build our data model
+```rb
+rails g migration create_likes user:references post:references
+```
+
+- Plan our routes and controller
+```rb
+resources :posts do
+  resources :likes, only: [:create, :destroy]
+end
+```
+```rb
+rails g controller likes create destroy
+```
+
+- Build out our API
+- Build out our JS

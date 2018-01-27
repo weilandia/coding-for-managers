@@ -14,6 +14,7 @@
 2. [Javascript Drumkit](resources/javascript_drumkit.md)
 3. [Intro to jQuery](resources/intro_to_jquery.md)
 4. [Using jQuery and AJAX in our Rails App](resources/jquery_with_rails.md)
+5. [Using JS Libs (quill.js)](resources/implement_quill.md)
 
 ### Resources
 

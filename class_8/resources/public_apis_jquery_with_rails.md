@@ -70,7 +70,6 @@ If you'd like to get into the details, [here's a good article](https://www.codem
 
 * User story:
 As a user, I want to be able to 'heart' a blog a blog post.
-As a user, I want to be able to 'unheart' a blog post.
 As a user, I want to be able to see how many 'hearts' a blog post has.
 
 When a blog post is deleted, any data related to the blog post should also be deleted.
@@ -96,12 +95,12 @@ rails g model like user:references post:references
 - Plan our routes and controller
 ```rb
 resources :posts do
-  resources :likes, only: [:create, :destroy]
+  resources :likes, only: [:create]
 end
 ```
 
 ```rb
-rails g controller likes create destroy
+rails g controller likes create
 ```
 
 - Wire up ajax call
@@ -114,6 +113,7 @@ $(document).on('turbolinks:load', function() {
       method: "POST",
       url: $(this).data("url"),
       success: function(data) {
+        // code
       }
     });
   });
@@ -135,6 +135,38 @@ def create
 end
 ```
 
+- Wire up ajax response
 
-- Build out our API
-- Build out our JS
+```javascript
+success: function(data) {
+  var likeCount = data.post.like_count;
+  $(".js-heart-count").text(likeCount);
+
+  $(".fa-heart-o").removeClass("fa-heart-o").addClass("fa-heart");
+}
+```
+
+- Wire up html so hearts show on page load
+
+```html
+<% if current_user.present? %>
+  <h3>
+    <%= link_to "#heart", class: "js-heart-post", data: { url: post_likes_path(@post) } do %>
+      <%= fa_icon post_like_icon_class(@post) %>
+    <% end %>
+    <span class="js-heart-count heart-count"> <%= @post.likes.count %></span>
+  </h3>
+<% end %>
+```
+
+```ruby
+module LikesHelper
+  def post_like_icon_class(post)
+    if post.likes.where(user: current_user).present?
+      "heart"
+    else
+      "heart-o"
+    end
+  end
+end
+```

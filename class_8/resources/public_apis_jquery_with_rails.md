@@ -58,12 +58,14 @@ If you'd like to get into the details, [here's a good article](https://www.codem
 
 *Adding the icon to our app*
 ```html
-<h3>
-  <%= link_to "#heart", class: "js-heart-post" do %>
-    <%= fa_icon "heart-o" %>
-  <% end %>
-  <span class="js-heart-count"> 20</span>
-</h3>
+<% if current_user.present? %>
+  <h3>
+    <%= link_to "#heart", class: "js-heart-post", data: { url: post_likes_path(@post) } do %>
+      <%= fa_icon "heart-o" %>
+    <% end %>
+    <span class="js-heart-count heart-count"> 20</span>
+  </h3>
+<% end %>
 ```
 
 * User story:
@@ -86,8 +88,10 @@ $(document).on('turbolinks:load', function() {
 
 - Build our data model
 ```rb
-rails g migration create_likes user:references post:references
+rails g model like user:references post:references
 ```
+
+*Where should we put 'has_many' relationships?*
 
 - Plan our routes and controller
 ```rb
@@ -95,9 +99,42 @@ resources :posts do
   resources :likes, only: [:create, :destroy]
 end
 ```
+
 ```rb
 rails g controller likes create destroy
 ```
+
+- Wire up ajax call
+
+```javascript
+$(document).on('turbolinks:load', function() {
+  $(".js-heart-post").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      method: "POST",
+      url: $(this).data("url"),
+      success: function(data) {
+      }
+    });
+  });
+});
+```
+
+- Wire up create controller
+```ruby
+def create
+  post = Post.find(params[:post_id])
+  like = post.likes.create(user_id: current_user.id)
+
+  render json: {
+    like: like.attributes,
+    post: {
+      like_count: post.likes.count
+    }
+  }
+end
+```
+
 
 - Build out our API
 - Build out our JS

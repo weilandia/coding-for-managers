@@ -14,6 +14,7 @@
 2. [Deploy 🎉](resources/deployment.md)
 3. [Course Review](resources/review.md)
 4. [Technical Interview Prep](resources/technical_interview_prep.md)
+5. [Example Practice Problem](https://coderbyte.com/editor/guest:Longest%20Word:Ruby)
 
 
 ### Resources
@@ -25,4 +26,4 @@
 
 - I *highly* recommend reading [The Ruby on Rails Turorial](https://www.railstutorial.org/book) and the articles referenced in it as well as completing the project in this book through c9.io.  This is an excellent tutorial that reinforces the core concepts of this course.
 
-- I also recommend something like [exercism.io](http://exercism.io/) or [coderbyte](coderbyte.com) as a way to pactice simple programming challenges to stay sharp or prepare for a technical interview.
+- I also recommend something like [exercism.io](http://exercism.io/) or [coderbyte](https://coderbyte.com/challenges#easyChals) as a way to pactice simple programming challenges to stay sharp or prepare for a technical interview.

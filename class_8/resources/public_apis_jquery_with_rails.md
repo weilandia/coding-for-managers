@@ -52,6 +52,8 @@ If you'd like to get into the details, [here's a good article](https://www.codem
 
 ### Using AJAX requests to improve our blog app
 
+* IF you don't have an up-to-date blog app fork this repo and clone the fork to c9: [here](https://github.com/weilandia/ps-school-blog.git)
+
 * First let's plan out the UI for liking a blog post
 - We'll need some icons, so let's use `gem "font-awesome-rails"`
 - By looking at the docs, we can see how to get started

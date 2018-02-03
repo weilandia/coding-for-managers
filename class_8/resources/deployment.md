@@ -10,8 +10,9 @@ Deployment is generally the last stage of development (after thorough testing) a
 
 ## Create Your Heroku App
 
-  1. Add a new app using the heroku toolbelt command. In the Terminal, from your project's root directory, run:
-  *If you don't supply a name for your app, Heroku will create a random one for you. The name must be unique across all of Heroku and the command line interface will tell you if the name you want is already taken. It's generally a good idea to give your app a name to personalize it and reflect its purpose.*
+1. Add a new app using the heroku toolbelt command. In the Terminal, from your project's root directory, run:
+
+*If you don't supply a name for your app, Heroku will create a random one for you. The name must be unique across all of Heroku and the command line interface will tell you if the name you want is already taken. It's generally a good idea to give your app a name to personalize it and reflect its purpose.*
 
 ```s
 $ heroku create YOUR_APP_NAME
@@ -72,7 +73,7 @@ $ heroku	https://git.heroku.com/YOUR_APP_NAME.git (push)
 
 ## Prepare Your App for Deploy II: Update your database config
 
-1. Open `database.yml` (search for the file using `cmd p`)
+1. Open `database.yml`
 2. Now we need to update our `production` settings to use Postgres. Your production config should look like the following:
 
 ```rb
